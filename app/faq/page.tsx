@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { canonicalMetadata } from '@/lib/metadata';
 import { SITE_URL } from '@/lib/site-contact';
@@ -184,6 +185,11 @@ export default function FAQPage() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold mb-6 text-gray-900">VIP New Construction Homes Specialist Advantages</h2>
+                <SectionImage
+                  imageId="buyer-consultation"
+                  heading="VIP New Construction Homes Specialist Advantages"
+                  caption="Buyer consultation for Homestead West new construction in Las Vegas 89149"
+                />
                 <p className="text-xl text-gray-700 max-w-4xl mx-auto">
                   Working with Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers exclusively, provides exclusive advantages 
                   throughout your new construction home buying journey—all while having an advocate who works for YOU, not the builder.

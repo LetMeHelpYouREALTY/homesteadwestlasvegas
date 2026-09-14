@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
@@ -90,6 +91,11 @@ export default function ComparisonPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold mb-8 text-gray-900">Quick Comparison</h2>
+              <SectionImage
+                imageId="ranch-exterior-dusk"
+                heading="Quick Comparison"
+                caption="Homestead West ranch homes in Northwest Las Vegas 89149"
+              />
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse border border-gray-300">
                   <thead>

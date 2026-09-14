@@ -611,6 +611,11 @@ export default function HomePage() {
               <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
                 What Buyers Say
               </h2>
+              <SectionImage
+                imageId="private-tour"
+                heading="What Buyers Say"
+                caption="Private tour of a Homestead West home in Northwest Las Vegas 89149"
+              />
 
               <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-600 mb-6">
                 <p className="text-lg text-gray-700 mb-4 italic">

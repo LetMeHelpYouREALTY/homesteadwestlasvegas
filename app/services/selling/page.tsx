@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
 
@@ -110,6 +111,11 @@ export default function HomeSellingPage() {
               ⭐ VIP NEW CONSTRUCTION PROGRAM ⭐
             </div>
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Elite Homestead West Selling Services</h2>
+            <SectionImage
+              imageId="ranch-exterior-dusk"
+              heading="Elite Homestead West Selling Services"
+              caption="Ranch homes at Homestead West in Northwest Las Vegas 89149"
+            />
             <p className="text-xl text-gray-700 mb-8">
               Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers exclusively, delivers exclusive market access, 
               premium buyer connections, and expert negotiation for maximum home value.

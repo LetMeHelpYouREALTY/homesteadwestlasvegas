@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
@@ -75,6 +76,11 @@ export default function HomesteadWestVsCadencePage() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-3xl font-bold mb-8 text-gray-900">Quick comparison</h2>
+            <SectionImage
+              imageId="pool-sized-lot"
+              heading="Quick comparison"
+              caption="Pool-sized lots at Homestead West, Las Vegas NV 89149"
+            />
             <div className="overflow-x-auto">
               <table className="w-full border-collapse border border-gray-300">
                 <thead>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import LocatorPlusEmbed from '@/components/LocatorPlusEmbed';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import {
   STORE_LOCATIONS,
   formatAddress,
@@ -103,6 +104,11 @@ export default function LocationIndexPage() {
         <section className="py-10 bg-gray-50" aria-label="Map of office locations">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold mb-4 text-gray-900">Office Locations Map</h2>
+            <SectionImage
+              imageId="sales-office"
+              heading="Office Locations Map"
+              caption="Homestead West office at 5592 Dapple Gray Rd, Las Vegas NV 89149"
+            />
             <p className="text-gray-700 mb-6">
               Use the map below to see where we’re located. Click Call, Directions, or View on Google for each office.{' '}
               <a href="#available-homes" className="text-[#1a365d] font-semibold underline">

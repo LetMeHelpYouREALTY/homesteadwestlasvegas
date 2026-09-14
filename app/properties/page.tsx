@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import RealScoutAdvancedSearch from '@/components/RealScoutAdvancedSearch';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
 
@@ -158,6 +159,11 @@ export default function PropertiesPage() {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Homestead West Properties?</h2>
+            <SectionImage
+              imageId="community-streetscape"
+              heading="Why Choose Homestead West Properties?"
+              caption="New construction ranch homes in Homestead West, Northwest Las Vegas 89149"
+            />
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-20 h-20 bg-[#1a365d] rounded-full flex items-center justify-center mx-auto mb-6">

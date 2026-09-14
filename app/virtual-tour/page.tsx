@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
 
@@ -79,6 +80,11 @@ export default function VirtualTourPage() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold mb-4">Homestead West Interactive 3D Property Tour</h2>
+                <SectionImage
+                  imageId="interior-great-room"
+                  heading="Homestead West Interactive 3D Property Tour"
+                  caption="Great room interior in a Homestead West ranch home, Las Vegas 89149"
+                />
                 <p className="text-lg text-gray-700 mb-6">
                   Explore Homestead West luxury ranch homes from anywhere with our immersive virtual tour. 
                   Navigate through the Homestead West properties and experience the space as if you were there in person.

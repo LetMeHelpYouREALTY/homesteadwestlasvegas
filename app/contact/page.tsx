@@ -3,6 +3,7 @@ import { ASSET_HEADSHOT_PATH } from '@/lib/site-assets';
 import Image from 'next/image';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import LeadForm from '@/components/LeadForm';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL, BROKERAGE_NAME, ADDRESS } from '@/lib/site-contact';
@@ -244,6 +245,11 @@ export default function ContactPage() {
               
               <div>
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">Find Our Office</h2>
+                <SectionImage
+                  imageId="sales-office"
+                  heading="Find Our Office"
+                  caption="Homestead West office at 5592 Dapple Gray Rd, Las Vegas NV 89149"
+                />
                 <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center mb-6">
                   <iframe
                     src="https://www.google.com/maps?q=5592+Dapple+Gray+Rd,+Las+Vegas,+NV+89149&output=embed"

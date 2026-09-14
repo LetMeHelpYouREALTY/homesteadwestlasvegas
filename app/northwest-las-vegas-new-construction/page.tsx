@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL, ADDRESS, PHONE_DISPLAY, PHONE_TEL_HREF, BROKERAGE_NAME, LICENSE_ID } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
@@ -95,6 +96,11 @@ export default function NorthwestLasVegasNewConstructionPage() {
             <h2 className="text-3xl font-bold text-gray-900 not-prose mb-4">
               What does &quot;Northwest Las Vegas&quot; mean for new construction buyers?
             </h2>
+            <SectionImage
+              imageId="community-streetscape"
+              heading={`What does "Northwest Las Vegas" mean for new construction buyers?`}
+              caption="New construction streetscape in Homestead West, Northwest Las Vegas 89149"
+            />
             <p className="text-gray-700 text-lg mb-4">
               Northwest Las Vegas generally refers to the area north of US 95 and west of I-15, including master-planned pockets
               and infill near Ann Road, Fort Apache, and Skye Canyon. Zip code <strong>89149</strong> covers much of this

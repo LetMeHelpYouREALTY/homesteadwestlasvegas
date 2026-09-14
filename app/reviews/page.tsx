@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
 
@@ -102,6 +103,11 @@ export default function ReviewsPage() {
               {/* QR code */}
               <div className="w-full text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
                 <h2 className="text-lg font-bold text-gray-900 mb-2">Share your review link</h2>
+                <SectionImage
+                  imageId="sales-office"
+                  heading="Share your review link"
+                  caption="Homestead West office at 5592 Dapple Gray Rd, Las Vegas NV 89149"
+                />
                 <p className="text-sm text-gray-600 mb-4">
                   Right-click the QR code and select &quot;Save Image As...&quot; to share with customers
                 </p>

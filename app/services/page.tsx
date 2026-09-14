@@ -3,6 +3,7 @@ import { ASSET_HEADSHOT_PATH } from '@/lib/site-assets';
 import Image from 'next/image';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
@@ -147,6 +148,11 @@ export default function ServicesPage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-6">Our Homestead West Services</h2>
+              <SectionImage
+                imageId="buyer-consultation"
+                heading="Our Homestead West Services"
+                caption="Buyer consultation for Homestead West services in Las Vegas 89149"
+              />
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Dr. Jan Duffy provides comprehensive real estate services throughout Las Vegas, 
                 helping clients achieve their property goals with expertise, integrity, and 

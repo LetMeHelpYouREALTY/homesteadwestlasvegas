@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import LeadForm from '@/components/LeadForm';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL } from '@/lib/site-contact';
@@ -205,6 +206,11 @@ export default function VIPBuyerProgramPage() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold mb-6 text-gray-900">What Working with a VIP New Construction Homes Specialist Means</h2>
+                <SectionImage
+                  imageId="vip-model-home"
+                  heading="What Working with a VIP New Construction Homes Specialist Means"
+                  caption="VIP model home access at Homestead West in Northwest Las Vegas 89149"
+                />
                 <p className="text-xl text-gray-700 max-w-3xl mx-auto">
                   Dr. Jan Duffy's elite builder relationships deliver exclusive advantages 
                   that regular agents simply cannot provide.

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL, ADDRESS, BROKERAGE_NAME, PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
@@ -92,6 +93,11 @@ export default function LasVegasOfficePage() {
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <h2 className="text-3xl font-bold mb-6">Visit Our Homestead West Office</h2>
+                <SectionImage
+                  imageId="sales-office"
+                  heading="Visit Our Homestead West Office"
+                  caption="Homestead West office at 5592 Dapple Gray Rd, Las Vegas NV 89149"
+                />
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mr-3 mt-1">

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
 
@@ -145,6 +146,11 @@ export default function HomebuyingProcessPage() {
                 ⭐ VIP NEW CONSTRUCTION PROGRAM ⭐
               </div>
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Homestead West VIP Homebuying Journey</h2>
+              <SectionImage
+                imageId="private-tour"
+                heading="Homestead West VIP Homebuying Journey"
+                caption="Private tour of a Homestead West ranch home in Northwest Las Vegas 89149"
+              />
               <p className="text-xl text-gray-700 mb-8">
                 Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers exclusively, delivers exclusive Homestead West access, 
                 priority Homestead West treatment, and expert Homestead West guidance throughout your entire homebuying process—all while working for YOU, not the builder.

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
 
@@ -110,6 +111,11 @@ export default function InvestmentConsultingPage() {
               ⭐ VIP NEW CONSTRUCTION PROGRAM ⭐
             </div>
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Elite Homestead West Investment Access</h2>
+            <SectionImage
+              imageId="aerial-northwest-lv"
+              heading="Elite Homestead West Investment Access"
+              caption="Aerial view of Northwest Las Vegas near Homestead West zip code 89149"
+            />
             <p className="text-xl text-gray-700 mb-8">
               Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers exclusively, delivers exclusive investment opportunities, 
               early access to new developments, and expert market analysis for maximum returns.

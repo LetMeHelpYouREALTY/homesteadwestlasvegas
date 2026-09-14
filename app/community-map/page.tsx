@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
 
@@ -101,6 +102,11 @@ export default function CommunityMapPage() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold mb-4 text-gray-900">Homestead West Community Layout</h2>
+                <SectionImage
+                  imageId="aerial-northwest-lv"
+                  heading="Homestead West Community Layout"
+                  caption="Aerial view of Northwest Las Vegas near Homestead West at 5592 Dapple Gray Rd"
+                />
                 <p className="text-xl text-gray-700 mb-4">
                   Explore the interactive map to see available lots, floor plan locations, and community amenities in Northwest Las Vegas
                 </p>

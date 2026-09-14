@@ -3,6 +3,7 @@ import { ASSET_HEADSHOT_PATH } from '@/lib/site-assets';
 import Image from 'next/image';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
@@ -143,6 +144,11 @@ export default function AboutPage() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold mb-6 text-gray-900">VIP New Construction Homes Specialist</h2>
+                <SectionImage
+                  imageId="buyer-consultation"
+                  heading="VIP New Construction Homes Specialist"
+                  caption="Buyer consultation for Homestead West new construction at 5592 Dapple Gray Rd, Las Vegas NV 89149"
+                />
                 <p className="text-xl text-gray-700 max-w-4xl mx-auto">
                   Dr. Jan Duffy is a VIP New Construction Homes Specialist who represents home buyers exclusively. 
                   She works for YOU, not the builder, delivering unparalleled Homestead West access and 

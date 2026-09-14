@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import LeadForm from '@/components/LeadForm';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
@@ -172,6 +173,11 @@ export default function AppointmentPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">Why Schedule Your Homestead West Consultation with Dr. Jan Duffy?</h2>
+              <SectionImage
+                imageId="buyer-consultation"
+                heading="Why Schedule Your Homestead West Consultation with Dr. Jan Duffy?"
+                caption="Buyer consultation for Homestead West at 5592 Dapple Gray Rd, Las Vegas 89149"
+              />
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 <div className="bg-blue-50 p-6 rounded-xl">
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">Homestead West VIP Access</h3>

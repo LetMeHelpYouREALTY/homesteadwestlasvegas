@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
 
@@ -222,6 +223,11 @@ export default function TestimonialsPage() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold mb-6 text-gray-900">5-Star Homestead West VIP Service</h2>
+                <SectionImage
+                  imageId="private-tour"
+                  heading="5-Star Homestead West VIP Service"
+                  caption="Private tour at Homestead West, 5592 Dapple Gray Rd, Las Vegas NV 89149"
+                />
                 <div className="flex items-center justify-center mb-6">
                   <div className="flex text-yellow-400 text-4xl mr-4">
                     <span>⭐⭐⭐⭐⭐</span>

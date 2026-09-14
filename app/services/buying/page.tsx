@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
 
@@ -89,6 +90,11 @@ export default function BuyingServicePage() {
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <h2 className="text-3xl font-bold mb-6">Your Homestead West Home Buying Partner</h2>
+                <SectionImage
+                  imageId="private-tour"
+                  heading="Your Homestead West Home Buying Partner"
+                  caption="Private tour with your Homestead West buyer agent in Las Vegas 89149"
+                />
                 <p className="text-lg mb-6">
                   Buying a home is one of life's most significant investments. Dr. Jan Duffy provides 
                   expert guidance throughout your home buying journey, from initial consultation to 

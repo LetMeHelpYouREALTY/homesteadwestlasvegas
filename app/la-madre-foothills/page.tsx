@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL, ADDRESS, PHONE_DISPLAY, PHONE_TEL_HREF, BROKERAGE_NAME, LICENSE_ID } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
@@ -215,6 +216,11 @@ export default function LaMadreFoothillsPage() {
             <h2 className="text-3xl font-bold text-gray-900 not-prose mb-4">
               What is the La Madre Foothills area in Las Vegas?
             </h2>
+            <SectionImage
+              imageId="la-madre-foothills"
+              heading="What is the La Madre Foothills area in Las Vegas?"
+              caption="La Madre Mountain foothills west of Homestead West in Northwest Las Vegas 89149"
+            />
             <p className="text-gray-700 text-lg mb-4">
               In everyday Las Vegas real estate language, “La Madre Foothills” refers to a northwest suburban pocket near the
               La Madre Mountain range—often discussed alongside zip codes like <strong>89124</strong>, <strong>89149</strong>,

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
 
@@ -179,6 +180,11 @@ export default function BuyersGuidePage() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold mb-6 text-gray-900">Homestead West VIP Buyer Advantages</h2>
+                <SectionImage
+                  imageId="vip-model-home"
+                  heading="Homestead West VIP Buyer Advantages"
+                  caption="VIP model home access at Homestead West in Northwest Las Vegas 89149"
+                />
                 <p className="text-xl text-gray-700 max-w-4xl mx-auto">
                   Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers exclusively, delivers exclusive Homestead West advantages 
                   throughout your entire Homestead West new construction home buying journey.

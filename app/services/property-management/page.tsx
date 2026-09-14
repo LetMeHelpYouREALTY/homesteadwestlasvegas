@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
 
@@ -93,6 +94,11 @@ export default function PropertyManagementPage() {
                 ⭐ VIP NEW CONSTRUCTION PROGRAM ⭐
               </div>
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Elite Homestead West Property Management</h2>
+              <SectionImage
+                imageId="community-streetscape"
+                heading="Elite Homestead West Property Management"
+                caption="Homestead West streetscape in Northwest Las Vegas 89149"
+              />
               <p className="text-xl text-gray-700 mb-8">
                 Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers exclusively, delivers exclusive property management 
                 services with premium tenant screening, maintenance coordination, and investment optimization.

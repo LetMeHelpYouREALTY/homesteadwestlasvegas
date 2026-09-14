@@ -3,6 +3,7 @@ import Link from 'next/link';
 import DeferredIframeEmbed from '@/components/DeferredIframeEmbed';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import {
   PRESET_ORIGINS,
   DESTINATION_DISPLAY,
@@ -133,6 +134,11 @@ export default function DirectionsPage() {
         <section className="py-10">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Choose Travel Mode</h2>
+            <SectionImage
+              imageId="aerial-northwest-lv"
+              heading="Choose Travel Mode"
+              caption="Aerial of Northwest Las Vegas near Homestead West at 5592 Dapple Gray Rd, 89149"
+            />
             <p className="text-center text-gray-600 mb-8 max-w-xl mx-auto">
               Open directions with your preferred mode. Google Maps will show estimated travel time.
             </p>

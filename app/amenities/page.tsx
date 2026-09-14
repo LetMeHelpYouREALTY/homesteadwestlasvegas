@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import {
   AMENITY_CATEGORIES,
   amenityMapEmbedUrl,
@@ -132,6 +133,14 @@ export default function AmenitiesPage() {
                       {category.icon && <span aria-hidden>{category.icon}</span>}
                       {category.label}
                     </h2>
+                    {category.id === 'parks' ? (
+                      <SectionImage
+                        imageId="red-rock-canyon"
+                        heading={category.label}
+                        caption="Red Rock Canyon is about 9 miles from Homestead West at 5592 Dapple Gray Rd, Las Vegas 89149"
+                        className="mt-4 mb-0"
+                      />
+                    ) : null}
                     <p className="text-gray-600 mt-1">{category.description}</p>
                   </div>
                   <div className="p-4 md:p-6">
