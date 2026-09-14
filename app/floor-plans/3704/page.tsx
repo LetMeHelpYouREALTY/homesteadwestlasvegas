@@ -1,44 +1,55 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
+import LeadForm from '@/components/LeadForm';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
+import { mediaAbsoluteUrl } from '@/lib/media';
+import { ADDRESS_LINE, EMAIL, PHONE_DISPLAY, PHONE_TEL_HREF, SITE_URL } from '@/lib/site-contact';
+import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
-  title: 'Plan 3704 - 3,704 Sq Ft Ranch Home | Homestead West Las Vegas | Dr. Jan Duffy',
-  description: 'Explore Plan 3704 at Homestead West: 3,704 sq ft single-story ranch home with 4 bedrooms, 4.5 baths, 3-5 car garage, and pool-sized lot. Starting at $940,990. Expert guidance from Dr. Jan Duffy.',
+  title: 'Plan 3704 - 3,704 Sq Ft Ranch with Casita | Homestead West Las Vegas | Dr. Jan Duffy',
+  description:
+    'Homestead West Plan 3704: 3,704 sq ft single-story ranch, optional detached casita, 4 bedrooms, 4.5 baths, 3–5 car garage, pool-sized lot. From $940,990. 5592 Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.',
   keywords: [
-    'available homes Las Vegas',
-    'Las Vegas MLS listings',
-    'Homestead West homes',
-    'Las Vegas real estate listings',
-    'new construction homes Las Vegas'
+    'Homestead West Plan 3704',
+    'casita ranch home Las Vegas',
+    '3704 sq ft new construction 89149',
+    'multi-generational ranch Northwest Las Vegas',
   ],
+  ...canonicalMetadata('/floor-plans/3704'),
   openGraph: {
-    title: 'Available Homes | Homestead West Las Vegas',
-    description: 'Browse current available homes in Las Vegas MLS. Updated daily with the latest properties.',
+    title: 'Plan 3704 | 3,704 Sq Ft Ranch + Casita | Homestead West Las Vegas',
+    description: 'Largest Homestead West ranch with optional detached casita. Buyer representation from Dr. Jan Duffy.',
     type: 'website',
-    url: 'https://www.homesteadwestlasvegas.com/floor-plans/3704',
+    url: absoluteUrl('/floor-plans/3704'),
     images: ogImages('detached-casita'),
   },
 };
 
 export default function Plan3704Page() {
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://www.homesteadwestlasvegas.com' },
-    { name: 'Floor Plans', url: 'https://www.homesteadwestlasvegas.com/floor-plans' },
-    { name: 'Plan 3704', url: 'https://www.homesteadwestlasvegas.com/floor-plans/3704' }
+    { name: 'Home', url: SITE_URL },
+    { name: 'Floor Plans', url: absoluteUrl('/floor-plans') },
+    { name: 'Plan 3704', url: absoluteUrl('/floor-plans/3704') },
   ]);
 
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'Homestead West Plan 3704 - Single-Story Ranch Home',
-    description: '3,704 sq ft single-story ranch home with 4 bedrooms, 4.5 baths, 3-5 car garage, and pool-sized lot. Starting at $940,990.',
-    brand: {
-      '@type': 'Brand',
-      name: 'Homestead West'
-    },
+    description:
+      '3,704 sq ft single-story ranch home with 4 bedrooms, 4.5 baths, 3-5 car garage, optional detached casita, and pool-sized lot. Starting at $940,990.',
+    image: [
+      mediaAbsoluteUrl('detached-casita'),
+      mediaAbsoluteUrl('luxury-kitchen'),
+      mediaAbsoluteUrl('covered-patio'),
+      mediaAbsoluteUrl('three-car-garage'),
+    ],
+    brand: { '@type': 'Brand', name: 'Homestead West' },
     category: 'Real Estate',
     offers: {
       '@type': 'Offer',
@@ -46,103 +57,106 @@ export default function Plan3704Page() {
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
       priceValidUntil: '2026-12-31',
-      url: 'https://www.homesteadwestlasvegas.com/floor-plans/3704',
+      url: absoluteUrl('/floor-plans/3704'),
       seller: {
         '@type': 'RealEstateAgent',
         name: 'Dr. Jan Duffy',
         telephone: '+17022996607',
-        email: 'DrJanSells@HomesteadWestLasVegas.com'
-      }
-    }
-  };
-
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'RealEstateAgent',
-    name: 'Dr. Jan Duffy',
-    telephone: '+17022996607',
-    email: 'DrJanSells@HomesteadWestLasVegas.com',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '5592 Dapple Gray Rd',
-      addressLocality: 'Las Vegas',
-      addressRegion: 'NV',
-      postalCode: '89149',
-      addressCountry: 'US'
+        email: EMAIL,
+      },
     },
-    areaServed: {
-      '@type': 'City',
-      name: 'Las Vegas'
-    },
-    knowsAbout: [
-      'Las Vegas Real Estate',
-      'MLS Listings',
-      'New Construction Homes',
-      'Homestead West'
-    ]
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+
       <div className="min-h-screen bg-white">
         <PageHero
           imageId="detached-casita"
           title="Homestead West Plan 3704 — 3,704 Sq Ft Ranch Home with Casita Option"
-          subtitle="Las Vegas MLS Listings - Updated Daily"
+          subtitle={`${ADDRESS_LINE} · From $940,990 · Call ${PHONE_DISPLAY}`}
         />
 
-        {/* RealScout Office Listings Carousel */}
+        <section className="py-14 bg-white">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">When Plan 3704 is the better fit</h2>
+            <SectionImage
+              imageId="interior-great-room"
+              heading="When Plan 3704 is the better fit"
+              caption="Larger great room footprint in the 3,704 sq ft Homestead West ranch"
+            />
+            <ul className="grid sm:grid-cols-2 gap-3 text-gray-700 mb-8">
+              <li><strong>Size:</strong> 3,704 square feet, single story</li>
+              <li><strong>Beds / baths:</strong> 4 bedrooms, 4.5 bathrooms</li>
+              <li><strong>Casita:</strong> Optional detached guest suite</li>
+              <li><strong>Garage:</strong> 3–5 car</li>
+              <li><strong>Starting price:</strong> $940,990 (lot and casita premiums extra)</li>
+              <li><strong>Office:</strong> {ADDRESS_LINE}</li>
+            </ul>
+            <p className="text-gray-700 leading-relaxed">
+              Choose 3704 when you want maximum single-story square footage, a larger entertaining room, or a casita for guests or work. Dr. Jan Duffy compares lot premiums and rear-yard orientation before you write—builder sales staff are paid to sell remaining inventory, not to shop the map for you.
+            </p>
+          </div>
+        </section>
+
+        <section className="py-14 bg-gray-50">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Optional detached casita</h2>
+            <h3 className="text-xl font-bold mb-3 text-gray-900">Private suite with a connecting walkway</h3>
+            <SectionImage
+              imageId="detached-casita"
+              heading="Optional detached casita"
+              caption="Detached casita option behind a Homestead West ranch in Northwest Las Vegas"
+            />
+            <p className="text-gray-700">
+              The casita is a separate lockable suite—useful for guests or a home office. Confirm setbacks, HVAC, and how the builder prices it on your specific lot before you sign.
+            </p>
+          </div>
+        </section>
+
+        <section className="py-14 bg-white">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Kitchen, patio, and garage</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div>
+                <h3 className="text-lg font-bold mb-2 text-gray-900">Kitchen</h3>
+                <SectionImage imageId="luxury-kitchen" heading="Kitchen" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold mb-2 text-gray-900">Covered patio</h3>
+                <SectionImage imageId="covered-patio" heading="Covered patio" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold mb-2 text-gray-900">Garage</h3>
+                <SectionImage imageId="three-car-garage" heading="Garage" />
+              </div>
+            </div>
+            <p className="mt-6">
+              <Link href="/floor-plans/3336" className="text-[#1a365d] font-semibold underline">
+                Compare Plan 3336 (3,336 sq ft) →
+              </Link>
+            </p>
+          </div>
+        </section>
+
         <section className="py-16 bg-gray-50" id="available-homes">
           <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">Available Homestead West homes on the MLS</h2>
+            <p className="text-center text-gray-600 mb-8">Inventory changes. Call {PHONE_DISPLAY} to hold a lot.</p>
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
-                Available Homes in Las Vegas
-              </h2>
-              <p className="text-xl text-center text-gray-700 mb-12 max-w-3xl mx-auto">
-                Browse current listings from the Las Vegas MLS - Updated daily with the latest properties
-              </p>
-              
               <RealScoutListings />
             </div>
           </div>
         </section>
 
-        {/* Contact CTA */}
         <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center bg-blue-900 text-white py-12 rounded-lg">
-              <h3 className="text-3xl font-bold mb-4">Ready to Find Your Dream Home?</h3>
-              <p className="text-xl mb-8 text-blue-100">
-                Contact Dr. Jan Duffy for expert guidance on your Las Vegas home search
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:7022996607"
-                  className="bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
-                >
-                  📞 Call (702) 299-6607
-                </a>
-                <a
-                  href="mailto:DrJanSells@HomesteadWestLasVegas.com"
-                  className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-colors"
-                >
-                  📧 Email Dr. Jan
-                </a>
-              </div>
-            </div>
+          <div className="container mx-auto px-4 max-w-xl">
+            <LeadForm source="floor-plan-3704" heading="Tour Plan 3704 with Dr. Jan" />
+            <p className="text-center text-sm text-gray-600 mt-4">
+              Or <a className="underline font-semibold" href={PHONE_TEL_HREF}>call {PHONE_DISPLAY}</a>
+            </p>
           </div>
         </section>
       </div>

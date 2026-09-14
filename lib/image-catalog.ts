@@ -94,6 +94,30 @@ export const SITE_IMAGES = {
     width: 1920,
     height: 1080,
   },
+  'three-car-garage': {
+    gitPath: '/photos/sections/three-car-garage.jpg',
+    alt: 'Three-car garage and driveway at a Homestead West luxury ranch home in Northwest Las Vegas',
+    width: 1920,
+    height: 1080,
+  },
+  'dining-room': {
+    gitPath: '/photos/sections/dining-room.jpg',
+    alt: 'Dining room in a Homestead West single-story ranch home, Las Vegas 89149',
+    width: 1920,
+    height: 1080,
+  },
+  'nw-shopping-plaza': {
+    gitPath: '/photos/sections/nw-shopping-plaza.jpg',
+    alt: 'Shopping and dining plaza in Northwest Las Vegas near Homestead West zip code 89149',
+    width: 1920,
+    height: 1080,
+  },
+  'medical-campus': {
+    gitPath: '/photos/sections/medical-campus.jpg',
+    alt: 'Medical campus in Northwest Las Vegas, a short drive from Homestead West at 5592 Dapple Gray Rd',
+    width: 1920,
+    height: 1080,
+  },
 } as const
 
 export type SiteImageId = keyof typeof SITE_IMAGES

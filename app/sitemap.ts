@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next'
 import { fetchKCMPosts } from '@/lib/rss-fetcher'
 import { SITE_URL } from '@/lib/site-contact'
+import { PAGE_HERO_IMAGE } from '@/lib/image-catalog'
+import { mediaAbsoluteUrl } from '@/lib/media'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = SITE_URL
@@ -233,5 +235,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
-  return [...staticPages, ...blogUrls]
+  const withImages = [...staticPages, ...blogUrls].map((entry) => {
+    const path = entry.url.replace(baseUrl, '') || '/'
+    const imageId = PAGE_HERO_IMAGE[path] ?? 'ranch-exterior-dusk'
+    return {
+      ...entry,
+      images: [mediaAbsoluteUrl(imageId)],
+    }
+  })
+
+  return withImages
 }

@@ -212,6 +212,11 @@ export default function CommunityPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Homestead West Local Schools</h2>
+              <SectionImage
+                imageId="community-streetscape"
+                heading="Homestead West Local Schools"
+                caption="Homestead West streetscape in the Centennial Hills area of Northwest Las Vegas 89149"
+              />
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                 <div className="bg-gray-50 p-6 rounded-xl">
@@ -308,6 +313,11 @@ export default function CommunityPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Homestead West Shopping & Dining</h2>
+              <SectionImage
+                imageId="nw-shopping-plaza"
+                heading="Homestead West Shopping & Dining"
+                caption="Retail and dining in Northwest Las Vegas, a short drive from 5592 Dapple Gray Rd"
+              />
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-white p-6 rounded-xl shadow-lg">
@@ -387,6 +397,11 @@ export default function CommunityPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Healthcare Facilities</h2>
+              <SectionImage
+                imageId="medical-campus"
+                heading="Healthcare Facilities"
+                caption="Medical campuses in Northwest Las Vegas near Homestead West"
+              />
               
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="bg-gray-50 p-6 rounded-xl">
