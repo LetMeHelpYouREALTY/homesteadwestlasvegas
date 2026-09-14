@@ -3,8 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import { SITE_URL, AGENT_JSONLD_DESCRIPTION } from "@/lib/site-contact";
+import GbpNapBar from "../components/GbpNapBar";
+import { SITE_URL, AGENT_JSONLD_DESCRIPTION, ADDRESS, GEO, GOOGLE_GBP_URL, GOOGLE_MAPS_PLACE_URL, GOOGLE_REVIEW_URL, PHONE_E164, EMAIL, BUSINESS_NAME } from "@/lib/site-contact";
 import { bhhsLogoAbsoluteUrl, headshotAbsoluteUrl } from "@/lib/site-assets";
+import { mediaAbsoluteUrl } from "@/lib/media";
 import { metadataBaseUrl } from "@/lib/metadata";
 
 const inter = Inter({ 
@@ -72,6 +74,12 @@ export const metadata: Metadata = {
     description: '$910K+ luxury ranch homes on pool-sized lots in Northwest Las Vegas. 3,336-3,704 sq ft. Expert guidance from Dr. Jan Duffy. Call (702) 299-6607.',
     images: [
       {
+        url: mediaAbsoluteUrl('ranch-exterior-dusk'),
+        width: 1920,
+        height: 1080,
+        alt: 'Luxury single-story ranch home in Homestead West, Northwest Las Vegas 89149',
+      },
+      {
         url: headshotAbsoluteUrl,
         width: 750,
         height: 752,
@@ -84,7 +92,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Homestead West Las Vegas | $910K+ Ranch Homes',
     description: 'Luxury ranch homes on pool-sized lots in Northwest Las Vegas. Expert real estate guidance from Dr. Jan Duffy.',
-    images: [headshotAbsoluteUrl],
+    images: [mediaAbsoluteUrl('ranch-exterior-dusk')],
   },
 
   ...(process.env.GOOGLE_SITE_VERIFICATION
@@ -127,26 +135,29 @@ export default function RootLayout({
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'RealEstateListing',
-    name: 'Homestead West | Homes by Dr Jan Duffy',
+    name: BUSINESS_NAME,
     description: '$910K+ ranch-style homes on pool-sized lots in Northwest Las Vegas',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '5592 Dapple Gray Rd',
-      addressLocality: 'Las Vegas',
-      addressRegion: 'NV',
-      postalCode: '89149',
-      addressCountry: 'US'
+      streetAddress: ADDRESS.streetAddress,
+      addressLocality: ADDRESS.addressLocality,
+      addressRegion: ADDRESS.addressRegion,
+      postalCode: ADDRESS.postalCode,
+      addressCountry: ADDRESS.addressCountry
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 36.2738,
-      longitude: -115.3089
+      latitude: GEO.latitude,
+      longitude: GEO.longitude
     },
-    telephone: '+17022996607',
-    smsNumber: 'sms:+17022996607',
-    email: 'DrJanSells@HomesteadWestLasVegas.com',
+    telephone: PHONE_E164,
+    smsNumber: `sms:${PHONE_E164}`,
+    email: EMAIL,
     url: SITE_URL,
-    image: `${SITE_URL}/og-image.jpg`,
+    image: [
+      mediaAbsoluteUrl('ranch-exterior-dusk'),
+      headshotAbsoluteUrl,
+    ],
     priceRange: '$910,990 - $940,990',
     numberOfRooms: '4-5',
     floorSize: {
@@ -320,9 +331,11 @@ export default function RootLayout({
             }
           }
         ],
-        hasMap: 'https://maps.google.com/?q=5592+Dapple+Gray+Rd,+Las+Vegas,+NV+89149',
+        hasMap: GOOGLE_MAPS_PLACE_URL,
         sameAs: [
           SITE_URL,
+          GOOGLE_GBP_URL,
+          GOOGLE_REVIEW_URL,
           `${SITE_URL}/vip-buyer-program`,
           `${SITE_URL}/about`,
           `${SITE_URL}/contact`,
@@ -471,7 +484,7 @@ export default function RootLayout({
                       telephone: '+17022996607',
                       email: 'DrJanSells@HomesteadWestLasVegas.com',
                       url: SITE_URL,
-                      image: headshotAbsoluteUrl,
+                      image: [headshotAbsoluteUrl, mediaAbsoluteUrl('ranch-exterior-dusk')],
                       priceRange: '$850,000-$990,000',
                       address: {
                         '@type': 'PostalAddress',
@@ -512,7 +525,12 @@ export default function RootLayout({
                       telephone: '+17022996607',
                       email: 'DrJanSells@HomesteadWestLasVegas.com',
                       url: SITE_URL,
-                      image: headshotAbsoluteUrl,
+                      image: [
+                        mediaAbsoluteUrl('ranch-exterior-dusk'),
+                        mediaAbsoluteUrl('sales-office'),
+                        mediaAbsoluteUrl('community-streetscape'),
+                        headshotAbsoluteUrl,
+                      ],
                       logo: bhhsLogoAbsoluteUrl,
                       priceRange: '$850,000-$990,000',
                       address: {
@@ -573,7 +591,7 @@ export default function RootLayout({
                       alternateName: 'Homestead West Las Vegas Real Estate',
                       url: SITE_URL,
                       logo: bhhsLogoAbsoluteUrl,
-                      image: headshotAbsoluteUrl,
+                      image: [headshotAbsoluteUrl, mediaAbsoluteUrl('ranch-exterior-dusk')],
                       address: {
                         '@type': 'PostalAddress',
                         streetAddress: '5592 Dapple Gray Rd',
@@ -591,6 +609,8 @@ export default function RootLayout({
                       },
                       sameAs: [
                         SITE_URL,
+                        GOOGLE_GBP_URL,
+                        GOOGLE_REVIEW_URL,
                         `${SITE_URL}/vip-buyer-program`,
                         `${SITE_URL}/about`,
                         `${SITE_URL}/contact`
@@ -793,6 +813,7 @@ export default function RootLayout({
             {/* Calendly: loaded on-demand by CalendlyLink / appointment page to avoid LCP and long main-thread tasks */}
           </head>
           <body className={inter.className}>
+            <GbpNapBar />
             <Navigation />
             {children}
             <Footer />

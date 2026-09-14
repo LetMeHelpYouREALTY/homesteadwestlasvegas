@@ -43,7 +43,7 @@ export const STORE_LOCATIONS: StoreLocation[] = [
     phone: '+17022996607',
     email: 'DrJanSells@HomesteadWestLasVegas.com',
     openingHours: ['Su 10:00-15:00', 'Mo 10:00-18:00', 'Tu 10:00-18:00', 'We 10:00-18:00', 'Th 10:00-18:00', 'Fr 10:00-18:00', 'Sa 10:00-16:00'],
-    geo: { latitude: 36.1699, longitude: -115.1398 },
+    geo: { latitude: 36.2738, longitude: -115.3089 },
     description: 'Real estate sales, property management, and investment consulting in Northwest Las Vegas.',
   },
 ];

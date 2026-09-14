@@ -22,7 +22,16 @@ CENTURY_COMMUNITIES_API_KEY=your-century-api-key
 CENTURY_COMMUNITIES_BASE_URL=your-century-base-url
 ```
 
-## Already Configured Environment Variables
+### Cloudflare Images
+```bash
+# Optional CDN. Git JPEGs in public/photos/sections are the backup.
+NEXT_PUBLIC_CF_IMAGES_HASH=
+NEXT_PUBLIC_CF_IMAGES_VARIANT=public
+CLOUDFLARE_ACCOUNT_ID=
+CLOUDFLARE_API_TOKEN=
+```
+
+Keep the Vercel hostname on DNS-only (gray cloud). Serve media from `imagedelivery.net` or a separate images hostname.
 
 ### Google Maps API
 - `VITE_GOOGLE_MAPS_API_KEY` ✅

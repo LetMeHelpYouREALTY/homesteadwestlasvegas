@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
@@ -113,6 +114,10 @@ export default function FloorPlansPage() {
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
                   When does Plan 3336 make sense?
                 </h3>
+                <SectionImage
+                  imageId="luxury-kitchen"
+                  heading="When does Plan 3336 make sense?"
+                />
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Plan 3336 fits buyers who want a large single-story footprint near 3,336 sq ft—strong for everyday living and
                   entertaining without jumping to the largest plan. If you want pool-sized lot flexibility and a balance of space
@@ -129,6 +134,10 @@ export default function FloorPlansPage() {
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
                   When does Plan 3704 make sense?
                 </h3>
+                <SectionImage
+                  imageId="detached-casita"
+                  heading="When does Plan 3704 make sense?"
+                />
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Plan 3704 is the step-up for buyers who want maximum single-story square footage in the community—ideal when
                   you need extra bedrooms, a larger great room, or multi-generational layout options. Compare lot premiums and

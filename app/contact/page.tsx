@@ -2,9 +2,12 @@ import { Metadata } from 'next';
 import { ASSET_HEADSHOT_PATH } from '@/lib/site-assets';
 import Image from 'next/image';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import LeadForm from '@/components/LeadForm';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
-import { SITE_URL, BROKERAGE_NAME, ADDRESS, PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact';
+import { SITE_URL, BROKERAGE_NAME, ADDRESS } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Contact Dr. Jan Duffy | Las Vegas Real Estate Agent | Homestead West',
@@ -16,6 +19,7 @@ export const metadata: Metadata = {
     description: 'Contact Dr. Jan Duffy for expert real estate services in Las Vegas. Professional consultation available.',
     type: 'website',
     url: absoluteUrl('/contact'),
+    images: ogImages('buyer-consultation'),
   },
 };
 
@@ -64,21 +68,20 @@ export default function ContactPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-blue-900 text-white py-8">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4">Contact Dr. Jan Duffy for Homestead West</h1>
-            <p className="text-xl mb-2">Las Vegas Real Estate Expert | License S.0197614.LLC</p>
-            <p className="text-lg text-blue-100 mb-1">{BROKERAGE_NAME}</p>
-            <p className="text-blue-200">
-              <a href={PHONE_TEL_HREF} className="underline hover:text-white">
-                {PHONE_DISPLAY}
-              </a>
-              {' · '}
+        <PageHero
+          imageId="buyer-consultation"
+          title="Contact Dr. Jan Duffy for Homestead West"
+          subtitle={
+            <>
+              Las Vegas Real Estate Expert | License S.0197614.LLC
+              <br />
+              {BROKERAGE_NAME}
+              <br />
               {ADDRESS.streetAddress}, {ADDRESS.addressLocality}, {ADDRESS.addressRegion} {ADDRESS.postalCode}
-            </p>
-          </div>
-        </header>
+            </>
+          }
+          badge="Call · Directions · Google Reviews"
+        />
 
         {/* Current Listings Preview */}
         <section id="homes-preview" className="py-10 bg-white">
@@ -205,6 +208,9 @@ export default function ContactPage() {
                     </div>
                   </div>
                 </div>
+              </div>
+              <div>
+                <LeadForm source="contact-page" />
               </div>
             </div>
           </div>

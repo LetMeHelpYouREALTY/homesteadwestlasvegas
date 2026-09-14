@@ -3,9 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import SearchWidgetScript from '@/components/SearchWidgetScript';
-import { LICENSE_ID, SITE_URL } from '@/lib/site-contact';
+import SectionImage from '@/components/SectionImage';
+import LeadForm from '@/components/LeadForm';
+import GbpActions from '@/components/GbpActions';
+import { LICENSE_ID, SITE_URL, ADDRESS_LINE, PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact';
 import { ASSET_BHHS_LOGO_PATH, ASSET_HEADSHOT_PATH, headshotAbsoluteUrl } from '@/lib/site-assets';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { ogImages } from '@/lib/og';
+import { mediaAlt, mediaSrc } from '@/lib/media';
 
 // Lazy load RealScoutListings to reduce initial bundle size
 // Note: ssr: false removed for Server Component compatibility
@@ -28,21 +33,14 @@ export const metadata: Metadata = {
     type: 'website',
     url: absoluteUrl('/'),
     siteName: 'Homestead West Las Vegas',
-    images: [
-      {
-        url: headshotAbsoluteUrl,
-        width: 750,
-        height: 752,
-        alt: 'Dr. Jan Duffy - VIP New Construction Homes Specialist | Homestead West Las Vegas',
-      }
-    ],
+    images: ogImages('ranch-exterior-dusk'),
   },
   
   twitter: {
     card: 'summary_large_image',
     title: 'Homestead West Las Vegas — Luxury Single-Story Ranch Homes from $910K',
     description: 'Get VIP access to Northwest Las Vegas\'s newest luxury community. Independent buyer\'s agent with Berkshire Hathaway HomeServices Nevada.',
-    images: [headshotAbsoluteUrl],
+    images: ogImages('ranch-exterior-dusk').map((img) => img.url),
   },
 };
 
@@ -156,13 +154,16 @@ export default function HomePage() {
       
       <div className="min-h-screen bg-white">
         {/* Hero Section - Above the Fold */}
-        <section className="relative bg-gradient-to-br from-[#1a365d] via-[#0f2439] to-[#1a365d] text-white overflow-hidden">
-          <div className="absolute inset-0 bg-black/10"></div>
-          {/* Subtle professional background elements */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-[#d4af37] rounded-full mix-blend-multiply filter blur-xl"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-[#2c5282] rounded-full mix-blend-multiply filter blur-xl"></div>
-          </div>
+        <section className="relative min-h-[520px] bg-[#0f2439] text-white overflow-hidden">
+          <Image
+            src={mediaSrc('ranch-exterior-dusk')}
+            alt={mediaAlt('ranch-exterior-dusk')}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0f2439]/80 via-[#1a365d]/70 to-[#0f2439]/55" />
           <div className="relative container mx-auto px-4 py-24 md:py-32">
             <div className="max-w-4xl mx-auto text-center">
               {/* VIP Badge */}
@@ -218,12 +219,14 @@ export default function HomePage() {
                   View Available Homes
                 </a>
                 <a 
-                  href="tel:7022996607"
+                  href={PHONE_TEL_HREF}
                   className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-all"
                 >
-                  📞 (702) 299-6607
+                  Call {PHONE_DISPLAY}
                 </a>
               </div>
+              <GbpActions className="mt-6 justify-center" compact />
+              <p className="mt-4 text-sm text-blue-100">{ADDRESS_LINE}</p>
             </div>
           </div>
         </section>
@@ -234,6 +237,11 @@ export default function HomePage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-8">
                 <h2 className="text-4xl font-bold mb-4 text-gray-900">How Much Do Homes Cost in Homestead West?</h2>
+                <SectionImage
+                  imageId="community-streetscape"
+                  heading="How Much Do Homes Cost in Homestead West?"
+                  caption="New construction ranch homes in Homestead West, Northwest Las Vegas 89149"
+                />
                 <p className="text-xl text-gray-700 mb-4">
                   Homes in Homestead West start at $910,000 for single-story ranch designs ranging from 3,336 to 3,704 square feet. Prices vary based on lot premiums, floor plan selection, and design center upgrades.
                 </p>
@@ -468,6 +476,10 @@ export default function HomePage() {
               <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
                 Do You Need a Buyer's Agent for New Construction?
               </h2>
+              <SectionImage
+                imageId="buyer-consultation"
+                heading="Do You Need a Buyer's Agent for New Construction?"
+              />
               <p className="text-xl text-center mb-8 text-gray-700 font-semibold">
                 While not required, a buyer's agent provides independent representation, negotiation leverage, and early access to lot releases. The builder typically pays the buyer's agent commission, so representation costs the buyer nothing additional.
               </p>
@@ -647,6 +659,11 @@ export default function HomePage() {
               <h2 className="text-4xl font-bold mb-6 text-gray-900">
                 The Community at a Glance
               </h2>
+              <SectionImage
+                imageId="pool-sized-lot"
+                heading="The Community at a Glance"
+                caption="Pool-sized lots and covered outdoor living in Homestead West Las Vegas"
+              />
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Single-story ranch homes from $910K+ on pool-sized lots in 89149—optional casitas, multi-generational plans, and quick access to Red Rock Canyon and Centennial Hills. Schools, amenities, and lifestyle are covered in the full guide.
               </p>
@@ -762,6 +779,9 @@ export default function HomePage() {
               >
                 Schedule Your Tour
               </a>
+            </div>
+            <div className="max-w-xl mx-auto text-left mb-10">
+              <LeadForm source="homepage" heading="Tell Dr. Jan what you are looking for" />
             </div>
             <div className="space-y-2 text-gray-200">
               <p>Or call directly: <a href="tel:7022996607" className="text-yellow-400 hover:text-yellow-300 font-semibold">(702) 299-6607</a></p>
