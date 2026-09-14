@@ -1,8 +1,10 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Community & Neighborhood | Homestead West Las Vegas | Schools, Shopping, Healthcare | Northwest Las Vegas',
@@ -29,6 +31,7 @@ export const metadata: Metadata = {
     description: 'Explore Homestead West Las Vegas community with local schools, shopping, dining, and recreation.',
     type: 'website',
     url: absoluteUrl('/community'),
+    images: ogImages('community-streetscape'),
   },
 };
 
@@ -128,18 +131,12 @@ export default function CommunityPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-block bg-yellow-500 text-black px-4 py-2 rounded-full font-bold text-sm mb-6">
-                ⭐ VIP NEW CONSTRUCTION COMMUNITY ⭐
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">Homestead West Community & Neighborhood</h1>
-              <p className="text-2xl md:text-3xl mb-4 text-blue-100">Homestead West Las Vegas</p>
-            </div>
-          </div>
-        </header>
+        <PageHero
+          imageId="community-streetscape"
+          title="Homestead West Community & Neighborhood"
+          subtitle="Homestead West Las Vegas"
+          badge="⭐ VIP NEW CONSTRUCTION COMMUNITY ⭐"
+        />
 
         {/* Available homes — early for buyer engagement */}
         <section className="py-16 bg-gray-50" id="available-homes">

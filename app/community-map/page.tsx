@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Community Map | Homestead West Las Vegas | Available Lots & Homesites | Northwest Las Vegas',
@@ -25,6 +27,7 @@ export const metadata: Metadata = {
     description: 'Explore Homestead West community map with available lots and homesites in Northwest Las Vegas. New construction homes from $910K.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/community-map',
+    images: ogImages('aerial-northwest-lv'),
   },
 };
 
@@ -71,15 +74,11 @@ export default function CommunityMapPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-blue-900 text-white py-12">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl font-bold mb-4">Homestead West Community Map</h1>
-              <p className="text-xl text-blue-100">Explore Available Lots & Homesites</p>
-            </div>
-          </div>
-        </header>
+        <PageHero
+          imageId="aerial-northwest-lv"
+          title="Homestead West Community Map"
+          subtitle="Explore Available Lots & Homesites"
+        />
 
         {/* MLS listings — early for buyer engagement */}
         <section className="py-16 bg-gray-50" id="available-homes">

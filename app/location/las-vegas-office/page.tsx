@@ -1,8 +1,10 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL, ADDRESS, BROKERAGE_NAME, PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Las Vegas Real Estate Office | Homestead West | Dr. Jan Duffy',
@@ -14,6 +16,7 @@ export const metadata: Metadata = {
     description: 'Visit our Las Vegas real estate office at 5592 Dapple Gray Rd. Dr. Jan Duffy provides expert real estate services.',
     type: 'website',
     url: absoluteUrl('/location/las-vegas-office'),
+    images: ogImages('sales-office'),
   },
 };
 
@@ -71,14 +74,17 @@ export default function LasVegasOfficePage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-blue-900 text-white py-8">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4">Homestead West Las Vegas Real Estate Office</h1>
-            <p className="text-xl mb-2">Homestead West | Homes by Dr Jan Duffy</p>
-            <p className="text-lg text-blue-100">{BROKERAGE_NAME}</p>
-          </div>
-        </header>
+        <PageHero
+          imageId="sales-office"
+          title="Homestead West Las Vegas Real Estate Office"
+          subtitle={
+            <>
+              Homestead West | Homes by Dr Jan Duffy
+              <br />
+              {BROKERAGE_NAME}
+            </>
+          }
+        />
 
         {/* Office Information */}
         <section className="py-16 bg-gray-50">

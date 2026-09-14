@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Plan 3704 - 3,704 Sq Ft Ranch Home | Homestead West Las Vegas | Dr. Jan Duffy',
@@ -17,6 +19,7 @@ export const metadata: Metadata = {
     description: 'Browse current available homes in Las Vegas MLS. Updated daily with the latest properties.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/floor-plans/3704',
+    images: ogImages('detached-casita'),
   },
 };
 
@@ -50,11 +53,6 @@ export default function Plan3704Page() {
         telephone: '+17022996607',
         email: 'DrJanSells@HomesteadWestLasVegas.com'
       }
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: '50'
     }
   };
 
@@ -100,13 +98,11 @@ export default function Plan3704Page() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-blue-900 text-white py-12">
-          <div className="container mx-auto px-4">
-            <h1 className="text-5xl font-bold mb-4">Available Homes</h1>
-            <p className="text-xl text-blue-100">Las Vegas MLS Listings - Updated Daily</p>
-          </div>
-        </header>
+        <PageHero
+          imageId="detached-casita"
+          title="Homestead West Plan 3704 — 3,704 Sq Ft Ranch Home with Casita Option"
+          subtitle="Las Vegas MLS Listings - Updated Daily"
+        />
 
         {/* RealScout Office Listings Carousel */}
         <section className="py-16 bg-gray-50" id="available-homes">

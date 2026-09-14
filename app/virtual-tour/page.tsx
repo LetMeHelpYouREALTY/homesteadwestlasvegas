@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Virtual Tour | Homestead West Las Vegas | 3D Property Walkthrough',
@@ -18,6 +20,7 @@ export const metadata: Metadata = {
     description: 'Take a virtual 3D tour of Homestead West luxury ranch homes in Northwest Las Vegas.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/virtual-tour',
+    images: ogImages('interior-great-room'),
   },
 };
 
@@ -64,13 +67,11 @@ export default function VirtualTourPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-blue-900 text-white py-8">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4">Homestead West Virtual Tour</h1>
-            <p className="text-xl">Experience Homestead West in 3D</p>
-          </div>
-        </header>
+        <PageHero
+          imageId="interior-great-room"
+          title="Homestead West Virtual Tour"
+          subtitle="Experience Homestead West in 3D"
+        />
 
         {/* Virtual Tour Section */}
         <section className="py-16">

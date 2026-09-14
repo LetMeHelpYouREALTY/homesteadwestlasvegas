@@ -1,8 +1,11 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import LeadForm from '@/components/LeadForm';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'VIP Berkshire Hathaway HomeServices Buyer Program | Dr. Jan Duffy | Las Vegas New Construction Expert',
@@ -24,6 +27,7 @@ export const metadata: Metadata = {
     description: 'Get VIP access to new construction homes in Las Vegas with Dr. Jan Duffy. Early phase access, priority lot selection, and expert negotiation.',
     type: 'website',
     url: absoluteUrl('/vip-buyer-program'),
+    images: ogImages('vip-model-home'),
   },
 };
 
@@ -151,41 +155,34 @@ export default function VIPBuyerProgramPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <header className="bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto text-center">
-              <div className="mb-8">
-                <div className="inline-block bg-yellow-500 text-black px-6 py-2 rounded-full font-bold text-lg mb-6">
-                  ⭐ VIP Berkshire Hathaway HomeServices Buyer Program ⭐
-                </div>
-              </div>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                VIP Berkshire Hathaway HomeServices Buyer Program for Homestead West
-              </h1>
-              <p className="text-2xl md:text-3xl mb-8 text-blue-100 font-semibold">
-                Premier New Home Buyer Program for Homestead West Las Vegas
-              </p>
-              <p className="text-xl text-blue-200 mb-12 max-w-4xl mx-auto">
+        <PageHero
+          imageId="vip-model-home"
+          title="VIP Berkshire Hathaway HomeServices Buyer Program for Homestead West"
+          subtitle={
+            <>
+              Premier New Home Buyer Program for Homestead West Las Vegas
+              <span className="block mt-4 text-lg md:text-xl font-normal">
                 The VIP Berkshire Hathaway HomeServices New Home Buyer Program provides exclusive access to Homestead West Las Vegas new construction homes. As a VIP New Construction Homes Specialist, Dr. Jan Duffy represents YOU—the buyer—with insider access, priority lot selection, and expert negotiation. She works exclusively for home buyers, not the builder, giving YOU the ultimate advantage when purchasing your new Homestead West home.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a
-                  href="tel:7022996607"
-                  className="bg-yellow-500 text-black px-10 py-5 rounded-lg font-bold text-xl hover:bg-yellow-400 transition-all shadow-2xl hover:shadow-3xl"
-                >
-                  📞 Call Dr. Jan: (702) 299-6607
-                </a>
-                <a
-                  href="mailto:DrJanSells@HomesteadWestLasVegas.com"
-                  className="bg-transparent border-3 border-white text-white px-10 py-5 rounded-lg font-bold text-xl hover:bg-white hover:text-blue-900 transition-all"
-                >
-                  📧 Get VIP Access
-                </a>
-              </div>
-            </div>
+              </span>
+            </>
+          }
+          badge="⭐ VIP Berkshire Hathaway HomeServices Buyer Program ⭐"
+        >
+          <div className="flex flex-col sm:flex-row gap-6">
+            <a
+              href="tel:7022996607"
+              className="bg-yellow-500 text-black px-10 py-5 rounded-lg font-bold text-xl hover:bg-yellow-400 transition-all shadow-2xl hover:shadow-3xl text-center"
+            >
+              📞 Call Dr. Jan: (702) 299-6607
+            </a>
+            <a
+              href="mailto:DrJanSells@HomesteadWestLasVegas.com"
+              className="bg-transparent border-3 border-white text-white px-10 py-5 rounded-lg font-bold text-xl hover:bg-white hover:text-blue-900 transition-all text-center"
+            >
+              📧 Get VIP Access
+            </a>
           </div>
-        </header>
+        </PageHero>
 
         {/* Available homes — early for buyer engagement */}
         <section className="py-16 bg-gray-50" id="available-homes">
@@ -507,6 +504,10 @@ export default function VIPBuyerProgramPage() {
                 >
                   📧 Get VIP Access Now
                 </a>
+              </div>
+
+              <div className="max-w-xl mx-auto mb-12 text-left">
+                <LeadForm source="vip-buyer-program" />
               </div>
 
               <div className="bg-white/10 rounded-lg p-8 backdrop-blur-sm text-white">

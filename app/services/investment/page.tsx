@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Investment Consulting | Dr. Jan Duffy | Las Vegas Real Estate Investment Expert',
@@ -18,6 +20,7 @@ export const metadata: Metadata = {
     description: 'Expert real estate investment consulting in Las Vegas with VIP New Construction Homes Specialist.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/services/investment',
+    images: ogImages('aerial-northwest-lv'),
   },
 };
 
@@ -72,16 +75,17 @@ export default function InvestmentConsultingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-blue-900 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-4">Homestead West Investment Consulting</h1>
-            <p className="text-xl text-blue-100">Strategic Homestead West Real Estate Investment Guidance</p>
-            <p className="text-lg text-blue-200 mt-2">Dr. Jan Duffy | Nevada License S.0197614.LLC</p>
-          </div>
-        </div>
-      </header>
+      <PageHero
+        imageId="aerial-northwest-lv"
+        title="Homestead West Investment Consulting"
+        subtitle={
+          <>
+            Strategic Homestead West Real Estate Investment Guidance
+            <br />
+            Dr. Jan Duffy | Nevada License S.0197614.LLC
+          </>
+        }
+      />
 
       {/* MLS listings — early for buyer engagement */}
       <section className="py-16 bg-gray-50" id="available-homes">

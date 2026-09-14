@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import RealScoutAdvancedSearch from '@/components/RealScoutAdvancedSearch';
+import PageHero from '@/components/PageHero';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Las Vegas Properties for Sale | Dr. Jan Duffy | Ranch Homes $910K+',
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
     description: 'Browse Las Vegas properties for sale with Dr. Jan Duffy. Ranch-style homes starting at $910K.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/properties',
+    images: ogImages('community-streetscape'),
   },
 };
 
@@ -115,13 +118,11 @@ export default function PropertiesPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-[#1a365d] text-white py-8">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4">Homestead West Las Vegas Properties for Sale</h1>
-            <p className="text-xl">Ranch-style homes on pool-sized lots in Northwest Las Vegas</p>
-          </div>
-        </header>
+        <PageHero
+          imageId="community-streetscape"
+          title="Homestead West Las Vegas Properties for Sale"
+          subtitle="Ranch-style homes on pool-sized lots in Northwest Las Vegas"
+        />
 
         {/* Property Search Filters */}
         <section className="py-8 bg-gray-50">

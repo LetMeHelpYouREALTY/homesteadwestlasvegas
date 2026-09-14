@@ -2,7 +2,8 @@ import { Metadata } from 'next';
 import { ASSET_HEADSHOT_PATH } from '@/lib/site-assets';
 import Image from 'next/image';
 import RealScoutListings from '@/components/RealScoutListings';
-import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import PageHero from '@/components/PageHero';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'About Dr. Jan Duffy | VIP New Construction Specialist | Las Vegas Real Estate Expert',
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
     description: 'Meet Dr. Jan Duffy, VIP new construction specialist and Las Vegas real estate expert with 500+ families helped.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/about',
+    images: ogImages('ranch-exterior-dusk'),
   },
 };
 
@@ -86,39 +88,39 @@ export default function AboutPage() {
       />
       
       <article itemScope itemType="https://schema.org/Article" className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-block bg-yellow-500 text-black px-4 py-2 rounded-full font-bold text-sm mb-6">
-                ⭐ VIP NEW CONSTRUCTION SPECIALIST ⭐
-              </div>
-              <div className="mb-6 flex justify-center">
-                <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl ring-4 ring-white/20" style={{ aspectRatio: '1/1' }}>
-                  <Image
-                    src={ASSET_HEADSHOT_PATH}
-                    alt="Dr. Jan Duffy - VIP New Construction Homes Specialist"
-                    fill
-                    className="object-cover object-center"
-                    style={{ objectPosition: 'center top' }}
-                    priority
-                    sizes="(max-width: 768px) 192px, 256px"
-                  />
-                </div>
-              </div>
-              <h1 itemProp="headline" className="text-5xl md:text-6xl font-bold mb-6">Who is Dr. Jan Duffy?</h1>
-              <p itemProp="description" className="text-2xl md:text-3xl mb-4 text-blue-100">
+        <PageHero
+          imageId="ranch-exterior-dusk"
+          title="Who is Dr. Jan Duffy?"
+          subtitle={
+            <>
+              <span itemProp="description">
                 Dr. Jan Duffy is a VIP New Construction Homes Specialist with Berkshire Hathaway HomeServices Nevada (License S.0197614.LLC) who represents home buyers exclusively in Northwest Las Vegas. She has helped 500+ families and leads the VIP Buyer Program that has assisted 65+ Homestead West families since 2022.
-              </p>
-              <p className="text-xl text-blue-200 mb-4">Las Vegas Real Estate Expert | Nevada License S.0197614.LLC</p>
-              {/* AEO: Author attribution and freshness */}
-              <address rel="author" className="text-blue-100 text-lg mb-2">
-                By <a href="/about" className="text-yellow-400 hover:text-yellow-300">Dr. Jan Duffy</a>, Licensed Nevada Real Estate Agent (S.0197614.LLC)
-              </address>
-              <time dateTime="2026-01-19" className="text-blue-200 text-sm">Last updated: January 19, 2026</time>
+              </span>
+              <br />
+              Las Vegas Real Estate Expert | Nevada License S.0197614.LLC
+            </>
+          }
+          badge="⭐ VIP NEW CONSTRUCTION SPECIALIST ⭐"
+          showActions={true}
+        >
+          <div className="mb-6 flex justify-start">
+            <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl ring-4 ring-white/20" style={{ aspectRatio: '1/1' }}>
+              <Image
+                src={ASSET_HEADSHOT_PATH}
+                alt="Dr. Jan Duffy - VIP New Construction Homes Specialist"
+                fill
+                className="object-cover object-center"
+                style={{ objectPosition: 'center top' }}
+                priority
+                sizes="(max-width: 768px) 192px, 256px"
+              />
             </div>
           </div>
-        </header>
+          <address rel="author" className="text-blue-50 text-lg mb-2 not-italic">
+            By <a href="/about" className="text-yellow-400 hover:text-yellow-300">Dr. Jan Duffy</a>, Licensed Nevada Real Estate Agent (S.0197614.LLC)
+          </address>
+          <time dateTime="2026-01-19" className="text-blue-100 text-sm">Last updated: January 19, 2026</time>
+        </PageHero>
 
         {/* MLS listings — early for buyer engagement */}
         <section className="py-16 bg-gray-50" id="available-homes">

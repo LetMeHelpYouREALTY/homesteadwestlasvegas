@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import LocatorPlusEmbed from '@/components/LocatorPlusEmbed';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
 import {
   STORE_LOCATIONS,
   formatAddress,
@@ -12,6 +13,7 @@ import {
 } from '@/lib/locations';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { ogImages } from '@/lib/og';
 
 /** Google Maps Platform — Locator Plus embed. */
 const LOCATOR_PLUS_EMBED_URL =
@@ -29,6 +31,7 @@ export const metadata: Metadata = {
     description: 'Map and directions to our Las Vegas real estate office. Visit Dr. Jan Duffy at Homestead West.',
     type: 'website',
     url: absoluteUrl('/location'),
+    images: ogImages('sales-office'),
   },
 };
 
@@ -90,14 +93,11 @@ export default function LocationIndexPage() {
       />
 
       <div className="min-h-screen bg-white">
-        <header className="bg-[#1a365d] text-white py-8">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-2">Find Our Office</h1>
-            <p className="text-xl text-gray-200">
-              Visit our Homestead West Las Vegas real estate office. Map, directions, hours & contact.
-            </p>
-          </div>
-        </header>
+        <PageHero
+          imageId="sales-office"
+          title="Find Our Office"
+          subtitle="Visit our Homestead West Las Vegas real estate office. Map, directions, hours & contact."
+        />
 
         {/* Map: all store locations */}
         <section className="py-10 bg-gray-50" aria-label="Map of office locations">

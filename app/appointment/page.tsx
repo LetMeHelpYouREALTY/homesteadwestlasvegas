@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
 import Script from 'next/script';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Schedule Appointment | Dr. Jan Duffy Real Estate | Las Vegas',
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
     description: 'Schedule a consultation with Dr. Jan Duffy for expert real estate services in Las Vegas.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/appointment',
+    images: ogImages('vip-model-home'),
   },
 };
 
@@ -52,13 +55,11 @@ export default function AppointmentPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-blue-900 text-white py-8">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4">Schedule Your Homestead West Appointment</h1>
-            <p className="text-xl">Book a consultation with Dr. Jan Duffy for Homestead West</p>
-          </div>
-        </header>
+        <PageHero
+          imageId="vip-model-home"
+          title="Schedule Your Homestead West Appointment"
+          subtitle="Book a consultation with Dr. Jan Duffy for Homestead West"
+        />
 
         {/* Appointment Form */}
         <section className="py-16">

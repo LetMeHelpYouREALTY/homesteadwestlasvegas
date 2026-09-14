@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import DeferredIframeEmbed from '@/components/DeferredIframeEmbed';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
 import {
   PRESET_ORIGINS,
   DESTINATION_DISPLAY,
@@ -11,6 +12,7 @@ import {
 } from '@/lib/directions';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { ogImages } from '@/lib/og';
 
 /** Google Maps Platform — Commutes Solution embed (Maps JavaScript API). */
 const COMMUTES_MAP_EMBED_URL =
@@ -32,6 +34,7 @@ export const metadata: Metadata = {
     description: `Plan your visit: directions to ${DESTINATION_DISPLAY}. From airport, downtown, Henderson. Drive, transit, or walk.`,
     type: 'website',
     url: absoluteUrl('/directions'),
+    images: ogImages('aerial-northwest-lv'),
   },
 };
 
@@ -92,19 +95,17 @@ export default function DirectionsPage() {
       />
 
       <div className="min-h-screen bg-white">
-        <header className="bg-[#1a365d] text-white py-10">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-3">Directions to Our Office</h1>
-              <p className="text-xl text-gray-200">
-                Plan your visit with directions from Google Maps — no cost
-              </p>
-              <p className="text-gray-300 mt-2 text-sm">
-                Destination: {DESTINATION_DISPLAY}
-              </p>
-            </div>
-          </div>
-        </header>
+        <PageHero
+          imageId="aerial-northwest-lv"
+          title="Directions to Our Office"
+          subtitle={
+            <>
+              Plan your visit with directions from Google Maps — no cost
+              <br />
+              Destination: {DESTINATION_DISPLAY}
+            </>
+          }
+        />
 
         <section className="py-12 bg-gray-50" id="available-homes">
           <div className="container mx-auto px-4">

@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Homebuying Process | Homestead West Las Vegas | Expert Guidance by Dr. Jan Duffy',
@@ -19,6 +21,7 @@ export const metadata: Metadata = {
     description: 'Complete guide to buying a new home at Homestead West Las Vegas with expert guidance from Dr. Jan Duffy.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/homebuying-process',
+    images: ogImages('private-tour'),
   },
 };
 
@@ -107,16 +110,17 @@ export default function HomebuyingProcessPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-blue-900 text-white py-12">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl font-bold mb-4">Homestead West Homebuying Process</h1>
-              <p className="text-xl text-blue-100">Expert Guidance Through Every Step</p>
-              <p className="text-lg text-blue-200 mt-2">Homestead West Las Vegas | Dr. Jan Duffy</p>
-            </div>
-          </div>
-        </header>
+        <PageHero
+          imageId="private-tour"
+          title="Homestead West Homebuying Process"
+          subtitle={
+            <>
+              Expert Guidance Through Every Step
+              <br />
+              Homestead West Las Vegas | Dr. Jan Duffy
+            </>
+          }
+        />
 
         {/* MLS listings — early for buyer engagement */}
         <section className="py-16 bg-gray-50" id="available-homes">

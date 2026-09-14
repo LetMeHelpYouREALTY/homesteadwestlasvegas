@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 const GOOGLE_REVIEW_URL = 'https://g.page/r/CVC1EMaenLJ3EBI/review';
 const QR_CODE_URL = `https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=${encodeURIComponent(GOOGLE_REVIEW_URL)}`;
@@ -21,6 +23,7 @@ export const metadata: Metadata = {
     description: 'Leave a Google review for Dr. Jan Duffy. Reviews build trust and help us stand out on Search and Maps.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/reviews',
+    images: ogImages('sales-office'),
   },
 };
 
@@ -58,16 +61,11 @@ export default function ReviewsPage() {
       />
 
       <div className="min-h-screen bg-white">
-        <header className="bg-[#1a365d] text-white py-10">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-3">Review Us on Google</h1>
-              <p className="text-xl text-gray-200">
-                Reviews build trust and help our Business Profile stand out to customers on Search and Maps
-              </p>
-            </div>
-          </div>
-        </header>
+        <PageHero
+          imageId="sales-office"
+          title="Review Us on Google"
+          subtitle="Reviews build trust and help our Business Profile stand out to customers on Search and Maps"
+        />
 
         <section className="py-10">
           <div className="container mx-auto px-4">
