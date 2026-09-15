@@ -113,7 +113,7 @@ export default function BlogPage() {
               Expert Insights from VIP New Construction Specialist
             </>
           }
-          badge="⭐ VIP NEW CONSTRUCTION INSIGHTS ⭐"
+          badge="Market Insights"
         />
 
         {/* Blog Posts */}

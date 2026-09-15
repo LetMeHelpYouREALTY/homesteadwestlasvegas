@@ -87,11 +87,11 @@ export default function PropertyManagementPage() {
         </section>
 
         {/* VIP New Construction Homes Specialist */}
-        <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-yellow-400">
+        <section className="py-16 bg-slate-50 border-2 border-yellow-400">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-block bg-yellow-500 text-black px-4 py-2 rounded-full font-bold text-sm mb-6">
-                ⭐ VIP NEW CONSTRUCTION PROGRAM ⭐
+                VIP Buyer Program
               </div>
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Elite Homestead West Property Management</h2>
               <SectionImage

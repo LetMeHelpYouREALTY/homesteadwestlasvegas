@@ -76,7 +76,7 @@ export default function LasVegasOfficePage() {
       
       <div className="min-h-screen bg-white">
         <PageHero
-          imageId="sales-office"
+          imageId="office-exterior-89149"
           title="Homestead West Las Vegas Real Estate Office"
           subtitle={
             <>

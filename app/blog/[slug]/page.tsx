@@ -3,7 +3,11 @@ import Link from 'next/link';
 import { fetchKCMPosts, fetchKCMPostBySlug } from '@/lib/rss-fetcher';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import CtaBand from '@/components/CtaBand';
 import type { Metadata } from 'next';
+import { SITE_URL } from '@/lib/site-contact';
+import { mediaAbsoluteUrl } from '@/lib/media';
 
 // ISR: Revalidate every hour
 export const revalidate = 3600;
@@ -35,10 +39,12 @@ export async function generateMetadata({
       description: post.excerpt,
       type: 'article',
       publishedTime: post.publishedAt.toISOString(),
-      images: post.featuredImage ? [{ url: post.featuredImage }] : [],
+      images: post.featuredImage
+        ? [{ url: post.featuredImage }]
+        : [{ url: mediaAbsoluteUrl('covered-patio'), width: 1920, height: 1080 }],
     },
     alternates: {
-      canonical: post.link, // Canonical to original KCM article
+      canonical: `${SITE_URL}/blog/${slug}`,
     },
   };
 }
@@ -89,7 +95,7 @@ export default async function BlogPostPage({
       '@type': 'WebPage',
       '@id': post.link,
     },
-    image: post.featuredImage,
+    image: post.featuredImage || mediaAbsoluteUrl('covered-patio'),
   };
 
   return (
@@ -105,6 +111,14 @@ export default async function BlogPostPage({
       />
       
       <div className="min-h-screen bg-white">
+        {!post.featuredImage ? (
+          <PageHero
+            imageId="covered-patio"
+            title={post.title}
+            subtitle={`${formattedDate} · Homestead West Las Vegas market notes`}
+            compact
+          />
+        ) : null}
         <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Breadcrumb */}
           <nav className="mb-8">
@@ -133,9 +147,11 @@ export default async function BlogPostPage({
                 </div>
               )}
               
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                {post.title}
-              </h1>
+              {post.featuredImage ? (
+                <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  {post.title}
+                </h1>
+              ) : null}
               
               <div className="flex items-center gap-4 text-gray-700">
                 <time dateTime={post.publishedAt.toISOString()}>
@@ -175,29 +191,11 @@ export default async function BlogPostPage({
               <RealScoutListings />
             </section>
             
-            {/* CTA Section */}
-            <div className="mt-12 p-8 bg-gradient-to-r from-[#1a365d] to-[#0f2439] rounded-xl text-white">
-              <h2 className="text-2xl font-bold mb-4">
-                Ready to Buy or Sell in Northwest Las Vegas?
-              </h2>
-              <p className="mb-6 text-blue-100">
-                Contact Dr. Jan Duffy for expert guidance on Homestead West and Northwest Las Vegas real estate.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a 
-                  href="tel:7022996607" 
-                  className="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors text-center"
-                >
-                  📞 Call (702) 299-6607
-                </a>
-                <a 
-                  href="mailto:DrJanSells@HomesteadWestLasVegas.com"
-                  className="inline-block border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-colors text-center"
-                >
-                  📧 Email Dr. Jan
-                </a>
-              </div>
-            </div>
+            <CtaBand
+              heading="Ready to buy in Northwest Las Vegas 89149?"
+              body="Call (702) 299-6607, get directions to 5592 Dapple Gray Rd, or send Dr. Jan the Homestead West plan you want to tour."
+              source={`blog-${slug}`}
+            />
             
             {/* Source Attribution */}
             <footer className="mt-8 pt-8 border-t border-gray-200">

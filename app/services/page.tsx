@@ -110,7 +110,7 @@ export default function ServicesPage() {
               VIP New Construction Homes Specialist | Nevada License S.0197614.LLC
             </>
           }
-          badge="⭐ VIP NEW CONSTRUCTION HOMES SPECIALIST ⭐"
+          badge="New Construction Specialist"
           showActions={true}
         >
           <div className="flex justify-center md:justify-start mt-4">
@@ -229,7 +229,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Why Choose Dr. Jan Duffy */}
-        <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50">
+        <section className="py-16 bg-slate-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Why Choose Dr. Jan Duffy?</h2>
@@ -320,7 +320,7 @@ export default function ServicesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+        <section className="py-20 bg-[#1a365d] text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>

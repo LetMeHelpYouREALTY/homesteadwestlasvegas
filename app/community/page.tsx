@@ -3,6 +3,7 @@ import Link from 'next/link';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
+import CtaBand from '@/components/CtaBand';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
@@ -133,10 +134,10 @@ export default function CommunityPage() {
       
       <div className="min-h-screen bg-white">
         <PageHero
-          imageId="community-streetscape"
+          imageId="sunset-mountain-views"
           title="Homestead West Community & Neighborhood"
           subtitle="Homestead West Las Vegas"
-          badge="⭐ VIP NEW CONSTRUCTION COMMUNITY ⭐"
+          badge="Northwest Las Vegas 89149"
         />
 
         {/* Available homes — early for buyer engagement */}
@@ -155,7 +156,7 @@ export default function CommunityPage() {
         </section>
 
         {/* VIP New Construction Homes Specialist */}
-        <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-yellow-400">
+        <section className="py-16 bg-slate-50 border-2 border-yellow-400">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
@@ -230,10 +231,10 @@ export default function CommunityPage() {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <p className="text-gray-700"><span className="font-semibold">GreatSchools:</span> 6/10</p>
-                    <p className="text-gray-700"><span className="font-semibold">Niche:</span> B-</p>
-                    <p className="text-gray-700"><span className="font-semibold">Distance:</span> ~1 mile</p>
-                    <p className="text-gray-700 text-sm"><span className="font-semibold">Address:</span> 8680 W Hammer Ln</p>
+                    <p className="text-gray-700"><span className="font-semibold">Grades:</span> K-5</p>
+                    <p className="text-gray-700"><span className="font-semibold">Distance:</span> about 1 mile</p>
+                    <p className="text-gray-700 text-sm"><span className="font-semibold">Address:</span> 8680 W Hammer Ln, Las Vegas NV 89149</p>
+                    <p className="text-gray-700 text-sm">Confirm current zoning with Clark County School District before you buy.</p>
                   </div>
                 </div>
 
@@ -265,11 +266,9 @@ export default function CommunityPage() {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <p className="text-gray-700"><span className="font-semibold">GreatSchools:</span> 4/10</p>
-                    <p className="text-gray-700"><span className="font-semibold">Niche:</span> B</p>
-                    <p className="text-gray-700"><span className="font-semibold">Graduation Rate:</span> 91%</p>
-                    <p className="text-gray-700 text-sm"><span className="font-semibold">Programs:</span> Culinary Arts, Performing Arts, JROTC</p>
-                    <p className="text-gray-700 text-sm"><span className="font-semibold">Ranking:</span> #1 in Nevada for Best High Schools for Athletes (Niche)</p>
+                    <p className="text-gray-700"><span className="font-semibold">Grades:</span> 9-12</p>
+                    <p className="text-gray-700"><span className="font-semibold">Programs:</span> Culinary Arts, Performing Arts, JROTC</p>
+                    <p className="text-gray-700 text-sm">Confirm current zoning and program seats with CCSD.</p>
                   </div>
                 </div>
 
@@ -284,8 +283,8 @@ export default function CommunityPage() {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <p className="text-gray-700"><span className="font-semibold">Ranking:</span> Top 12 in Nevada (SchoolDigger)</p>
-                    <p className="text-gray-700 text-sm"><span className="font-semibold">Features:</span> Smaller class sizes, career-focused curriculum</p>
+                    <p className="text-gray-700"><span className="font-semibold">Type:</span> Magnet option (application required)</p>
+                    <p className="text-gray-700 text-sm"><span className="font-semibold">Focus:</span> Career and technical programs, smaller class sizes</p>
                     <p className="text-gray-700 text-sm"><span className="font-semibold">Requirement:</span> Application required</p>
                     <p className="text-blue-700 text-sm font-semibold mt-2">Magnet School Option</p>
                   </div>
@@ -579,38 +578,11 @@ export default function CommunityPage() {
           </div>
         </section>
 
-        {/* Contact CTA */}
-        <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold mb-6">Ready to Call Homestead West Home?</h2>
-              <p className="text-xl mb-8 text-blue-100">
-                Let Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers, guide you to the perfect community
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a
-                  href="tel:7022996607"
-                  className="bg-yellow-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-colors"
-                >
-                  📞 Call Dr. Jan: (702) 299-6607
-                </a>
-                <a
-                  href="mailto:DrJanSells@HomesteadWestLasVegas.com"
-                  className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-colors"
-                >
-                  📧 Email Dr. Jan
-                </a>
-              </div>
-              
-              <div className="mt-8 text-blue-200">
-                <p className="text-lg font-semibold">Dr. Jan Duffy - VIP New Construction Specialist</p>
-                <p>Las Vegas Real Estate Expert | Nevada License S.0197614.LLC</p>
-                <p>DrJanSells@HomesteadWestLasVegas.com</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CtaBand
+          heading="Walk Homestead West in 89149"
+          body="Single-story ranch homes on pool-sized lots at Ann Road and Fort Apache. Call (702) 299-6607 for a private tour."
+          source="community"
+        />
       </div>
     </>
   );

@@ -4,11 +4,12 @@ import Image from 'next/image';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
+import CtaBand from '@/components/CtaBand';
 import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'About Dr. Jan Duffy | VIP New Construction Specialist | Las Vegas Real Estate Expert',
-  description: 'Meet Dr. Jan Duffy, VIP New Construction Homes Specialist and Las Vegas real estate expert. 500+ families helped, Nevada License S.0197614.LLC. Represents home buyers exclusively.',
+  description: 'Meet Dr. Jan Duffy, VIP New Construction Homes Specialist with Berkshire Hathaway HomeServices Nevada. Nevada License S.0197614.LLC. Buyer representation for Homestead West at 5592 Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.',
   keywords: [
     'Dr. Jan Duffy Las Vegas',
     'Las Vegas real estate agent',
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'About Dr. Jan Duffy | VIP New Construction Specialist',
-    description: 'Meet Dr. Jan Duffy, VIP new construction specialist and Las Vegas real estate expert with 500+ families helped.',
+    description: 'Meet Dr. Jan Duffy, VIP New Construction Homes Specialist. Buyer representation for Homestead West at 5592 Dapple Gray Rd, Las Vegas NV 89149.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/about',
     images: ogImages('ranch-exterior-dusk'),
@@ -95,13 +96,13 @@ export default function AboutPage() {
           subtitle={
             <>
               <span itemProp="description">
-                Dr. Jan Duffy is a VIP New Construction Homes Specialist with Berkshire Hathaway HomeServices Nevada (License S.0197614.LLC) who represents home buyers exclusively in Northwest Las Vegas. She has helped 500+ families and leads the VIP Buyer Program that has assisted 65+ Homestead West families since 2022.
+                Dr. Jan Duffy is a VIP New Construction Homes Specialist with Berkshire Hathaway HomeServices Nevada (License S.0197614.LLC) who represents home buyers exclusively in Northwest Las Vegas, including Homestead West at 5592 Dapple Gray Rd.
               </span>
               <br />
               Las Vegas Real Estate Expert | Nevada License S.0197614.LLC
             </>
           }
-          badge="⭐ VIP NEW CONSTRUCTION SPECIALIST ⭐"
+          badge="New Construction Specialist"
           showActions={true}
         >
           <div className="mb-6 flex justify-start">
@@ -139,7 +140,7 @@ export default function AboutPage() {
         </section>
 
         {/* VIP New Construction Homes Specialist Highlight */}
-        <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-yellow-400">
+        <section className="py-16 bg-slate-50 border-2 border-yellow-400">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
@@ -238,7 +239,7 @@ export default function AboutPage() {
                       />
                     </div>
                   </div>
-                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-8">
+                  <div className="bg-slate-50 rounded-xl p-8">
                     <h3 className="text-2xl font-bold mb-6 text-gray-900">Dr. Jan Duffy's Credentials & Achievements</h3>
                     <div className="space-y-4">
                       <div className="flex items-start">
@@ -292,20 +293,20 @@ export default function AboutPage() {
               
               <div className="grid md:grid-cols-4 gap-8 mb-12">
                 <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">VIP</div>
-                  <p className="text-gray-700 font-semibold">Complete Buyer Representation Services</p>
+                  <div className="text-4xl font-bold text-[#1a365d] mb-2">You</div>
+                  <p className="text-gray-700 font-semibold">Buyer representation, not builder sales</p>
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-                  <div className="text-4xl font-bold text-green-600 mb-2">$2M+</div>
-                  <p className="text-gray-700 font-semibold">Average Homestead West Home Value</p>
+                  <div className="text-4xl font-bold text-[#1a365d] mb-2">$910K+</div>
+                  <p className="text-gray-700 font-semibold">Homestead West ranch homes from $910,990</p>
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-                  <div className="text-4xl font-bold text-purple-600 mb-2">98%</div>
-                  <p className="text-gray-700 font-semibold">Homestead West Client Satisfaction</p>
+                  <div className="text-4xl font-bold text-[#1a365d] mb-2">89149</div>
+                  <p className="text-gray-700 font-semibold">Office at 5592 Dapple Gray Rd</p>
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-                  <div className="text-4xl font-bold text-yellow-600 mb-2">VIP</div>
-                  <p className="text-gray-700 font-semibold">VIP New Construction Homes Specialist</p>
+                  <div className="text-4xl font-bold text-[#1a365d] mb-2">S.0197614.LLC</div>
+                  <p className="text-gray-700 font-semibold">Nevada real estate license</p>
                 </div>
               </div>
 
@@ -367,8 +368,8 @@ export default function AboutPage() {
                     "Working with Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers, made all the difference. 
                     We got early access to the best lots and saved thousands through her expert negotiation—all while having an advocate who worked for us, not the builder."
                   </p>
-                  <p className="font-semibold text-gray-900">- Sarah & Mike Johnson</p>
-                  <p className="text-sm text-gray-700">Homestead West Homeowners</p>
+                  <p className="font-semibold text-gray-900">- Homestead West buyers</p>
+                  <p className="text-sm text-gray-700">Northwest Las Vegas 89149</p>
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-xl">
@@ -381,8 +382,8 @@ export default function AboutPage() {
                     "Dr. Jan's knowledge of the builder's process and her direct builder contacts 
                     saved us months of delays. Her VIP status gave us priority treatment throughout."
                   </p>
-                  <p className="font-semibold text-gray-900">- David & Lisa Chen</p>
-                  <p className="text-sm text-gray-700">Cadence Henderson Homeowners</p>
+                  <p className="font-semibold text-gray-900">- Henderson new-construction buyers</p>
+                  <p className="text-sm text-gray-700">Cadence area</p>
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-xl">
@@ -395,8 +396,8 @@ export default function AboutPage() {
                     "Working with Dr. Jan Duffy, a VIP New Construction Homes Specialist, was like having an insider at the builder. 
                     Her expertise meant we got upgrades and incentives others couldn't access—all while having an advocate who worked for us, not the builder."
                   </p>
-                  <p className="font-semibold text-gray-900">- Robert & Maria Garcia</p>
-                  <p className="text-sm text-gray-700">North Las Vegas Homeowners</p>
+                  <p className="font-semibold text-gray-900">- North Las Vegas buyers</p>
+                  <p className="text-sm text-gray-700">New construction</p>
                 </div>
               </div>
             </div>
@@ -435,42 +436,11 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Contact CTA */}
-        <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold mb-6">Ready to Work with a Homestead West VIP Specialist?</h2>
-              <p className="text-xl mb-8 text-blue-100">
-                Experience the difference of working with Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers exclusively
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a
-                  href="tel:7022996607"
-                  className="bg-yellow-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-colors"
-                >
-                  📞 Call Dr. Jan: (702) 299-6607
-                </a>
-                <a
-                  href="mailto:DrJanSells@HomesteadWestLasVegas.com"
-                  className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-colors"
-                >
-                  📧 Email Dr. Jan
-                </a>
-              </div>
-              
-              <div className="mt-8 text-blue-200">
-                <p className="text-lg font-semibold">Dr. Jan Duffy - VIP New Construction Specialist</p>
-                <p>Las Vegas Real Estate Expert | Nevada License S.0197614.LLC</p>
-                <p>DrJanSells@HomesteadWestLasVegas.com</p>
-                <p className="mt-4 text-sm">
-                  Independent real estate agent providing VIP access to new construction homes. 
-                  Not affiliated with or endorsed by the builder.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CtaBand
+          heading="Tour Homestead West with Dr. Jan Duffy"
+          body="Call (702) 299-6607 before you register at the builder sales office. Office: 5592 Dapple Gray Rd, Las Vegas NV 89149."
+          source="about"
+        />
 
         {/* Related Pages Section */}
         <section className="py-16 bg-white">

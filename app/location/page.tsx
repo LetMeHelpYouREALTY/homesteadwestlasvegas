@@ -95,7 +95,7 @@ export default function LocationIndexPage() {
 
       <div className="min-h-screen bg-white">
         <PageHero
-          imageId="sales-office"
+          imageId="office-exterior-89149"
           title="Find Our Office"
           subtitle="Visit our Homestead West Las Vegas real estate office. Map, directions, hours & contact."
         />
@@ -105,7 +105,7 @@ export default function LocationIndexPage() {
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold mb-4 text-gray-900">Office Locations Map</h2>
             <SectionImage
-              imageId="sales-office"
+              imageId="office-exterior-89149"
               heading="Office Locations Map"
               caption="Homestead West office at 5592 Dapple Gray Rd, Las Vegas NV 89149"
             />

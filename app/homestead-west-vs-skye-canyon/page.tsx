@@ -227,7 +227,7 @@ export default function ComparisonPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+        <section className="py-16 bg-[#1a365d] text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6">Need Help Deciding?</h2>
             <p className="text-xl mb-8 text-blue-100">

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
+import CtaBand from '@/components/CtaBand';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { canonicalMetadata } from '@/lib/metadata';
 import { SITE_URL } from '@/lib/site-contact';
@@ -95,7 +96,7 @@ export default function FAQPage() {
         },
         {
           question: 'What schools serve the Homestead West community?',
-          answer: 'Homestead West (Ann Rd & Fort Apache area, 89149) is zoned for: Dean LaMar Allen Elementary (K-5, GreatSchools 6/10, Niche B-, ~1 mile, 8680 W Hammer Ln), Justice Myron E. Leavitt Middle School (6-8, 1.5 miles, ~1,400 students in Centennial Hills), and Centennial High School (9-12, GreatSchools 4/10, Niche B, 91% graduation rate, strong programs in Culinary Arts, Performing Arts, and JROTC, ranked #1 in Nevada for Best High Schools for Athletes). Magnet option: Northwest Career & Technical Academy (top 12 in Nevada, smaller classes, career-focused, application required).'
+          answer: 'Homestead West (Ann Rd & Fort Apache area, 89149) is zoned for Dean LaMar Allen Elementary (K-5, about 1 mile, 8680 W Hammer Ln), Justice Myron E. Leavitt Middle School (grades 6-8, about 1.5 miles in Centennial Hills), and Centennial High School (grades 9-12, programs include Culinary Arts, Performing Arts, and JROTC). Magnet option: Northwest Career & Technical Academy (application required). Confirm current zoning with Clark County School District—boundaries can change.'
         }
       ]
     },
@@ -152,7 +153,7 @@ export default function FAQPage() {
       
       <div className="min-h-screen bg-white">
         <PageHero
-          imageId="buyer-consultation"
+          imageId="faq-buyer-desk"
           title="Homestead West Frequently Asked Questions"
           subtitle={
             <>
@@ -161,7 +162,7 @@ export default function FAQPage() {
               Expert Answers from VIP New Construction Specialist
             </>
           }
-          badge="⭐ VIP NEW CONSTRUCTION FAQ ⭐"
+          badge="Homestead West FAQ"
         />
 
         {/* MLS listings — early for buyer engagement */}
@@ -180,7 +181,7 @@ export default function FAQPage() {
         </section>
 
         {/* VIP New Construction Homes Specialist Highlight */}
-        <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-yellow-400">
+        <section className="py-16 bg-slate-50 border-2 border-yellow-400">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
@@ -295,38 +296,11 @@ export default function FAQPage() {
           </div>
         </section>
 
-        {/* Contact CTA */}
-        <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold mb-6">Ready to Start Your Homestead West VIP Journey?</h2>
-              <p className="text-xl mb-8 text-blue-100">
-                Let Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers, guide you to your dream home
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a
-                  href="tel:7022996607"
-                  className="bg-yellow-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-colors"
-                >
-                  📞 Call Dr. Jan: (702) 299-6607
-                </a>
-                <a
-                  href="mailto:DrJanSells@HomesteadWestLasVegas.com"
-                  className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-colors"
-                >
-                  📧 Email Dr. Jan
-                </a>
-              </div>
-              
-              <div className="mt-8 text-blue-200">
-                <p className="text-lg font-semibold">Dr. Jan Duffy - VIP New Construction Specialist</p>
-                <p>Las Vegas Real Estate Expert | Nevada License S.0197614.LLC</p>
-                <p>DrJanSells@HomesteadWestLasVegas.com</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CtaBand
+          heading="Have a Homestead West question?"
+          body="Call (702) 299-6607 or send the form. Confirm lot, plan, and zoning before you write an offer."
+          source="faq"
+        />
 
         {/* Related Pages Section */}
         <section className="py-16 bg-white">

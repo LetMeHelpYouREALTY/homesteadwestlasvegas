@@ -193,8 +193,7 @@ export default function PropertiesPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Homestead West Prime Location</h3>
                 <p className="text-gray-700">
-                  Homestead West is located in Northwest Las Vegas with easy access to shopping, dining, 
-                  entertainment, and excellent schools.
+                  Homestead West is located in Northwest Las Vegas with access to shopping, dining, Red Rock Canyon, and named CCSD campuses in 89149.
                 </p>
               </div>
             </div>
@@ -207,23 +206,23 @@ export default function PropertiesPage() {
             <h2 className="text-3xl font-bold text-center mb-12">Homestead West and Las Vegas Market Insights</h2>
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-2xl font-semibold mb-6">Current Market Trends for Homestead West</h3>
+                <h3 className="text-2xl font-semibold mb-6">Homestead West listing facts</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span className="font-medium">Average Home Price</span>
-                    <span className="text-blue-600 font-semibold">$425,000</span>
+                    <span className="font-medium">Listed ranch starting price</span>
+                    <span className="text-[#1a365d] font-semibold">$910,990</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span className="font-medium">Days on Market</span>
-                    <span className="text-green-600 font-semibold">28 days</span>
+                    <span className="font-medium">Floor plans</span>
+                    <span className="text-[#1a365d] font-semibold">3,336 and 3,704 sq ft</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span className="font-medium">Inventory Level</span>
-                    <span className="text-orange-600 font-semibold">2.1 months</span>
+                    <span className="font-medium">ZIP / map pin</span>
+                    <span className="text-[#1a365d] font-semibold">89149 · 5592 Dapple Gray Rd</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span className="font-medium">Price Appreciation</span>
-                    <span className="text-green-600 font-semibold">+8.5% YoY</span>
+                    <span className="font-medium">Live MLS inventory</span>
+                    <span className="text-[#1a365d] font-semibold">See listings on this page</span>
                   </div>
                 </div>
               </div>
@@ -237,7 +236,7 @@ export default function PropertiesPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-[#1a365d] rounded-full mr-3 mt-2"></span>
-                    <span>Excellent school districts and family-friendly environment</span>
+                    <span>Dean LaMar Allen Elementary, Justice Myron E. Leavitt Middle, and Centennial High are the named schools serving 89149—confirm current zoning with CCSD</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-[#1a365d] rounded-full mr-3 mt-2"></span>

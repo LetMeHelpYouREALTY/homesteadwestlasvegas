@@ -156,7 +156,7 @@ export default function BuyersGuidePage() {
               Expert Guidance with VIP New Construction Homes Specialist
             </>
           }
-          badge="⭐ VIP NEW CONSTRUCTION BUYER'S GUIDE ⭐"
+          badge="Buyer Guide"
         />
 
         {/* MLS listings — early for buyer engagement */}
@@ -473,7 +473,7 @@ export default function BuyersGuidePage() {
         </section>
 
         {/* Contact CTA */}
-        <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+        <section className="py-16 bg-[#1a365d] text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl font-bold mb-6">Ready to Start Your Homestead West New Construction Journey?</h2>

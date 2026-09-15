@@ -82,7 +82,7 @@ export default function LeadForm({
 
   return (
     <form onSubmit={onSubmit} className="space-y-4 bg-white p-6 rounded-xl shadow-md border border-gray-100">
-      <h2 className="text-2xl font-bold text-gray-900">{heading}</h2>
+      <h3 className="text-2xl font-bold text-gray-900">{heading}</h3>
       <p className="text-sm text-gray-600">
         Homestead West | Homes by Dr Jan Duffy · 5592 Dapple Gray Rd, Las Vegas, NV 89149 · (702) 299-6607
       </p>
