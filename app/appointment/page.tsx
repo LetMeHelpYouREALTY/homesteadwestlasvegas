@@ -1,7 +1,11 @@
 import { Metadata } from 'next';
 import Script from 'next/script';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
+import LeadForm from '@/components/LeadForm';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Schedule Appointment | Dr. Jan Duffy Real Estate | Las Vegas',
@@ -12,6 +16,7 @@ export const metadata: Metadata = {
     description: 'Schedule a consultation with Dr. Jan Duffy for expert real estate services in Las Vegas.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/appointment',
+    images: ogImages('vip-model-home'),
   },
 };
 
@@ -52,13 +57,11 @@ export default function AppointmentPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-blue-900 text-white py-8">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4">Schedule Your Homestead West Appointment</h1>
-            <p className="text-xl">Book a consultation with Dr. Jan Duffy for Homestead West</p>
-          </div>
-        </header>
+        <PageHero
+          imageId="vip-model-home"
+          title="Schedule Your Homestead West Appointment"
+          subtitle="Book a consultation with Dr. Jan Duffy for Homestead West"
+        />
 
         {/* Appointment Form */}
         <section className="py-16">
@@ -70,6 +73,7 @@ export default function AppointmentPage() {
                   Schedule a personalized Homestead West consultation with Dr. Jan Duffy to discuss your Homestead West real estate needs. 
                   We offer flexible scheduling to accommodate your busy lifestyle for Homestead West buyers.
                 </p>
+                <LeadForm source="appointment-page" heading="Or send a quick inquiry" submitLabel="Request a callback" />
                 
                 <div className="space-y-6">
                   <div className="flex items-start">
@@ -169,6 +173,11 @@ export default function AppointmentPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">Why Schedule Your Homestead West Consultation with Dr. Jan Duffy?</h2>
+              <SectionImage
+                imageId="buyer-consultation"
+                heading="Why Schedule Your Homestead West Consultation with Dr. Jan Duffy?"
+                caption="Buyer consultation for Homestead West at 5592 Dapple Gray Rd, Las Vegas 89149"
+              />
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 <div className="bg-blue-50 p-6 rounded-xl">
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">Homestead West VIP Access</h3>

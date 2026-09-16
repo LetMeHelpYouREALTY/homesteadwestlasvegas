@@ -1,8 +1,11 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL, ADDRESS, BROKERAGE_NAME, PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Las Vegas Real Estate Office | Homestead West | Dr. Jan Duffy',
@@ -14,6 +17,7 @@ export const metadata: Metadata = {
     description: 'Visit our Las Vegas real estate office at 5592 Dapple Gray Rd. Dr. Jan Duffy provides expert real estate services.',
     type: 'website',
     url: absoluteUrl('/location/las-vegas-office'),
+    images: ogImages('sales-office'),
   },
 };
 
@@ -71,14 +75,17 @@ export default function LasVegasOfficePage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-blue-900 text-white py-8">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4">Homestead West Las Vegas Real Estate Office</h1>
-            <p className="text-xl mb-2">Homestead West | Homes by Dr Jan Duffy</p>
-            <p className="text-lg text-blue-100">{BROKERAGE_NAME}</p>
-          </div>
-        </header>
+        <PageHero
+          imageId="office-exterior-89149"
+          title="Homestead West Las Vegas Real Estate Office"
+          subtitle={
+            <>
+              Homestead West | Homes by Dr Jan Duffy
+              <br />
+              {BROKERAGE_NAME}
+            </>
+          }
+        />
 
         {/* Office Information */}
         <section className="py-16 bg-gray-50">
@@ -86,6 +93,11 @@ export default function LasVegasOfficePage() {
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <h2 className="text-3xl font-bold mb-6">Visit Our Homestead West Office</h2>
+                <SectionImage
+                  imageId="sales-office"
+                  heading="Visit Our Homestead West Office"
+                  caption="Homestead West office at 5592 Dapple Gray Rd, Las Vegas NV 89149"
+                />
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mr-3 mt-1">

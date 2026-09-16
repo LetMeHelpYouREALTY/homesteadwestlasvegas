@@ -27,6 +27,33 @@ export const ADDRESS = {
   addressCountry: 'US',
 } as const
 
+/** Canonical Maps pin for the GBP / sales office (NW Las Vegas 89149 — not downtown). */
+export const GEO = {
+  latitude: 36.2738,
+  longitude: -115.3089,
+} as const
+
+export const ADDRESS_LINE = `${ADDRESS.streetAddress}, ${ADDRESS.addressLocality}, ${ADDRESS.addressRegion} ${ADDRESS.postalCode}` as const
+
+export const GOOGLE_MAPS_PLACE_URL =
+  'https://maps.google.com/?q=5592+Dapple+Gray+Rd,+Las+Vegas,+NV+89149' as const
+export const GOOGLE_DIRECTIONS_URL =
+  'https://www.google.com/maps/dir/?api=1&destination=5592%20Dapple%20Gray%20Rd%2C%20Las%20Vegas%2C%20NV%2089149' as const
+export const GOOGLE_MAPS_EMBED_URL =
+  'https://www.google.com/maps?q=5592+Dapple+Gray+Rd,+Las+Vegas,+NV+89149&output=embed' as const
+/** Google Business Profile review write URL (Search + Maps). */
+export const GOOGLE_REVIEW_URL = 'https://g.page/r/CVC1EMaenLJ3EBI/review' as const
+export const GOOGLE_GBP_URL = 'https://g.page/r/CVC1EMaenLJ3EBI' as const
+export const GOOGLE_CONTACT_CARD_URL = 'https://share.google/nB0T4SaU9gr8wLSdB' as const
+
+export const OFFICE_HOURS = [
+  { days: 'Sunday', hours: '10:00 AM – 3:00 PM', schemaDay: 'Sunday', opens: '10:00', closes: '15:00' },
+  { days: 'Monday – Friday', hours: '10:00 AM – 6:00 PM', schemaDay: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'] as const, opens: '10:00', closes: '18:00' },
+  { days: 'Saturday', hours: '10:00 AM – 4:00 PM', schemaDay: 'Saturday', opens: '10:00', closes: '16:00' },
+] as const
+
+export const OPENING_HOURS_TEXT = 'Sun 10AM–3PM · Mon–Fri 10AM–6PM · Sat 10AM–4PM' as const
+
 /** Stable @id for RealEstateAgent in JSON-LD (GEO entity consistency). */
 export const AGENT_SCHEMA_ID = `${SITE_URL}/#agent` as const
 /** Stable @id for LocalBusiness in JSON-LD. */

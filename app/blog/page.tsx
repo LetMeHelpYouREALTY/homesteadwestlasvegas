@@ -2,8 +2,10 @@ import { Metadata } from 'next';
 import { Suspense } from 'react';
 import { fetchKCMPosts } from '@/lib/rss-fetcher';
 import BlogCard from '@/components/BlogCard';
+import PageHero from '@/components/PageHero';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import RealScoutListings from '@/components/RealScoutListings';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Real Estate Blog | Homestead West Las Vegas | Dr. Jan Duffy',
@@ -22,6 +24,7 @@ export const metadata: Metadata = {
     description: 'Expert real estate insights for Northwest Las Vegas buyers and sellers.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/blog',
+    images: ogImages('covered-patio'),
   },
   alternates: {
     types: {
@@ -100,19 +103,18 @@ export default function BlogPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-gradient-to-r from-[#1a365d] to-[#0f2439] text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-block bg-yellow-500 text-black px-4 py-2 rounded-full font-bold text-sm mb-6">
-                ⭐ VIP NEW CONSTRUCTION INSIGHTS ⭐
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">Real Estate Blog & Market Insights</h1>
-              <p className="text-2xl md:text-3xl mb-4 text-blue-100">Las Vegas Market Updates</p>
-              <p className="text-xl text-blue-200">Expert Insights from VIP New Construction Specialist</p>
-            </div>
-          </div>
-        </header>
+        <PageHero
+          imageId="covered-patio"
+          title="Real Estate Blog & Market Insights"
+          subtitle={
+            <>
+              Las Vegas Market Updates
+              <br />
+              Expert Insights from VIP New Construction Specialist
+            </>
+          }
+          badge="Market Insights"
+        />
 
         {/* Blog Posts */}
         <section className="py-16 bg-gray-50">

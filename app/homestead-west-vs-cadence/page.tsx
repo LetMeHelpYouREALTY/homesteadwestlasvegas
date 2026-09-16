@@ -1,8 +1,11 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Homestead West vs Cadence (Henderson): New Construction Comparison | Las Vegas Valley',
@@ -21,6 +24,7 @@ export const metadata: Metadata = {
     description: 'Side-by-side look at two Las Vegas Valley new construction options.',
     type: 'website',
     url: absoluteUrl('/homestead-west-vs-cadence'),
+    images: ogImages('pool-sized-lot'),
   },
 };
 
@@ -51,15 +55,11 @@ export default function HomesteadWestVsCadencePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonSchema) }} />
 
       <article className="min-h-screen bg-white">
-        <header className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-          <div className="container mx-auto px-4 max-w-4xl text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Homestead West vs Cadence (Henderson)</h1>
-            <p className="text-xl text-blue-100">
-              Two different markets—Northwest Las Vegas (89149) vs master-planned Henderson—both with new construction. Here is
-              how buyers often compare them before touring.
-            </p>
-          </div>
-        </header>
+        <PageHero
+          imageId="pool-sized-lot"
+          title="Homestead West vs Cadence (Henderson)"
+          subtitle="Two different markets—Northwest Las Vegas (89149) vs master-planned Henderson—both with new construction. Here is how buyers often compare them before touring."
+        />
 
         <section className="py-14 bg-gray-50" id="available-homes">
           <div className="container mx-auto px-4">
@@ -76,6 +76,11 @@ export default function HomesteadWestVsCadencePage() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-3xl font-bold mb-8 text-gray-900">Quick comparison</h2>
+            <SectionImage
+              imageId="pool-sized-lot"
+              heading="Quick comparison"
+              caption="Pool-sized lots at Homestead West, Las Vegas NV 89149"
+            />
             <div className="overflow-x-auto">
               <table className="w-full border-collapse border border-gray-300">
                 <thead>
@@ -135,7 +140,7 @@ export default function HomesteadWestVsCadencePage() {
           </div>
         </section>
 
-        <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+        <section className="py-16 bg-[#1a365d] text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6">Tour with a buyer&apos;s agent</h2>
             <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">

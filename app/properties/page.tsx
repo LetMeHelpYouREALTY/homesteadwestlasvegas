@@ -1,7 +1,10 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import RealScoutAdvancedSearch from '@/components/RealScoutAdvancedSearch';
+import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Las Vegas Properties for Sale | Dr. Jan Duffy | Ranch Homes $910K+',
@@ -12,6 +15,7 @@ export const metadata: Metadata = {
     description: 'Browse Las Vegas properties for sale with Dr. Jan Duffy. Ranch-style homes starting at $910K.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/properties',
+    images: ogImages('community-streetscape'),
   },
 };
 
@@ -115,13 +119,11 @@ export default function PropertiesPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-[#1a365d] text-white py-8">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4">Homestead West Las Vegas Properties for Sale</h1>
-            <p className="text-xl">Ranch-style homes on pool-sized lots in Northwest Las Vegas</p>
-          </div>
-        </header>
+        <PageHero
+          imageId="community-streetscape"
+          title="Homestead West Las Vegas Properties for Sale"
+          subtitle="Ranch-style homes on pool-sized lots in Northwest Las Vegas"
+        />
 
         {/* Property Search Filters */}
         <section className="py-8 bg-gray-50">
@@ -157,6 +159,11 @@ export default function PropertiesPage() {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Homestead West Properties?</h2>
+            <SectionImage
+              imageId="community-streetscape"
+              heading="Why Choose Homestead West Properties?"
+              caption="New construction ranch homes in Homestead West, Northwest Las Vegas 89149"
+            />
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-20 h-20 bg-[#1a365d] rounded-full flex items-center justify-center mx-auto mb-6">
@@ -186,8 +193,7 @@ export default function PropertiesPage() {
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Homestead West Prime Location</h3>
                 <p className="text-gray-700">
-                  Homestead West is located in Northwest Las Vegas with easy access to shopping, dining, 
-                  entertainment, and excellent schools.
+                  Homestead West is located in Northwest Las Vegas with access to shopping, dining, Red Rock Canyon, and named CCSD campuses in 89149.
                 </p>
               </div>
             </div>
@@ -200,23 +206,23 @@ export default function PropertiesPage() {
             <h2 className="text-3xl font-bold text-center mb-12">Homestead West and Las Vegas Market Insights</h2>
             <div className="grid md:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-2xl font-semibold mb-6">Current Market Trends for Homestead West</h3>
+                <h3 className="text-2xl font-semibold mb-6">Homestead West listing facts</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span className="font-medium">Average Home Price</span>
-                    <span className="text-blue-600 font-semibold">$425,000</span>
+                    <span className="font-medium">Listed ranch starting price</span>
+                    <span className="text-[#1a365d] font-semibold">$910,990</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span className="font-medium">Days on Market</span>
-                    <span className="text-green-600 font-semibold">28 days</span>
+                    <span className="font-medium">Floor plans</span>
+                    <span className="text-[#1a365d] font-semibold">3,336 and 3,704 sq ft</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span className="font-medium">Inventory Level</span>
-                    <span className="text-orange-600 font-semibold">2.1 months</span>
+                    <span className="font-medium">ZIP / map pin</span>
+                    <span className="text-[#1a365d] font-semibold">89149 · 5592 Dapple Gray Rd</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span className="font-medium">Price Appreciation</span>
-                    <span className="text-green-600 font-semibold">+8.5% YoY</span>
+                    <span className="font-medium">Live MLS inventory</span>
+                    <span className="text-[#1a365d] font-semibold">See listings on this page</span>
                   </div>
                 </div>
               </div>
@@ -230,7 +236,7 @@ export default function PropertiesPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-[#1a365d] rounded-full mr-3 mt-2"></span>
-                    <span>Excellent school districts and family-friendly environment</span>
+                    <span>Dean LaMar Allen Elementary, Justice Myron E. Leavitt Middle, and Centennial High are the named schools serving 89149—confirm current zoning with CCSD</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-[#1a365d] rounded-full mr-3 mt-2"></span>

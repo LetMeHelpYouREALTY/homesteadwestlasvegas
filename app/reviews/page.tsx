@@ -1,7 +1,10 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 const GOOGLE_REVIEW_URL = 'https://g.page/r/CVC1EMaenLJ3EBI/review';
 const QR_CODE_URL = `https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=${encodeURIComponent(GOOGLE_REVIEW_URL)}`;
@@ -21,6 +24,7 @@ export const metadata: Metadata = {
     description: 'Leave a Google review for Dr. Jan Duffy. Reviews build trust and help us stand out on Search and Maps.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/reviews',
+    images: ogImages('sales-office'),
   },
 };
 
@@ -58,16 +62,11 @@ export default function ReviewsPage() {
       />
 
       <div className="min-h-screen bg-white">
-        <header className="bg-[#1a365d] text-white py-10">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-3">Review Us on Google</h1>
-              <p className="text-xl text-gray-200">
-                Reviews build trust and help our Business Profile stand out to customers on Search and Maps
-              </p>
-            </div>
-          </div>
-        </header>
+        <PageHero
+          imageId="sales-office"
+          title="Review Us on Google"
+          subtitle="Reviews build trust and help our Business Profile stand out to customers on Search and Maps"
+        />
 
         <section className="py-10">
           <div className="container mx-auto px-4">
@@ -104,6 +103,11 @@ export default function ReviewsPage() {
               {/* QR code */}
               <div className="w-full text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
                 <h2 className="text-lg font-bold text-gray-900 mb-2">Share your review link</h2>
+                <SectionImage
+                  imageId="sales-office"
+                  heading="Share your review link"
+                  caption="Homestead West office at 5592 Dapple Gray Rd, Las Vegas NV 89149"
+                />
                 <p className="text-sm text-gray-600 mb-4">
                   Right-click the QR code and select &quot;Save Image As...&quot; to share with customers
                 </p>

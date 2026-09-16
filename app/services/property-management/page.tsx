@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Property Management Services | Dr. Jan Duffy | Las Vegas Real Estate',
@@ -18,6 +21,7 @@ export const metadata: Metadata = {
     description: 'Professional property management services in Las Vegas with VIP New Construction Homes Specialist.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/services/property-management',
+    images: ogImages('community-streetscape'),
   },
 };
 
@@ -55,16 +59,17 @@ export default function PropertyManagementPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-blue-900 text-white py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl font-bold mb-4">Homestead West Property Management Services</h1>
-              <p className="text-xl text-blue-100">Professional Homestead West Property Management Solutions</p>
-              <p className="text-lg text-blue-200 mt-2">Dr. Jan Duffy | Nevada License S.0197614.LLC</p>
-            </div>
-          </div>
-        </header>
+        <PageHero
+          imageId="community-streetscape"
+          title="Homestead West Property Management Services"
+          subtitle={
+            <>
+              Professional Homestead West Property Management Solutions
+              <br />
+              Dr. Jan Duffy | Nevada License S.0197614.LLC
+            </>
+          }
+        />
 
         {/* MLS listings — early for buyer engagement */}
         <section className="py-16 bg-gray-50" id="available-homes">
@@ -82,13 +87,18 @@ export default function PropertyManagementPage() {
         </section>
 
         {/* VIP New Construction Homes Specialist */}
-        <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-yellow-400">
+        <section className="py-16 bg-slate-50 border-2 border-yellow-400">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-block bg-yellow-500 text-black px-4 py-2 rounded-full font-bold text-sm mb-6">
-                ⭐ VIP NEW CONSTRUCTION PROGRAM ⭐
+                VIP Buyer Program
               </div>
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Elite Homestead West Property Management</h2>
+              <SectionImage
+                imageId="community-streetscape"
+                heading="Elite Homestead West Property Management"
+                caption="Homestead West streetscape in Northwest Las Vegas 89149"
+              />
               <p className="text-xl text-gray-700 mb-8">
                 Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers exclusively, delivers exclusive property management 
                 services with premium tenant screening, maintenance coordination, and investment optimization.

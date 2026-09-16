@@ -1,0 +1,182 @@
+/**
+ * Heading-matched photography catalog.
+ * Git paths under /public/photos/sections are the backup source of truth.
+ * Cloudflare Images IDs (when uploaded) live in cloudflare-image-ids.json.
+ */
+export const SITE_IMAGES = {
+  'ranch-exterior-dusk': {
+    gitPath: '/photos/sections/ranch-exterior-dusk.jpg',
+    alt: 'Luxury single-story ranch home at dusk on a pool-sized lot in Homestead West, Northwest Las Vegas 89149',
+    width: 1920,
+    height: 1080,
+  },
+  'interior-great-room': {
+    gitPath: '/photos/sections/interior-great-room.jpg',
+    alt: 'Open great room and kitchen in a Homestead West luxury ranch home, Northwest Las Vegas',
+    width: 1920,
+    height: 1080,
+  },
+  'pool-sized-lot': {
+    gitPath: '/photos/sections/pool-sized-lot.jpg',
+    alt: 'Pool-sized backyard and covered patio at a Homestead West ranch home in Las Vegas 89149',
+    width: 1920,
+    height: 1080,
+  },
+  'detached-casita': {
+    gitPath: '/photos/sections/detached-casita.jpg',
+    alt: 'Optional detached casita guest suite behind a Homestead West ranch home in Northwest Las Vegas',
+    width: 1920,
+    height: 1080,
+  },
+  'community-streetscape': {
+    gitPath: '/photos/sections/community-streetscape.jpg',
+    alt: 'New construction ranch home streetscape in Homestead West, Northwest Las Vegas',
+    width: 1920,
+    height: 1080,
+  },
+  'red-rock-canyon': {
+    gitPath: '/photos/sections/red-rock-canyon.jpg',
+    alt: 'Red Rock Canyon National Conservation Area, about 9 miles from Homestead West Las Vegas',
+    width: 1920,
+    height: 1080,
+  },
+  'la-madre-foothills': {
+    gitPath: '/photos/sections/la-madre-foothills.jpg',
+    alt: 'La Madre Mountain foothills west of Homestead West in Northwest Las Vegas 89149',
+    width: 1920,
+    height: 1080,
+  },
+  'luxury-kitchen': {
+    gitPath: '/photos/sections/luxury-kitchen.jpg',
+    alt: 'Luxury kitchen island in a Homestead West single-story ranch home, Las Vegas',
+    width: 1920,
+    height: 1080,
+  },
+  'primary-suite': {
+    gitPath: '/photos/sections/primary-suite.jpg',
+    alt: 'Primary bedroom suite in a Homestead West ranch home with mountain-view windows',
+    width: 1920,
+    height: 1080,
+  },
+  'sales-office': {
+    gitPath: '/photos/sections/sales-office.jpg',
+    alt: 'Homestead West Las Vegas real estate office at 5592 Dapple Gray Rd, Las Vegas NV 89149',
+    width: 1920,
+    height: 1080,
+  },
+  'vip-model-home': {
+    gitPath: '/photos/sections/vip-model-home.jpg',
+    alt: 'VIP private tour entry at a Homestead West model home in Northwest Las Vegas',
+    width: 1920,
+    height: 1080,
+  },
+  'aerial-northwest-lv': {
+    gitPath: '/photos/sections/aerial-northwest-lv.jpg',
+    alt: 'Aerial view of Northwest Las Vegas new construction near Homestead West zip code 89149',
+    width: 1920,
+    height: 1080,
+  },
+  'covered-patio': {
+    gitPath: '/photos/sections/covered-patio.jpg',
+    alt: 'Covered outdoor living patio at a Homestead West ranch home in Las Vegas',
+    width: 1920,
+    height: 1080,
+  },
+  'buyer-consultation': {
+    gitPath: '/photos/sections/buyer-consultation.jpg',
+    alt: 'New construction buyer consultation with floor plans for Homestead West Las Vegas',
+    width: 1920,
+    height: 1080,
+  },
+  'private-tour': {
+    gitPath: '/photos/sections/private-tour.jpg',
+    alt: 'Private backyard tour of a Homestead West ranch home at sunset in Northwest Las Vegas',
+    width: 1920,
+    height: 1080,
+  },
+  'three-car-garage': {
+    gitPath: '/photos/sections/three-car-garage.jpg',
+    alt: 'Three-car garage and driveway at a Homestead West luxury ranch home in Northwest Las Vegas',
+    width: 1920,
+    height: 1080,
+  },
+  'dining-room': {
+    gitPath: '/photos/sections/dining-room.jpg',
+    alt: 'Dining room in a Homestead West single-story ranch home, Las Vegas 89149',
+    width: 1920,
+    height: 1080,
+  },
+  'nw-shopping-plaza': {
+    gitPath: '/photos/sections/nw-shopping-plaza.jpg',
+    alt: 'Shopping and dining plaza in Northwest Las Vegas near Homestead West zip code 89149',
+    width: 1920,
+    height: 1080,
+  },
+  'medical-campus': {
+    gitPath: '/photos/sections/medical-campus.jpg',
+    alt: 'Medical campus in Northwest Las Vegas, a short drive from Homestead West at 5592 Dapple Gray Rd',
+    width: 1920,
+    height: 1080,
+  },
+  'how-it-works': {
+    gitPath: '/photos/sections/how-it-works.jpg',
+    alt: 'Floor plans on a kitchen island during a Homestead West buyer consultation in Northwest Las Vegas',
+    width: 1920,
+    height: 1080,
+  },
+  'sunset-mountain-views': {
+    gitPath: '/photos/sections/sunset-mountain-views.jpg',
+    alt: 'Covered patio with mountain sunset views from a Homestead West ranch home in Las Vegas 89149',
+    width: 1920,
+    height: 1080,
+  },
+  'office-exterior-89149': {
+    gitPath: '/photos/sections/office-exterior-89149.jpg',
+    alt: 'Homestead West sales office exterior in Northwest Las Vegas near 5592 Dapple Gray Rd, 89149',
+    width: 1920,
+    height: 1080,
+  },
+  'faq-buyer-desk': {
+    gitPath: '/photos/sections/faq-buyer-desk.jpg',
+    alt: 'Ranch floor plans and lot map on a desk for Homestead West Las Vegas buyer questions',
+    width: 1920,
+    height: 1080,
+  },
+} as const
+
+export type SiteImageId = keyof typeof SITE_IMAGES
+
+/** Default image for each route H1 (GBP / local SEO alt text lives on the asset). */
+export const PAGE_HERO_IMAGE: Record<string, SiteImageId> = {
+  '/': 'ranch-exterior-dusk',
+  '/properties': 'community-streetscape',
+  '/floor-plans': 'interior-great-room',
+  '/floor-plans/3336': 'luxury-kitchen',
+  '/floor-plans/3704': 'detached-casita',
+  '/community': 'sunset-mountain-views',
+  '/community-map': 'aerial-northwest-lv',
+  '/virtual-tour': 'interior-great-room',
+  '/location': 'office-exterior-89149',
+  '/location/las-vegas-office': 'office-exterior-89149',
+  '/contact': 'buyer-consultation',
+  '/about': 'ranch-exterior-dusk',
+  '/buyers-guide': 'buyer-consultation',
+  '/homebuying-process': 'how-it-works',
+  '/vip-buyer-program': 'vip-model-home',
+  '/faq': 'faq-buyer-desk',
+  '/testimonials': 'private-tour',
+  '/reviews': 'sales-office',
+  '/amenities': 'red-rock-canyon',
+  '/directions': 'aerial-northwest-lv',
+  '/appointment': 'vip-model-home',
+  '/services': 'buyer-consultation',
+  '/services/buying': 'private-tour',
+  '/services/selling': 'ranch-exterior-dusk',
+  '/services/investment': 'aerial-northwest-lv',
+  '/services/property-management': 'community-streetscape',
+  '/northwest-las-vegas-new-construction': 'community-streetscape',
+  '/homestead-west-vs-skye-canyon': 'ranch-exterior-dusk',
+  '/homestead-west-vs-cadence': 'pool-sized-lot',
+  '/la-madre-foothills': 'la-madre-foothills',
+  '/blog': 'covered-patio',
+}

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "upload:cf-images": "node scripts/upload-cloudflare-images.mjs"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",

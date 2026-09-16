@@ -1,9 +1,12 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL, ADDRESS, PHONE_DISPLAY, PHONE_TEL_HREF, BROKERAGE_NAME, LICENSE_ID } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Northwest Las Vegas New Construction & 89149 Homes | Homestead West Area Guide',
@@ -24,6 +27,7 @@ export const metadata: Metadata = {
       'Local guide to new construction in Northwest Las Vegas and zip 89149, with Homestead West as a flagship community.',
     type: 'website',
     url: absoluteUrl('/northwest-las-vegas-new-construction'),
+    images: ogImages('community-streetscape'),
   },
 };
 
@@ -60,21 +64,20 @@ export default function NorthwestLasVegasNewConstructionPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       <article className="min-h-screen bg-white">
-        <header className="bg-gradient-to-r from-[#1a365d] to-[#0f2439] text-white py-16 md:py-20">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <p className="text-sm uppercase tracking-wide text-yellow-400 mb-2">GEO · Northwest Las Vegas · 89149</p>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Northwest Las Vegas New Construction in 89149
-            </h1>
-            <p className="text-xl text-blue-100">
+        <PageHero
+          imageId="community-streetscape"
+          title="Northwest Las Vegas New Construction in 89149"
+          subtitle={
+            <>
               How the Centennial Hills corridor is growing—and how{' '}
               <Link href="/community" className="text-yellow-400 underline hover:text-yellow-300">
                 Homestead West
               </Link>{' '}
               fits buyers who want single-story ranch homes on generous lots.
-            </p>
-          </div>
-        </header>
+            </>
+          }
+          badge="GEO · Northwest Las Vegas · 89149"
+        />
 
         <section className="py-14 bg-gray-50" id="available-homes">
           <div className="container mx-auto px-4">
@@ -93,6 +96,11 @@ export default function NorthwestLasVegasNewConstructionPage() {
             <h2 className="text-3xl font-bold text-gray-900 not-prose mb-4">
               What does &quot;Northwest Las Vegas&quot; mean for new construction buyers?
             </h2>
+            <SectionImage
+              imageId="community-streetscape"
+              heading={`What does "Northwest Las Vegas" mean for new construction buyers?`}
+              caption="New construction streetscape in Homestead West, Northwest Las Vegas 89149"
+            />
             <p className="text-gray-700 text-lg mb-4">
               Northwest Las Vegas generally refers to the area north of US 95 and west of I-15, including master-planned pockets
               and infill near Ann Road, Fort Apache, and Skye Canyon. Zip code <strong>89149</strong> covers much of this

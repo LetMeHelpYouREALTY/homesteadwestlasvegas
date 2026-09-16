@@ -6,6 +6,11 @@ export function middleware(request: NextRequest) {
   const pathname = url.pathname;
   const hostname = request.headers.get('host') || '';
 
+  const isLocal =
+    hostname.startsWith('localhost') ||
+    hostname.startsWith('127.0.0.1') ||
+    hostname.startsWith('[::1]');
+
   // Legacy headshot URL with spaces (some crawlers / bookmarks) → canonical asset path
   if (pathname === '/images/Dr. Duffy Blue_Headshot.jpg') {
     url.pathname = '/photos/team/dr-jan-duffy-headshot.jpg';
@@ -23,8 +28,9 @@ export function middleware(request: NextRequest) {
   }
 
   const needsRedirect =
-    hostname === 'homesteadwestlasvegas.com' || // non-www
-    url.protocol === 'http:'; // HTTP
+    !isLocal &&
+    (hostname === 'homesteadwestlasvegas.com' || // non-www
+      url.protocol === 'http:'); // HTTP
 
   // If redirect needed, combine both redirects into one
   if (needsRedirect) {

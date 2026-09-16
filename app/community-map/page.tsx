@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Community Map | Homestead West Las Vegas | Available Lots & Homesites | Northwest Las Vegas',
@@ -25,6 +28,7 @@ export const metadata: Metadata = {
     description: 'Explore Homestead West community map with available lots and homesites in Northwest Las Vegas. New construction homes from $910K.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/community-map',
+    images: ogImages('aerial-northwest-lv'),
   },
 };
 
@@ -71,15 +75,11 @@ export default function CommunityMapPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-blue-900 text-white py-12">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl font-bold mb-4">Homestead West Community Map</h1>
-              <p className="text-xl text-blue-100">Explore Available Lots & Homesites</p>
-            </div>
-          </div>
-        </header>
+        <PageHero
+          imageId="aerial-northwest-lv"
+          title="Homestead West Community Map"
+          subtitle="Explore Available Lots & Homesites"
+        />
 
         {/* MLS listings — early for buyer engagement */}
         <section className="py-16 bg-gray-50" id="available-homes">
@@ -102,6 +102,11 @@ export default function CommunityMapPage() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold mb-4 text-gray-900">Homestead West Community Layout</h2>
+                <SectionImage
+                  imageId="aerial-northwest-lv"
+                  heading="Homestead West Community Layout"
+                  caption="Aerial view of Northwest Las Vegas near Homestead West at 5592 Dapple Gray Rd"
+                />
                 <p className="text-xl text-gray-700 mb-4">
                   Explore the interactive map to see available lots, floor plan locations, and community amenities in Northwest Las Vegas
                 </p>
@@ -348,11 +353,11 @@ export default function CommunityMapPage() {
         </section>
 
         {/* Dr. Jan Duffy VIP New Construction Homes Specialist */}
-        <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-yellow-400">
+        <section className="py-16 bg-slate-50 border-2 border-yellow-400">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-block bg-yellow-500 text-black px-4 py-2 rounded-full font-bold text-sm mb-6">
-                ⭐ VIP NEW CONSTRUCTION PROGRAM ⭐
+                VIP Buyer Program
               </div>
               <h2 className="text-3xl font-bold mb-6 text-gray-900">VIP Access to Perfect Homestead West Lot Selection</h2>
               <p className="text-xl text-gray-700 mb-8">

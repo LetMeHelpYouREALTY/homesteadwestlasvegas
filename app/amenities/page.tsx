@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import {
   AMENITY_CATEGORIES,
   amenityMapEmbedUrl,
@@ -8,6 +10,7 @@ import {
   MAP_BASE_DISPLAY,
 } from '@/lib/amenities';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Nearby Amenities Map | Homestead West Las Vegas | Restaurants, Parks, Parking',
@@ -26,6 +29,7 @@ export const metadata: Metadata = {
     description: 'Restaurants, parks, parking, shopping, schools, and more near Homestead West. View on Google Maps.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/amenities',
+    images: ogImages('red-rock-canyon'),
   },
 };
 
@@ -81,19 +85,17 @@ export default function AmenitiesPage() {
       />
 
       <div className="min-h-screen bg-white">
-        <header className="bg-[#1a365d] text-white py-10">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-3">Nearby Amenities Map</h1>
-              <p className="text-xl text-gray-200">
-                Restaurants, parks, parking, shopping, schools & more near Homestead West
-              </p>
-              <p className="text-gray-300 mt-2 text-sm">
-                Centered near {MAP_BASE_DISPLAY}. Powered by Google Maps — no cost to use.
-              </p>
-            </div>
-          </div>
-        </header>
+        <PageHero
+          imageId="red-rock-canyon"
+          title="Nearby Amenities Map"
+          subtitle={
+            <>
+              Restaurants, parks, parking, shopping, schools & more near Homestead West
+              <br />
+              Centered near {MAP_BASE_DISPLAY}. Powered by Google Maps — no cost to use.
+            </>
+          }
+        />
 
         <section className="py-12 bg-gray-50" id="available-homes">
           <div className="container mx-auto px-4">
@@ -131,6 +133,14 @@ export default function AmenitiesPage() {
                       {category.icon && <span aria-hidden>{category.icon}</span>}
                       {category.label}
                     </h2>
+                    {category.id === 'parks' ? (
+                      <SectionImage
+                        imageId="red-rock-canyon"
+                        heading={category.label}
+                        caption="Red Rock Canyon is about 9 miles from Homestead West at 5592 Dapple Gray Rd, Las Vegas 89149"
+                        className="mt-4 mb-0"
+                      />
+                    ) : null}
                     <p className="text-gray-600 mt-1">{category.description}</p>
                   </div>
                   <div className="p-4 md:p-6">

@@ -3,9 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import SearchWidgetScript from '@/components/SearchWidgetScript';
-import { LICENSE_ID, SITE_URL } from '@/lib/site-contact';
+import SectionImage from '@/components/SectionImage';
+import LeadForm from '@/components/LeadForm';
+import GbpActions from '@/components/GbpActions';
+import { LICENSE_ID, SITE_URL, ADDRESS_LINE, PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact';
 import { ASSET_BHHS_LOGO_PATH, ASSET_HEADSHOT_PATH, headshotAbsoluteUrl } from '@/lib/site-assets';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { ogImages } from '@/lib/og';
+import { mediaAlt, mediaSrc } from '@/lib/media';
 
 // Lazy load RealScoutListings to reduce initial bundle size
 // Note: ssr: false removed for Server Component compatibility
@@ -19,7 +24,7 @@ const RealScoutListings = dynamic(() => import('@/components/RealScoutListings')
 
 export const metadata: Metadata = {
   title: 'Homestead West Las Vegas — Luxury Single-Story Ranch Homes from $910K | New Construction Northwest Las Vegas',
-  description: 'New construction luxury single-story ranch homes in Northwest Las Vegas from $910K. Pool-sized lots, optional casitas, VIP buyer representation. Dr. Jan Duffy represents YOU—not the builder. Independent buyer\'s agent with Berkshire Hathaway HomeServices Nevada. The VIP Berkshire Hathaway HomeServices Buyer Program has helped 65+ Homestead West families since 2022.',
+  description: 'New construction luxury single-story ranch homes in Northwest Las Vegas from $910K. Pool-sized lots, optional casitas, VIP buyer representation. Dr. Jan Duffy represents YOU—not the builder. Independent buyer\'s agent with Berkshire Hathaway HomeServices Nevada at 5592 Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.',
   keywords: 'Homestead West Las Vegas, luxury ranch homes, single-story homes, Northwest Las Vegas, new construction, pool-sized lots, $910K homes, Las Vegas real estate, Berkshire Hathaway HomeServices, independent buyer agent, new construction homes Las Vegas, single story homes Las Vegas, luxury homes Northwest Las Vegas, new construction community Las Vegas, ranch homes Las Vegas, pool sized lots Las Vegas',
   ...canonicalMetadata('/'),
   openGraph: {
@@ -28,21 +33,14 @@ export const metadata: Metadata = {
     type: 'website',
     url: absoluteUrl('/'),
     siteName: 'Homestead West Las Vegas',
-    images: [
-      {
-        url: headshotAbsoluteUrl,
-        width: 750,
-        height: 752,
-        alt: 'Dr. Jan Duffy - VIP New Construction Homes Specialist | Homestead West Las Vegas',
-      }
-    ],
+    images: ogImages('ranch-exterior-dusk'),
   },
   
   twitter: {
     card: 'summary_large_image',
     title: 'Homestead West Las Vegas — Luxury Single-Story Ranch Homes from $910K',
     description: 'Get VIP access to Northwest Las Vegas\'s newest luxury community. Independent buyer\'s agent with Berkshire Hathaway HomeServices Nevada.',
-    images: [headshotAbsoluteUrl],
+    images: ogImages('ranch-exterior-dusk').map((img) => img.url),
   },
 };
 
@@ -156,19 +154,22 @@ export default function HomePage() {
       
       <div className="min-h-screen bg-white">
         {/* Hero Section - Above the Fold */}
-        <section className="relative bg-gradient-to-br from-[#1a365d] via-[#0f2439] to-[#1a365d] text-white overflow-hidden">
-          <div className="absolute inset-0 bg-black/10"></div>
-          {/* Subtle professional background elements */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-[#d4af37] rounded-full mix-blend-multiply filter blur-xl"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-[#2c5282] rounded-full mix-blend-multiply filter blur-xl"></div>
-          </div>
+        <section className="relative min-h-[520px] bg-[#0f2439] text-white overflow-hidden">
+          <Image
+            src={mediaSrc('ranch-exterior-dusk')}
+            alt={mediaAlt('ranch-exterior-dusk')}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0f2439]/80 via-[#1a365d]/70 to-[#0f2439]/55" />
           <div className="relative container mx-auto px-4 py-24 md:py-32">
             <div className="max-w-4xl mx-auto text-center">
               {/* VIP Badge */}
               <div className="mb-8">
                 <div className="inline-block bg-[#d4af37] text-[#1a365d] px-6 py-2 rounded-full font-bold text-lg mb-6 shadow-lg">
-                  ⭐ VIP Berkshire Hathaway HomeServices Buyer Program ⭐
+                  VIP Berkshire Hathaway HomeServices Buyer Program
                 </div>
               </div>
               {/* LCP Element - Optimized for fast rendering (no blocking styles) */}
@@ -218,12 +219,14 @@ export default function HomePage() {
                   View Available Homes
                 </a>
                 <a 
-                  href="tel:7022996607"
+                  href={PHONE_TEL_HREF}
                   className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-all"
                 >
-                  📞 (702) 299-6607
+                  Call {PHONE_DISPLAY}
                 </a>
               </div>
+              <GbpActions className="mt-6 justify-center" compact />
+              <p className="mt-4 text-sm text-blue-100">{ADDRESS_LINE}</p>
             </div>
           </div>
         </section>
@@ -234,6 +237,11 @@ export default function HomePage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-8">
                 <h2 className="text-4xl font-bold mb-4 text-gray-900">How Much Do Homes Cost in Homestead West?</h2>
+                <SectionImage
+                  imageId="community-streetscape"
+                  heading="How Much Do Homes Cost in Homestead West?"
+                  caption="New construction ranch homes in Homestead West, Northwest Las Vegas 89149"
+                />
                 <p className="text-xl text-gray-700 mb-4">
                   Homes in Homestead West start at $910,000 for single-story ranch designs ranging from 3,336 to 3,704 square feet. Prices vary based on lot premiums, floor plan selection, and design center upgrades.
                 </p>
@@ -468,6 +476,10 @@ export default function HomePage() {
               <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
                 Do You Need a Buyer's Agent for New Construction?
               </h2>
+              <SectionImage
+                imageId="buyer-consultation"
+                heading="Do You Need a Buyer's Agent for New Construction?"
+              />
               <p className="text-xl text-center mb-8 text-gray-700 font-semibold">
                 While not required, a buyer's agent provides independent representation, negotiation leverage, and early access to lot releases. The builder typically pays the buyer's agent commission, so representation costs the buyer nothing additional.
               </p>
@@ -546,7 +558,7 @@ export default function HomePage() {
         </section>
 
         {/* About Berkshire Hathaway HomeServices Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50">
+        <section className="py-16 bg-slate-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl font-bold mb-6 text-gray-900">
@@ -599,6 +611,11 @@ export default function HomePage() {
               <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">
                 What Buyers Say
               </h2>
+              <SectionImage
+                imageId="private-tour"
+                heading="What Buyers Say"
+                caption="Private tour of a Homestead West home in Northwest Las Vegas 89149"
+              />
 
               <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-600 mb-6">
                 <p className="text-lg text-gray-700 mb-4 italic">
@@ -614,25 +631,25 @@ export default function HomePage() {
                 </Link>
               </p>
 
-              <div className="bg-blue-900 text-white p-6 md:p-8 rounded-lg">
-                <h3 className="text-2xl font-bold mb-4 text-center">Homestead West by the Numbers</h3>
-                <p className="text-center text-blue-100 mb-6 text-sm">VIP Berkshire Hathaway HomeServices Buyer Program results</p>
+              <div className="bg-[#1a365d] text-white p-6 md:p-8 rounded-lg">
+                <h3 className="text-2xl font-bold mb-4 text-center">Homestead West facts you can verify</h3>
+                <p className="text-center text-blue-100 mb-6 text-sm">Single-story ranch inventory at 5592 Dapple Gray Rd, Las Vegas NV 89149</p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                  <div itemScope itemType="https://schema.org/QuantitativeValue">
-                    <data value="VIP" className="text-2xl md:text-3xl font-bold text-yellow-400 mb-1 block">VIP</data>
-                    <p className="text-xs md:text-sm">Early access &amp; lot selection</p>
+                  <div>
+                    <p className="text-2xl md:text-3xl font-bold text-[#d4af37] mb-1">$910,990</p>
+                    <p className="text-xs md:text-sm">Starting price for listed ranch plans</p>
                   </div>
-                  <div itemScope itemType="https://schema.org/QuantitativeValue">
-                    <data value="14200" className="text-2xl md:text-3xl font-bold text-yellow-400 mb-1 block">$14,200</data>
-                    <p className="text-xs md:text-sm">Avg. savings per transaction (65+ transactions, 2022–2025)</p>
+                  <div>
+                    <p className="text-2xl md:text-3xl font-bold text-[#d4af37] mb-1">3,336–3,704</p>
+                    <p className="text-xs md:text-sm">Square feet on Plans 3336 and 3704</p>
                   </div>
-                  <div itemScope itemType="https://schema.org/QuantitativeValue">
-                    <data value="18" className="text-2xl md:text-3xl font-bold text-yellow-400 mb-1 block">18</data>
-                    <p className="text-xs md:text-sm">Lots secured before public release</p>
+                  <div>
+                    <p className="text-2xl md:text-3xl font-bold text-[#d4af37] mb-1">89149</p>
+                    <p className="text-xs md:text-sm">Northwest Las Vegas at Ann &amp; Fort Apache</p>
                   </div>
-                  <div itemScope itemType="https://schema.org/QuantitativeValue">
-                    <data value="98" className="text-2xl md:text-3xl font-bold text-yellow-400 mb-1 block">98%</data>
-                    <p className="text-xs md:text-sm">Client satisfaction rate</p>
+                  <div>
+                    <p className="text-2xl md:text-3xl font-bold text-[#d4af37] mb-1">(702) 299-6607</p>
+                    <p className="text-xs md:text-sm">Call for a private tour — Sun 10–3, Mon–Fri 10–6, Sat 10–4</p>
                   </div>
                 </div>
               </div>
@@ -647,6 +664,11 @@ export default function HomePage() {
               <h2 className="text-4xl font-bold mb-6 text-gray-900">
                 The Community at a Glance
               </h2>
+              <SectionImage
+                imageId="sunset-mountain-views"
+                heading="The Community at a Glance"
+                caption="Covered patio and mountain views from Homestead West ranch homes in Las Vegas 89149"
+              />
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Single-story ranch homes from $910K+ on pool-sized lots in 89149—optional casitas, multi-generational plans, and quick access to Red Rock Canyon and Centennial Hills. Schools, amenities, and lifestyle are covered in the full guide.
               </p>
@@ -697,6 +719,11 @@ export default function HomePage() {
               <h2 className="text-4xl font-bold text-center mb-6 text-gray-900">
                 How It Works
               </h2>
+              <SectionImage
+                imageId="how-it-works"
+                heading="How It Works"
+                caption="Floor-plan review for Homestead West new construction in Northwest Las Vegas 89149"
+              />
               <ol className="list-decimal pl-5 space-y-3 text-gray-700 mb-6">
                 <li>Schedule a 15-minute call—goals, budget, and must-haves.</li>
                 <li>Get VIP access to new phases, pricing, and inventory alerts.</li>
@@ -727,6 +754,11 @@ export default function HomePage() {
               <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
                 Frequently Asked Questions About Buying in Homestead West Las Vegas
               </h2>
+              <SectionImage
+                imageId="faq-buyer-desk"
+                heading="Frequently Asked Questions About Buying in Homestead West Las Vegas"
+                caption="Buyer questions and ranch floor plans for Homestead West Las Vegas"
+              />
 
               <div className="space-y-6">
                 {homePageFaqs.map((faq) => (
@@ -762,6 +794,9 @@ export default function HomePage() {
               >
                 Schedule Your Tour
               </a>
+            </div>
+            <div className="max-w-xl mx-auto text-left mb-10">
+              <LeadForm source="homepage" heading="Tell Dr. Jan what you are looking for" />
             </div>
             <div className="space-y-2 text-gray-200">
               <p>Or call directly: <a href="tel:7022996607" className="text-yellow-400 hover:text-yellow-300 font-semibold">(702) 299-6607</a></p>

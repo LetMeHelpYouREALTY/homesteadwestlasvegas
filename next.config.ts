@@ -15,6 +15,14 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'imagedelivery.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.homesteadwestlasvegas.com',
+      },
+      {
+        protocol: 'https',
         hostname: '*.simplifyingthemarket.com',
       },
       {
@@ -89,7 +97,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=3600, s-maxage=3600',
+            value: 'no-store',
           },
         ],
       },

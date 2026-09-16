@@ -2,8 +2,11 @@ import { Metadata } from 'next';
 import { ASSET_HEADSHOT_PATH } from '@/lib/site-assets';
 import Image from 'next/image';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Real Estate Services | Dr. Jan Duffy | Las Vegas Real Estate Agent',
@@ -15,6 +18,7 @@ export const metadata: Metadata = {
     description: 'Comprehensive real estate services by Dr. Jan Duffy in Las Vegas.',
     type: 'website',
     url: absoluteUrl('/services'),
+    images: ogImages('buyer-consultation'),
   },
 };
 
@@ -96,34 +100,33 @@ export default function ServicesPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-8">
-                <div className="inline-block bg-yellow-500 text-black px-4 py-2 rounded-full font-bold text-sm mb-6">
-                  ⭐ VIP NEW CONSTRUCTION HOMES SPECIALIST ⭐
-                </div>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6">Real Estate Services</h1>
-                <p className="text-2xl md:text-3xl mb-4 text-blue-100">Comprehensive Solutions by Dr. Jan Duffy</p>
-                <p className="text-xl text-blue-200">VIP New Construction Homes Specialist | Nevada License S.0197614.LLC</p>
-              </div>
-              <div className="flex justify-center mt-8">
-                <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-2xl ring-4 ring-white/20" style={{ aspectRatio: '1/1' }}>
-                  <Image
-                    src={ASSET_HEADSHOT_PATH}
-                    alt="Dr. Jan Duffy - VIP New Construction Homes Specialist"
-                    fill
-                    className="object-cover object-center"
-                    style={{ objectPosition: 'center top' }}
-                    priority
-                    sizes="(max-width: 768px) 160px, 192px"
-                  />
-                </div>
-              </div>
+        <PageHero
+          imageId="buyer-consultation"
+          title="Real Estate Services"
+          subtitle={
+            <>
+              Comprehensive Solutions by Dr. Jan Duffy
+              <br />
+              VIP New Construction Homes Specialist | Nevada License S.0197614.LLC
+            </>
+          }
+          badge="New Construction Specialist"
+          showActions={true}
+        >
+          <div className="flex justify-center md:justify-start mt-4">
+            <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-2xl ring-4 ring-white/20" style={{ aspectRatio: '1/1' }}>
+              <Image
+                src={ASSET_HEADSHOT_PATH}
+                alt="Dr. Jan Duffy - VIP New Construction Homes Specialist"
+                fill
+                className="object-cover object-center"
+                style={{ objectPosition: 'center top' }}
+                priority
+                sizes="(max-width: 768px) 160px, 192px"
+              />
             </div>
           </div>
-        </header>
+        </PageHero>
 
         {/* MLS listings — early for buyer engagement */}
         <section className="py-16 bg-gray-50" id="available-homes">
@@ -145,6 +148,11 @@ export default function ServicesPage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-6">Our Homestead West Services</h2>
+              <SectionImage
+                imageId="buyer-consultation"
+                heading="Our Homestead West Services"
+                caption="Buyer consultation for Homestead West services in Las Vegas 89149"
+              />
               <p className="text-lg text-gray-700 max-w-3xl mx-auto">
                 Dr. Jan Duffy provides comprehensive real estate services throughout Las Vegas, 
                 helping clients achieve their property goals with expertise, integrity, and 
@@ -221,7 +229,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Why Choose Dr. Jan Duffy */}
-        <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50">
+        <section className="py-16 bg-slate-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Why Choose Dr. Jan Duffy?</h2>
@@ -312,7 +320,7 @@ export default function ServicesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+        <section className="py-20 bg-[#1a365d] text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>

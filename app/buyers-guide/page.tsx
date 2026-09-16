@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: "Buyer's Guide | New Construction Process | Dr. Jan Duffy | Las Vegas Real Estate Expert",
@@ -24,6 +27,7 @@ export const metadata: Metadata = {
     description: "Complete buyer's guide to new construction homes in Las Vegas with VIP New Construction Homes Specialist.",
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/buyers-guide',
+    images: ogImages('buyer-consultation'),
   },
 };
 
@@ -142,19 +146,18 @@ export default function BuyersGuidePage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-gradient-to-r from-[#1a365d] to-[#0f2439] text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-block bg-yellow-500 text-black px-4 py-2 rounded-full font-bold text-sm mb-6">
-                ⭐ VIP NEW CONSTRUCTION BUYER'S GUIDE ⭐
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">Complete Homestead West Buyer's Guide</h1>
-              <p className="text-2xl md:text-3xl mb-4 text-blue-100">New Construction Process</p>
-              <p className="text-xl text-blue-200">Expert Guidance with VIP New Construction Homes Specialist</p>
-            </div>
-          </div>
-        </header>
+        <PageHero
+          imageId="buyer-consultation"
+          title="Complete Homestead West Buyer's Guide"
+          subtitle={
+            <>
+              New Construction Process
+              <br />
+              Expert Guidance with VIP New Construction Homes Specialist
+            </>
+          }
+          badge="Buyer Guide"
+        />
 
         {/* MLS listings — early for buyer engagement */}
         <section className="py-16 bg-gray-50" id="available-homes">
@@ -177,6 +180,11 @@ export default function BuyersGuidePage() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold mb-6 text-gray-900">Homestead West VIP Buyer Advantages</h2>
+                <SectionImage
+                  imageId="vip-model-home"
+                  heading="Homestead West VIP Buyer Advantages"
+                  caption="VIP model home access at Homestead West in Northwest Las Vegas 89149"
+                />
                 <p className="text-xl text-gray-700 max-w-4xl mx-auto">
                   Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers exclusively, delivers exclusive Homestead West advantages 
                   throughout your entire Homestead West new construction home buying journey.
@@ -465,7 +473,7 @@ export default function BuyersGuidePage() {
         </section>
 
         {/* Contact CTA */}
-        <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+        <section className="py-16 bg-[#1a365d] text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl font-bold mb-6">Ready to Start Your Homestead West New Construction Journey?</h2>

@@ -1,8 +1,12 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
+import CtaBand from '@/components/CtaBand';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'VIP Berkshire Hathaway HomeServices Buyer Program | Dr. Jan Duffy | Las Vegas New Construction Expert',
@@ -24,6 +28,7 @@ export const metadata: Metadata = {
     description: 'Get VIP access to new construction homes in Las Vegas with Dr. Jan Duffy. Early phase access, priority lot selection, and expert negotiation.',
     type: 'website',
     url: absoluteUrl('/vip-buyer-program'),
+    images: ogImages('vip-model-home'),
   },
 };
 
@@ -151,41 +156,34 @@ export default function VIPBuyerProgramPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <header className="bg-gradient-to-br from-blue-900 via-purple-900 to-blue-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto text-center">
-              <div className="mb-8">
-                <div className="inline-block bg-yellow-500 text-black px-6 py-2 rounded-full font-bold text-lg mb-6">
-                  ⭐ VIP Berkshire Hathaway HomeServices Buyer Program ⭐
-                </div>
-              </div>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                VIP Berkshire Hathaway HomeServices Buyer Program for Homestead West
-              </h1>
-              <p className="text-2xl md:text-3xl mb-8 text-blue-100 font-semibold">
-                Premier New Home Buyer Program for Homestead West Las Vegas
-              </p>
-              <p className="text-xl text-blue-200 mb-12 max-w-4xl mx-auto">
+        <PageHero
+          imageId="vip-model-home"
+          title="VIP Berkshire Hathaway HomeServices Buyer Program for Homestead West"
+          subtitle={
+            <>
+              Premier New Home Buyer Program for Homestead West Las Vegas
+              <span className="block mt-4 text-lg md:text-xl font-normal">
                 The VIP Berkshire Hathaway HomeServices New Home Buyer Program provides exclusive access to Homestead West Las Vegas new construction homes. As a VIP New Construction Homes Specialist, Dr. Jan Duffy represents YOU—the buyer—with insider access, priority lot selection, and expert negotiation. She works exclusively for home buyers, not the builder, giving YOU the ultimate advantage when purchasing your new Homestead West home.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a
-                  href="tel:7022996607"
-                  className="bg-yellow-500 text-black px-10 py-5 rounded-lg font-bold text-xl hover:bg-yellow-400 transition-all shadow-2xl hover:shadow-3xl"
-                >
-                  📞 Call Dr. Jan: (702) 299-6607
-                </a>
-                <a
-                  href="mailto:DrJanSells@HomesteadWestLasVegas.com"
-                  className="bg-transparent border-3 border-white text-white px-10 py-5 rounded-lg font-bold text-xl hover:bg-white hover:text-blue-900 transition-all"
-                >
-                  📧 Get VIP Access
-                </a>
-              </div>
-            </div>
+              </span>
+            </>
+          }
+          badge="VIP Buyer Program"
+        >
+          <div className="flex flex-col sm:flex-row gap-6">
+            <a
+              href="tel:7022996607"
+              className="bg-yellow-500 text-black px-10 py-5 rounded-lg font-bold text-xl hover:bg-yellow-400 transition-all shadow-2xl hover:shadow-3xl text-center"
+            >
+              📞 Call Dr. Jan: (702) 299-6607
+            </a>
+            <a
+              href="mailto:DrJanSells@HomesteadWestLasVegas.com"
+              className="bg-transparent border-3 border-white text-white px-10 py-5 rounded-lg font-bold text-xl hover:bg-white hover:text-blue-900 transition-all text-center"
+            >
+              📧 Get VIP Access
+            </a>
           </div>
-        </header>
+        </PageHero>
 
         {/* Available homes — early for buyer engagement */}
         <section className="py-16 bg-gray-50" id="available-homes">
@@ -208,6 +206,11 @@ export default function VIPBuyerProgramPage() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold mb-6 text-gray-900">What Working with a VIP New Construction Homes Specialist Means</h2>
+                <SectionImage
+                  imageId="vip-model-home"
+                  heading="What Working with a VIP New Construction Homes Specialist Means"
+                  caption="VIP model home access at Homestead West in Northwest Las Vegas 89149"
+                />
                 <p className="text-xl text-gray-700 max-w-3xl mx-auto">
                   Dr. Jan Duffy's elite builder relationships deliver exclusive advantages 
                   that regular agents simply cannot provide.
@@ -354,16 +357,16 @@ export default function VIPBuyerProgramPage() {
                 <h3 className="text-3xl font-bold mb-8">VIP Buyer Services & Expertise</h3>
                 <div className="grid md:grid-cols-3 gap-8">
                   <div>
-                    <p className="text-5xl font-bold text-yellow-400 mb-2">VIP</p>
-                    <p className="text-xl">Early Access & Priority Selection</p>
+                    <p className="text-5xl font-bold text-[#d4af37] mb-2">$910K+</p>
+                    <p className="text-xl">Listed ranch homes from $910,990</p>
                   </div>
                   <div>
-                    <p className="text-5xl font-bold text-yellow-400 mb-2">$2M+</p>
-                    <p className="text-xl">Average Home Value</p>
+                    <p className="text-5xl font-bold text-[#d4af37] mb-2">3,336–3,704</p>
+                    <p className="text-xl">Square feet on the two ranch plans</p>
                   </div>
                   <div>
-                    <p className="text-5xl font-bold text-yellow-400 mb-2">98%</p>
-                    <p className="text-xl">Client Satisfaction</p>
+                    <p className="text-5xl font-bold text-[#d4af37] mb-2">(702) 299-6607</p>
+                    <p className="text-xl">Call before you walk into the sales office</p>
                   </div>
                 </div>
               </div>
@@ -470,66 +473,11 @@ export default function VIPBuyerProgramPage() {
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Buying a New Construction Home?
-              </h2>
-              <h3 className="text-2xl md:text-3xl font-bold mb-8 text-yellow-400">
-                Get VIP Treatment from Start to Close
-              </h3>
-              <p className="text-xl mb-12 text-blue-100 max-w-3xl mx-auto">
-                Don't settle for ordinary. Experience the difference of working with Dr. Jan Duffy, 
-                a VIP New Construction Homes Specialist who represents home buyers exclusively. Get insider access, priority treatment, 
-                and expert negotiation—all while having an advocate who works for YOU, not the builder.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-                <a
-                  href="https://drjanduffy.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNTk3Mg=="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-yellow-500 text-black px-10 py-5 rounded-lg font-bold text-xl hover:bg-yellow-400 transition-all shadow-2xl"
-                >
-                  🔍 Search Available Homes
-                </a>
-                <a
-                  href="tel:7022996607"
-                  className="bg-white text-blue-900 px-10 py-5 rounded-lg font-bold text-xl hover:bg-gray-100 transition-all shadow-2xl"
-                >
-                  📞 Call Dr. Jan: (702) 299-6607
-                </a>
-                <a
-                  href="mailto:DrJanSells@HomesteadWestLasVegas.com"
-                  className="bg-transparent border-3 border-white text-white px-10 py-5 rounded-lg font-bold text-xl hover:bg-white hover:text-blue-900 transition-all"
-                >
-                  📧 Get VIP Access Now
-                </a>
-              </div>
-
-              <div className="bg-white/10 rounded-lg p-8 backdrop-blur-sm text-white">
-                <h4 className="text-2xl font-bold mb-4 text-white">Dr. Jan Duffy - VIP New Construction Specialist</h4>
-                <div className="grid md:grid-cols-2 gap-6 text-left">
-                  <div>
-                    <p className="mb-2 text-white"><span className="font-semibold">Phone:</span> (702) 299-6607</p>
-                    <p className="mb-2 text-white"><span className="font-semibold">Email:</span> DrJanSells@HomesteadWestLasVegas.com</p>
-                    <p className="mb-2 text-white"><span className="font-semibold">License:</span> Nevada S.0197614.LLC</p>
-                  </div>
-                  <div>
-                    <p className="mb-2 text-white"><span className="font-semibold">Office:</span> Builder Sales Office</p>
-                    <p className="mb-2 text-white"><span className="font-semibold">Specialty:</span> VIP New Construction Homes Specialist</p>
-                  </div>
-                </div>
-                <p className="mt-6 text-sm text-blue-200">
-                  Independent real estate agent providing VIP access to new construction homes. 
-                  Not affiliated with or endorsed by the builder.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CtaBand
+          heading="Register as a represented Homestead West buyer"
+          body="Call (702) 299-6607 before you walk into the builder sales office. Dr. Jan represents you—not the builder."
+          source="vip-buyer-program"
+        />
 
         {/* Related Pages Section */}
         <section className="py-16 bg-white">

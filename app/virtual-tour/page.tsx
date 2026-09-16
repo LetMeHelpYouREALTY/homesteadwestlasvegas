@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Virtual Tour | Homestead West Las Vegas | 3D Property Walkthrough',
@@ -18,6 +21,7 @@ export const metadata: Metadata = {
     description: 'Take a virtual 3D tour of Homestead West luxury ranch homes in Northwest Las Vegas.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/virtual-tour',
+    images: ogImages('interior-great-room'),
   },
 };
 
@@ -64,13 +68,11 @@ export default function VirtualTourPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-blue-900 text-white py-8">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4">Homestead West Virtual Tour</h1>
-            <p className="text-xl">Experience Homestead West in 3D</p>
-          </div>
-        </header>
+        <PageHero
+          imageId="interior-great-room"
+          title="Homestead West Virtual Tour"
+          subtitle="Experience Homestead West in 3D"
+        />
 
         {/* Virtual Tour Section */}
         <section className="py-16">
@@ -78,6 +80,11 @@ export default function VirtualTourPage() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold mb-4">Homestead West Interactive 3D Property Tour</h2>
+                <SectionImage
+                  imageId="interior-great-room"
+                  heading="Homestead West Interactive 3D Property Tour"
+                  caption="Great room interior in a Homestead West ranch home, Las Vegas 89149"
+                />
                 <p className="text-lg text-gray-700 mb-6">
                   Explore Homestead West luxury ranch homes from anywhere with our immersive virtual tour. 
                   Navigate through the Homestead West properties and experience the space as if you were there in person.
@@ -160,9 +167,9 @@ export default function VirtualTourPage() {
               </div>
 
               {/* VIP New Construction Homes Specialist CTA */}
-              <div className="text-center bg-gradient-to-r from-blue-900 to-purple-900 text-white py-12 rounded-lg">
+              <div className="text-center bg-[#1a365d] text-white py-12 rounded-lg">
                 <div className="inline-block bg-yellow-500 text-black px-4 py-2 rounded-full font-bold text-sm mb-4">
-                  ⭐ VIP NEW CONSTRUCTION PROGRAM ⭐
+                  VIP Buyer Program
                 </div>
                 <h3 className="text-3xl font-bold mb-4">Ready to Experience Homestead West VIP Treatment?</h3>
                 <p className="text-xl mb-8 text-blue-100">

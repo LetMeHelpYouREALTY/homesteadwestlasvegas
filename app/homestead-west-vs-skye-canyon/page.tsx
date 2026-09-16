@@ -1,8 +1,11 @@
 import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Homestead West vs Skye Canyon: Complete Comparison | Northwest Las Vegas New Construction',
@@ -23,6 +26,7 @@ export const metadata: Metadata = {
     description: 'Compare Homestead West and Skye Canyon new construction communities in Northwest Las Vegas.',
     type: 'website',
     url: absoluteUrl('/homestead-west-vs-skye-canyon'),
+    images: ogImages('ranch-exterior-dusk'),
   },
 };
 
@@ -59,23 +63,16 @@ export default function ComparisonPage() {
       />
       
       <article itemScope itemType="https://schema.org/Article" className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 itemProp="headline" className="text-4xl md:text-5xl font-bold mb-6">
-                Homestead West vs Skye Canyon: Complete Comparison
-              </h1>
-              <p itemProp="description" className="text-xl text-blue-100 mb-4">
-                Compare two premier new construction communities in Northwest Las Vegas to find the right fit for your lifestyle and budget.
-              </p>
-              <address rel="author" className="text-blue-200 text-sm mb-2">
-                By <a href="/about" className="text-yellow-400 hover:text-yellow-300">Dr. Jan Duffy</a>, Licensed Nevada Real Estate Agent (S.0197614.LLC)
-              </address>
-              <time dateTime="2026-01-19" className="text-blue-200 text-sm">Last updated: January 19, 2026</time>
-            </div>
-          </div>
-        </header>
+        <PageHero
+          imageId="ranch-exterior-dusk"
+          title="Homestead West vs Skye Canyon: Complete Comparison"
+          subtitle="Compare two premier new construction communities in Northwest Las Vegas to find the right fit for your lifestyle and budget."
+        >
+          <address rel="author" className="text-blue-100 text-sm mb-2 not-italic">
+            By <a href="/about" className="text-yellow-400 hover:text-yellow-300">Dr. Jan Duffy</a>, Licensed Nevada Real Estate Agent (S.0197614.LLC)
+          </address>
+          <time dateTime="2026-01-19" className="text-blue-100 text-sm">Last updated: January 19, 2026</time>
+        </PageHero>
 
         <section className="py-14 bg-gray-50" id="available-homes">
           <div className="container mx-auto px-4">
@@ -94,6 +91,11 @@ export default function ComparisonPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold mb-8 text-gray-900">Quick Comparison</h2>
+              <SectionImage
+                imageId="ranch-exterior-dusk"
+                heading="Quick Comparison"
+                caption="Homestead West ranch homes in Northwest Las Vegas 89149"
+              />
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse border border-gray-300">
                   <thead>
@@ -225,7 +227,7 @@ export default function ComparisonPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+        <section className="py-16 bg-[#1a365d] text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6">Need Help Deciding?</h2>
             <p className="text-xl mb-8 text-blue-100">

@@ -1,9 +1,12 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import RealScoutListings from '@/components/RealScoutListings';
+import PageHero from '@/components/PageHero';
+import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Available Homes | Homestead West Las Vegas | MLS Listings',
@@ -23,6 +26,7 @@ export const metadata: Metadata = {
     description: 'Browse current available homes in Las Vegas MLS. Updated daily with the latest properties.',
     type: 'website',
     url: absoluteUrl('/floor-plans'),
+    images: ogImages('interior-great-room'),
   },
 };
 
@@ -78,13 +82,11 @@ export default function FloorPlansPage() {
       />
       
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-blue-900 text-white py-12">
-          <div className="container mx-auto px-4">
-            <h1 className="text-5xl font-bold mb-4">Available Homestead West Homes</h1>
-            <p className="text-xl text-blue-100">Homestead West Las Vegas MLS Listings - Updated Daily</p>
-          </div>
-        </header>
+        <PageHero
+          imageId="interior-great-room"
+          title="Available Homestead West Homes"
+          subtitle="Homestead West Las Vegas MLS Listings - Updated Daily"
+        />
 
         {/* MLS listings — early for buyer engagement */}
         <section className="py-16 bg-gray-50" id="available-homes">
@@ -112,6 +114,10 @@ export default function FloorPlansPage() {
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
                   When does Plan 3336 make sense?
                 </h3>
+                <SectionImage
+                  imageId="luxury-kitchen"
+                  heading="When does Plan 3336 make sense?"
+                />
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Plan 3336 fits buyers who want a large single-story footprint near 3,336 sq ft—strong for everyday living and
                   entertaining without jumping to the largest plan. If you want pool-sized lot flexibility and a balance of space
@@ -128,6 +134,10 @@ export default function FloorPlansPage() {
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
                   When does Plan 3704 make sense?
                 </h3>
+                <SectionImage
+                  imageId="detached-casita"
+                  heading="When does Plan 3704 make sense?"
+                />
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Plan 3704 is the step-up for buyers who want maximum single-story square footage in the community—ideal when
                   you need extra bedrooms, a larger great room, or multi-generational layout options. Compare lot premiums and

@@ -1,6 +1,17 @@
 import CalendlyLink from '@/components/CalendlyLink';
 import { ASSET_BHHS_LOGO_PATH } from '@/lib/site-assets';
-import { LICENSE_ID } from '@/lib/site-contact';
+import {
+  ADDRESS_LINE,
+  BUSINESS_NAME,
+  EMAIL,
+  GOOGLE_DIRECTIONS_URL,
+  GOOGLE_MAPS_EMBED_URL,
+  GOOGLE_REVIEW_URL,
+  LICENSE_ID,
+  OPENING_HOURS_TEXT,
+  PHONE_DISPLAY,
+  PHONE_TEL_HREF,
+} from '@/lib/site-contact';
 
 export default function Footer() {
   return (
@@ -8,35 +19,39 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-white font-bold text-lg mb-4">Dr. Jan Duffy</h3>
+            <h3 className="text-white font-bold text-lg mb-4">{BUSINESS_NAME}</h3>
             <p className="mb-2">Berkshire Hathaway HomeServices Nevada</p>
             <p className="mb-2">Nevada License: {LICENSE_ID}</p>
-            <p className="mb-2">(702) 299-6607</p>
-            <p>DrJanSells@HomesteadWestLasVegas.com</p>
+            <p className="mb-2">
+              <a href={PHONE_TEL_HREF} className="hover:text-yellow-400">{PHONE_DISPLAY}</a>
+            </p>
+            <p>
+              <a href={`mailto:${EMAIL}`} className="hover:text-yellow-400 break-all">{EMAIL}</a>
+            </p>
+            <p className="mt-3 text-sm text-gray-300">{OPENING_HOURS_TEXT}</p>
           </div>
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Map Location</h3>
-            <p className="mb-2">5592 Dapple Gray Rd</p>
-            <p className="mb-2">Las Vegas, NV 89149</p>
+            <p className="mb-2">{ADDRESS_LINE}</p>
             <div className="mt-4 rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps?q=5592+Dapple+Gray+Rd,+Las+Vegas,+NV+89149&output=embed"
+                src={GOOGLE_MAPS_EMBED_URL}
                 width="100%"
                 height="200"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Homestead West Location - 5592 Dapple Gray Rd, Las Vegas, NV 89149"
+                title={`Homestead West Location - ${ADDRESS_LINE}`}
                 className="w-full"
               />
             </div>
-            <a
-              href="/location"
-              className="inline-block mt-3 text-yellow-400 hover:text-yellow-300 text-sm transition-colors"
-            >
-              Find Our Office (map & directions) →
-            </a>
+            <div className="mt-3 flex flex-wrap gap-3 text-sm">
+              <a href={PHONE_TEL_HREF} className="text-yellow-400 hover:text-yellow-300">Call</a>
+              <a href={GOOGLE_DIRECTIONS_URL} target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300">Directions</a>
+              <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300">View Google Reviews</a>
+              <a href="/location" className="text-yellow-400 hover:text-yellow-300">Find Our Office →</a>
+            </div>
           </div>
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Quick Links</h3>
