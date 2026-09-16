@@ -22,16 +22,24 @@ CENTURY_COMMUNITIES_API_KEY=your-century-api-key
 CENTURY_COMMUNITIES_BASE_URL=your-century-base-url
 ```
 
-### Cloudflare Images
-```bash
-# Optional CDN. Git JPEGs in public/photos/sections are the backup.
-NEXT_PUBLIC_CF_IMAGES_HASH=
-NEXT_PUBLIC_CF_IMAGES_VARIANT=public
-CLOUDFLARE_ACCOUNT_ID=
-CLOUDFLARE_API_TOKEN=
+### Cloudflare Images (hosted)
+
+Public delivery (already in the app):
+
+```
+https://imagedelivery.net/byE6BTe9lNqo21V57n4aPQ/<image_id>/public
 ```
 
-Keep the Vercel hostname on DNS-only (gray cloud). Serve media from `imagedelivery.net` or a separate images hostname.
+```bash
+NEXT_PUBLIC_CF_IMAGES_HASH=byE6BTe9lNqo21V57n4aPQ
+NEXT_PUBLIC_CF_IMAGES_VARIANT=public
+CLOUDFLARE_ACCOUNT_ID=2cc579c1ec9e426ed585e933ebf4753b
+CLOUDFLARE_API_TOKEN=          # Images Write — never commit
+```
+
+Upload git JPEGs once: `CLOUDFLARE_API_TOKEN=… npm run upload:cf-images`
+
+Keep the Vercel hostname on DNS-only (gray cloud). Serve media from `imagedelivery.net`.
 
 ### Google Maps API
 - `VITE_GOOGLE_MAPS_API_KEY` ✅

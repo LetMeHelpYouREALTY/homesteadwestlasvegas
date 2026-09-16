@@ -1,15 +1,11 @@
 import cloudflareImageIds from '@/lib/cloudflare-image-ids.json'
+import { cloudflareDeliveryUrl } from '@/lib/cloudflare-images'
 import { SITE_IMAGES, type SiteImageId } from '@/lib/image-catalog'
 import { SITE_URL } from '@/lib/site-contact'
 
 type CloudflareIdMap = Record<string, string>
 
 const uploadedIds = cloudflareImageIds as CloudflareIdMap
-
-function cloudflareHash(): string | undefined {
-  const hash = process.env.NEXT_PUBLIC_CF_IMAGES_HASH?.trim()
-  return hash || undefined
-}
 
 function customDomain(): string | undefined {
   const domain = process.env.NEXT_PUBLIC_CF_IMAGES_CUSTOM_DOMAIN?.trim()
@@ -18,24 +14,22 @@ function customDomain(): string | undefined {
 }
 
 /**
- * Cloudflare-first image URL with git `/photos/...` backup.
+ * Cloudflare hosted Images first, git `/photos/...` backup.
  *
- * Delivery order:
- * 1. Cloudflare Images (`imagedelivery.net/{hash}/{id}/{variant}`) when hash + uploaded id exist
- * 2. Custom Cloudflare hostname (Images custom domain or R2 + Image Resizing)
- * 3. Git-hosted file on this origin (Vercel)
+ * Delivery order (Cloudflare hosted Images, not orange-cloud on Vercel):
+ * 1. https://imagedelivery.net/<account_hash>/<image_id>/<variant>
+ *    when lib/cloudflare-image-ids.json has an uploaded custom ID
+ * 2. Optional custom Images hostname
+ * 3. Git-hosted JPEG on this origin
  *
- * Do not orange-cloud the Vercel apex. Serve media from imagedelivery.net or a
- * separate images subdomain (gray-cloud DNS for the Next.js site).
+ * @see https://developers.cloudflare.com/images/optimization/hosted-images/
  */
 export function mediaSrc(id: SiteImageId): string {
   const asset = SITE_IMAGES[id]
-  const hash = cloudflareHash()
   const cfId = uploadedIds[id]
-  const variant = process.env.NEXT_PUBLIC_CF_IMAGES_VARIANT?.trim() || 'public'
 
-  if (hash && cfId) {
-    return `https://imagedelivery.net/${hash}/${cfId}/${variant}`
+  if (cfId) {
+    return cloudflareDeliveryUrl(cfId)
   }
 
   const custom = customDomain()
