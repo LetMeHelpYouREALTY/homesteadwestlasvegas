@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: 'Schedule a consultation with Dr. Jan Duffy for expert real estate services in Las Vegas.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/appointment',
-    images: ogImages('vip-model-home'),
+    images: ogImages('appointment-consultation'),
   },
 };
 
@@ -58,7 +58,7 @@ export default function AppointmentPage() {
       
       <div className="min-h-screen bg-white">
         <PageHero
-          imageId="vip-model-home"
+          imageId="appointment-consultation"
           title="Schedule Your Homestead West Appointment"
           subtitle="Book a consultation with Dr. Jan Duffy for Homestead West"
         />
@@ -69,6 +69,11 @@ export default function AppointmentPage() {
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <h2 className="text-3xl font-bold mb-6">Book Your Homestead West Consultation</h2>
+                <SectionImage
+                  imageId="appointment-consultation"
+                  heading="Book Your Homestead West Consultation"
+                  caption="Floor plans and keys ready for a Homestead West appointment in Las Vegas 89149"
+                />
                 <p className="text-lg mb-8">
                   Schedule a personalized Homestead West consultation with Dr. Jan Duffy to discuss your Homestead West real estate needs. 
                   We offer flexible scheduling to accommodate your busy lifestyle for Homestead West buyers.
@@ -174,9 +179,9 @@ export default function AppointmentPage() {
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-8 text-gray-900">Why Schedule Your Homestead West Consultation with Dr. Jan Duffy?</h2>
               <SectionImage
-                imageId="buyer-consultation"
+                imageId="appointment-consultation"
                 heading="Why Schedule Your Homestead West Consultation with Dr. Jan Duffy?"
-                caption="Buyer consultation for Homestead West at 5592 Dapple Gray Rd, Las Vegas 89149"
+                caption="Appointment desk with Homestead West ranch floor plans at 5592 Dapple Gray Rd, Las Vegas 89149"
               />
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 <div className="bg-blue-50 p-6 rounded-xl">

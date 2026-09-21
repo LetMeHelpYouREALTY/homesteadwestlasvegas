@@ -95,6 +95,12 @@ export default function FloorPlansPage() {
               <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">
                 Available Homestead West Homes and Las Vegas MLS Listings
               </h2>
+              <SectionImage
+                imageId="listings-search-desk"
+                heading="Available Homestead West Homes and Las Vegas MLS Listings"
+                caption="Search live Homestead West MLS inventory from a ranch kitchen in Las Vegas 89149"
+                className="max-w-3xl mx-auto"
+              />
               <p className="text-xl text-center text-gray-700 mb-12 max-w-3xl mx-auto">
                 Browse current listings from the Las Vegas MLS — updated daily with the latest properties
               </p>

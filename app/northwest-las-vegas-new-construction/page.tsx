@@ -82,6 +82,12 @@ export default function NorthwestLasVegasNewConstructionPage() {
         <section className="py-14 bg-gray-50" id="available-homes">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">Browse 89149 &amp; Northwest Las Vegas listings</h2>
+            <SectionImage
+              imageId="listings-search-desk"
+              heading="Browse 89149 & Northwest Las Vegas listings"
+              caption="Search new construction in zip code 89149 from a Homestead West ranch kitchen"
+              className="max-w-3xl mx-auto"
+            />
             <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
               Live MLS inventory — updated as new homes and phases come online.
             </p>

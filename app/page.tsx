@@ -238,9 +238,9 @@ export default function HomePage() {
               <div className="text-center mb-8">
                 <h2 className="text-4xl font-bold mb-4 text-gray-900">How Much Do Homes Cost in Homestead West?</h2>
                 <SectionImage
-                  imageId="community-streetscape"
+                  imageId="price-comparison-ranch"
                   heading="How Much Do Homes Cost in Homestead West?"
-                  caption="New construction ranch homes in Homestead West, Northwest Las Vegas 89149"
+                  caption="Luxury ranch homes in Homestead West start at $910,000 in Northwest Las Vegas 89149"
                 />
                 <p className="text-xl text-gray-700 mb-4">
                   Homes in Homestead West start at $910,000 for single-story ranch designs ranging from 3,336 to 3,704 square feet. Prices vary based on lot premiums, floor plan selection, and design center upgrades.
@@ -310,6 +310,11 @@ export default function HomePage() {
                 <h2 className="text-4xl font-bold mb-4 text-gray-900">
                   Filter new construction across Northwest Las Vegas
                 </h2>
+                <SectionImage
+                  imageId="listings-search-desk"
+                  heading="Filter new construction across Northwest Las Vegas"
+                  caption="Search Homestead West and Northwest Las Vegas new construction from a ranch kitchen"
+                />
                 <p className="text-gray-700 mb-8 text-lg">
                   Narrow by price, beds, baths, and square footage — opens results in a new tab.
                 </p>
@@ -564,6 +569,11 @@ export default function HomePage() {
               <h2 className="text-4xl font-bold mb-6 text-gray-900">
                 Backed by a Name You Can Trust
               </h2>
+              <SectionImage
+                imageId="bhhs-office-interior"
+                heading="Backed by a Name You Can Trust"
+                caption="Buyer representation office overlooking ranch homes near 5592 Dapple Gray Rd, Las Vegas NV 89149"
+              />
               <p className="text-xl text-gray-700 mb-8">
                 Dr. Jan Duffy is proud to represent buyers through Berkshire Hathaway HomeServices Nevada—one of the most respected names in real estate.
               </p>

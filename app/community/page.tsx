@@ -214,9 +214,9 @@ export default function CommunityPage() {
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Homestead West Local Schools</h2>
               <SectionImage
-                imageId="community-streetscape"
+                imageId="school-campus-89149"
                 heading="Homestead West Local Schools"
-                caption="Homestead West streetscape in the Centennial Hills area of Northwest Las Vegas 89149"
+                caption="Zoned school campus in the Centennial Hills area near Homestead West, Las Vegas NV 89149"
               />
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -313,14 +313,19 @@ export default function CommunityPage() {
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Homestead West Shopping & Dining</h2>
               <SectionImage
-                imageId="nw-shopping-plaza"
+                imageId="grocery-center-89149"
                 heading="Homestead West Shopping & Dining"
-                caption="Retail and dining in Northwest Las Vegas, a short drive from 5592 Dapple Gray Rd"
+                caption="Shopping centers in Northwest Las Vegas, a short drive from 5592 Dapple Gray Rd"
               />
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <h3 className="text-2xl font-bold mb-6 text-gray-900">Homestead West Shopping Centers</h3>
+                  <SectionImage
+                    imageId="grocery-center-89149"
+                    heading="Homestead West Shopping Centers"
+                    caption="Grocery and retail near Homestead West in zip code 89149"
+                  />
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <span className="text-blue-600 mr-3 text-xl">🛒</span>
@@ -355,6 +360,11 @@ export default function CommunityPage() {
 
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <h3 className="text-2xl font-bold mb-6 text-gray-900">Homestead West Restaurants</h3>
+                  <SectionImage
+                    imageId="dining-patio-89149"
+                    heading="Homestead West Restaurants"
+                    caption="Dining with mountain views near Homestead West and Centennial Hills"
+                  />
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <span className="text-green-600 mr-3 text-xl">🍽️</span>
@@ -464,14 +474,19 @@ export default function CommunityPage() {
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Homestead West Recreation & Parks</h2>
               <SectionImage
-                imageId="red-rock-canyon"
+                imageId="local-park-89149"
                 heading="Homestead West Recreation & Parks"
-                caption="Red Rock Canyon is about 9 miles from Homestead West at 5592 Dapple Gray Rd"
+                caption="Neighborhood park near Homestead West in Northwest Las Vegas 89149"
               />
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <h3 className="text-2xl font-bold mb-6 text-gray-900">Homestead West Local Parks</h3>
+                  <SectionImage
+                    imageId="local-park-89149"
+                    heading="Homestead West Local Parks"
+                    caption="Walking paths and ramadas near Homestead West, Las Vegas 89149"
+                  />
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <span className="text-green-600 mr-3 text-xl">🌳</span>
@@ -499,6 +514,11 @@ export default function CommunityPage() {
 
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <h3 className="text-2xl font-bold mb-6 text-gray-900">Things to Do Near Homestead West</h3>
+                  <SectionImage
+                    imageId="red-rock-canyon"
+                    heading="Things to Do Near Homestead West"
+                    caption="Red Rock Canyon is about 9 miles from Homestead West at 5592 Dapple Gray Rd"
+                  />
                   <div className="space-y-4 mb-6">
                     <div className="flex items-start">
                       <span className="text-purple-600 mr-3 text-xl">🏔️</span>

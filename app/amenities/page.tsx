@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: 'Restaurants, parks, parking, shopping, schools, and more near Homestead West. View on Google Maps.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/amenities',
-    images: ogImages('red-rock-canyon'),
+    images: ogImages('local-park-89149'),
   },
 };
 
@@ -86,7 +86,7 @@ export default function AmenitiesPage() {
 
       <div className="min-h-screen bg-white">
         <PageHero
-          imageId="red-rock-canyon"
+          imageId="local-park-89149"
           title="Nearby Amenities Map"
           subtitle={
             <>
@@ -133,15 +133,13 @@ export default function AmenitiesPage() {
                       {category.icon && <span aria-hidden>{category.icon}</span>}
                       {category.label}
                     </h2>
-                    {category.id === 'parks' ? (
-                      <SectionImage
-                        imageId="red-rock-canyon"
-                        heading={category.label}
-                        caption="Red Rock Canyon is about 9 miles from Homestead West at 5592 Dapple Gray Rd, Las Vegas 89149"
-                        className="mt-4 mb-0"
-                      />
-                    ) : null}
                     <p className="text-gray-600 mt-1">{category.description}</p>
+                    <SectionImage
+                      imageId={category.imageId}
+                      heading={category.label}
+                      caption={`${category.label} near Homestead West at 5592 Dapple Gray Rd, Las Vegas NV 89149`}
+                      className="mt-4 mb-0"
+                    />
                   </div>
                   <div className="p-4 md:p-6">
                     <div className="rounded-lg overflow-hidden border border-gray-200 bg-gray-100 aspect-video max-h-[400px]">

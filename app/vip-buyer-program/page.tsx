@@ -299,6 +299,11 @@ export default function VIPBuyerProgramPage() {
               <div className="grid md:grid-cols-2 gap-12 mb-16">
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8">
                   <h3 className="text-3xl font-bold mb-6 text-gray-900">Active Communities Including Homestead West</h3>
+                  <SectionImage
+                    imageId="cadence-henderson"
+                    heading="Active Communities Including Homestead West"
+                    caption="New construction beyond Homestead West, including Henderson master-planned streets"
+                  />
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <div className="w-4 h-4 bg-blue-600 rounded-full mr-4"></div>

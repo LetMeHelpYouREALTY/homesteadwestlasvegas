@@ -188,6 +188,11 @@ export default function HomebuyingProcessPage() {
                     <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl mr-4">1</div>
                     <h2 className="text-3xl font-bold text-gray-900">Homestead West Prequalify</h2>
                   </div>
+                  <SectionImage
+                    imageId="preapproval-desk"
+                    heading="Homestead West Prequalify"
+                    caption="Prequalify paperwork for a Homestead West ranch purchase in Las Vegas 89149"
+                  />
                   <h3 className="text-2xl font-semibold mb-4 text-gray-800">Get a No-Strings-Attached Homestead West Financial Assessment</h3>
                   <p className="text-lg text-gray-700 mb-6">
                     This no-commitment, knowledge-building exercise gives you insight into how much home you could probably afford, 
@@ -277,6 +282,11 @@ export default function HomebuyingProcessPage() {
                     <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl mr-4">2</div>
                     <h2 className="text-3xl font-bold text-gray-900">Homestead West House Hunt</h2>
                   </div>
+                  <SectionImage
+                    imageId="listings-search-desk"
+                    heading="Homestead West House Hunt"
+                    caption="Search Homestead West ranch listings on-site or online in Las Vegas 89149"
+                  />
                   <h3 className="text-2xl font-semibold mb-4 text-gray-800">Search Homestead West On-Site or Online</h3>
                   <p className="text-lg text-gray-700 mb-6">
                     Once you've prequalified and know your price range, you're ready to go shopping. Depending on what's most 

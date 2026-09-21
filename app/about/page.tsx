@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: 'Meet Dr. Jan Duffy, VIP New Construction Homes Specialist. Buyer representation for Homestead West at 5592 Dapple Gray Rd, Las Vegas NV 89149.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/about',
-    images: ogImages('ranch-exterior-dusk'),
+    images: ogImages('bhhs-office-interior'),
   },
 };
 
@@ -91,7 +91,7 @@ export default function AboutPage() {
       
       <article itemScope itemType="https://schema.org/Article" className="min-h-screen bg-white">
         <PageHero
-          imageId="ranch-exterior-dusk"
+          imageId="bhhs-office-interior"
           title="Who is Dr. Jan Duffy?"
           subtitle={
             <>

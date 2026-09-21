@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Professional property management services in Las Vegas with VIP New Construction Homes Specialist.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/services/property-management',
-    images: ogImages('managed-rental-ranch'),
+    images: ogImages('tenant-keys-ranch'),
   },
 };
 
@@ -60,7 +60,7 @@ export default function PropertyManagementPage() {
       
       <div className="min-h-screen bg-white">
         <PageHero
-          imageId="managed-rental-ranch"
+          imageId="tenant-keys-ranch"
           title="Homestead West Property Management Services"
           subtitle={
             <>
@@ -95,9 +95,9 @@ export default function PropertyManagementPage() {
               </div>
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Elite Homestead West Property Management</h2>
               <SectionImage
-                imageId="managed-rental-ranch"
+                imageId="tenant-keys-ranch"
                 heading="Elite Homestead West Property Management"
-                caption="Professionally managed ranch home in Homestead West, Las Vegas 89149"
+                caption="Lockbox and keys at a managed Homestead West ranch in Las Vegas 89149"
               />
               <p className="text-xl text-gray-700 mb-8">
                 Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers exclusively, delivers exclusive property management 
@@ -112,6 +112,11 @@ export default function PropertyManagementPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Comprehensive Homestead West Management Services</h2>
+              <SectionImage
+                imageId="managed-rental-ranch"
+                heading="Comprehensive Homestead West Management Services"
+                caption="Professionally managed ranch home in Homestead West, Las Vegas 89149"
+              />
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
@@ -236,6 +241,11 @@ export default function PropertyManagementPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Our Homestead West Management Process</h2>
+              <SectionImage
+                imageId="tenant-keys-ranch"
+                heading="Our Homestead West Management Process"
+                caption="Tenant placement starts at the ranch door — Homestead West, Las Vegas 89149"
+              />
               <div className="grid md:grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">

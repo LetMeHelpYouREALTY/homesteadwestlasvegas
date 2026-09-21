@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: 'Compare Homestead West and Skye Canyon new construction communities in Northwest Las Vegas.',
     type: 'website',
     url: absoluteUrl('/homestead-west-vs-skye-canyon'),
-    images: ogImages('ranch-exterior-dusk'),
+    images: ogImages('vs-skye-canyon'),
   },
 };
 
@@ -64,7 +64,7 @@ export default function ComparisonPage() {
       
       <article itemScope itemType="https://schema.org/Article" className="min-h-screen bg-white">
         <PageHero
-          imageId="ranch-exterior-dusk"
+          imageId="vs-skye-canyon"
           title="Homestead West vs Skye Canyon: Complete Comparison"
           subtitle="Compare two premier new construction communities in Northwest Las Vegas to find the right fit for your lifestyle and budget."
         >
@@ -77,6 +77,12 @@ export default function ComparisonPage() {
         <section className="py-14 bg-gray-50" id="available-homes">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">Browse live MLS listings</h2>
+            <SectionImage
+              imageId="listings-search-desk"
+              heading="Browse live MLS listings"
+              caption="Search Homestead West and Northwest Las Vegas listings from a ranch kitchen island"
+              className="max-w-3xl mx-auto"
+            />
             <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
               See current inventory in Northwest Las Vegas while you compare communities.
             </p>
@@ -92,9 +98,9 @@ export default function ComparisonPage() {
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold mb-8 text-gray-900">Quick Comparison</h2>
               <SectionImage
-                imageId="community-streetscape"
+                imageId="vs-skye-canyon"
                 heading="Quick Comparison"
-                caption="Homestead West ranch streetscape in Northwest Las Vegas 89149"
+                caption="Homestead West ranch with pool versus hillside master-planned homes in Northwest Las Vegas"
               />
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse border border-gray-300">
@@ -148,6 +154,11 @@ export default function ComparisonPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Price Comparison</h2>
+              <SectionImage
+                imageId="price-comparison-ranch"
+                heading="Price Comparison"
+                caption="Homestead West luxury ranch homes start at $910,000 in Northwest Las Vegas 89149"
+              />
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p className="text-lg mb-4">
                   <strong>How much do homes cost in Homestead West vs Skye Canyon?</strong> Homestead West homes start at $910,000, while Skye Canyon offers entry-level options starting around $650,000. Homestead West focuses exclusively on luxury single-story ranch homes, while Skye Canyon provides a wider range including more affordable two-story options.
@@ -165,6 +176,11 @@ export default function ComparisonPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Location Comparison</h2>
+              <SectionImage
+                imageId="commute-northwest"
+                heading="Location Comparison"
+                caption="Northwest Las Vegas freeway access near Homestead West zip code 89149"
+              />
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p className="text-lg mb-4">
                   <strong>Where is Homestead West vs Skye Canyon located?</strong> Homestead West is located in zip code 89149 at the intersection of W. Ann Road and N. Fort Apache Road in Northwest Las Vegas. Skye Canyon is located in zip code 89166, also in Northwest Las Vegas but in a different area of the valley.
@@ -182,6 +198,11 @@ export default function ComparisonPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Home Style Comparison</h2>
+              <SectionImage
+                imageId="home-style-ranch"
+                heading="Home Style Comparison"
+                caption="Single-story ranch living at Homestead West versus mixed one- and two-story plans nearby"
+              />
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p className="text-lg mb-4">
                   <strong>What types of homes are available in each community?</strong> Homestead West exclusively offers single-story ranch homes ranging from 3,336 to 3,704 square feet, perfect for families who want space without stairs. Skye Canyon offers both single-story and two-story homes with a wider size range from 1,800 to 4,500 square feet.
@@ -199,6 +220,11 @@ export default function ComparisonPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Which Should You Choose?</h2>
+              <SectionImage
+                imageId="vs-skye-canyon"
+                heading="Which Should You Choose?"
+                caption="Compare Homestead West single-story ranches with denser hillside communities in Northwest Las Vegas"
+              />
               <div className="space-y-6">
                 <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
                   <h3 className="text-xl font-bold mb-3 text-gray-900">Choose Homestead West if:</h3>

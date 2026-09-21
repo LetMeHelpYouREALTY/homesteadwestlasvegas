@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Expert real estate investment consulting in Las Vegas with VIP New Construction Homes Specialist.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/services/investment',
-    images: ogImages('managed-rental-ranch'),
+    images: ogImages('investment-roi'),
   },
 };
 
@@ -77,7 +77,7 @@ export default function InvestmentConsultingPage() {
       />
     <div className="min-h-screen bg-white">
       <PageHero
-        imageId="managed-rental-ranch"
+        imageId="investment-roi"
         title="Homestead West Investment Consulting"
         subtitle={
           <>
@@ -112,9 +112,9 @@ export default function InvestmentConsultingPage() {
             </div>
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Elite Homestead West Investment Access</h2>
             <SectionImage
-              imageId="managed-rental-ranch"
+              imageId="investment-roi"
               heading="Elite Homestead West Investment Access"
-              caption="Investment ranch home in Homestead West, Northwest Las Vegas 89149"
+              caption="Investment analysis for Homestead West ranch homes in Northwest Las Vegas 89149"
             />
             <p className="text-xl text-gray-700 mb-8">
               Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers exclusively, delivers exclusive investment opportunities, 
@@ -129,6 +129,11 @@ export default function InvestmentConsultingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Homestead West Investment Consulting Services</h2>
+            <SectionImage
+              imageId="managed-rental-ranch"
+              heading="Homestead West Investment Consulting Services"
+              caption="Ranch inventory used for Homestead West investment and rental analysis in Las Vegas 89149"
+            />
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: 'Side-by-side look at two Las Vegas Valley new construction options.',
     type: 'website',
     url: absoluteUrl('/homestead-west-vs-cadence'),
-    images: ogImages('pool-sized-lot'),
+    images: ogImages('cadence-henderson'),
   },
 };
 
@@ -56,7 +56,7 @@ export default function HomesteadWestVsCadencePage() {
 
       <article className="min-h-screen bg-white">
         <PageHero
-          imageId="pool-sized-lot"
+          imageId="cadence-henderson"
           title="Homestead West vs Cadence (Henderson)"
           subtitle="Two different markets—Northwest Las Vegas (89149) vs master-planned Henderson—both with new construction. Here is how buyers often compare them before touring."
         />
@@ -64,6 +64,12 @@ export default function HomesteadWestVsCadencePage() {
         <section className="py-14 bg-gray-50" id="available-homes">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">Browse live MLS listings</h2>
+            <SectionImage
+              imageId="listings-search-desk"
+              heading="Browse live MLS listings"
+              caption="Live Las Vegas Valley inventory while you compare Homestead West and Cadence"
+              className="max-w-3xl mx-auto"
+            />
             <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
               See current Las Vegas Valley inventory while you compare Homestead West and Cadence.
             </p>
@@ -77,9 +83,9 @@ export default function HomesteadWestVsCadencePage() {
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-3xl font-bold mb-8 text-gray-900">Quick comparison</h2>
             <SectionImage
-              imageId="pool-sized-lot"
+              imageId="cadence-henderson"
               heading="Quick comparison"
-              caption="Pool-sized lots at Homestead West, Las Vegas NV 89149"
+              caption="Two-story Henderson new construction compared with Homestead West single-story ranches in 89149"
             />
             <div className="overflow-x-auto">
               <table className="w-full border-collapse border border-gray-300">
@@ -115,6 +121,11 @@ export default function HomesteadWestVsCadencePage() {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Which commute and lifestyle fit you?</h2>
+            <SectionImage
+              imageId="commute-northwest"
+              heading="Which commute and lifestyle fit you?"
+              caption="Northwest Las Vegas commute corridors near Homestead West versus southeast-valley Henderson drives"
+            />
             <p className="text-lg text-gray-700 mb-4">
               <strong>How do I choose between Northwest Las Vegas and Henderson?</strong> Start with non-negotiables: work
               location, school preferences, and daily drive patterns. Henderson (including Cadence) can be the better fit when

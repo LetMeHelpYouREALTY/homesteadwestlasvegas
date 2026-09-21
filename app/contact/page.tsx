@@ -90,6 +90,12 @@ export default function ContactPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-5">
                 <h2 className="text-2xl font-bold mb-2 text-gray-900">Current Homestead West Listings</h2>
+                <SectionImage
+                  imageId="listings-search-desk"
+                  heading="Current Homestead West Listings"
+                  caption="Review Homestead West inventory before you call Dr. Jan for a private tour"
+                  className="max-w-3xl mx-auto"
+                />
                 <p className="text-gray-700 text-sm">Review available homes, then contact Dr. Jan for a private tour</p>
               </div>
 

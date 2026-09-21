@@ -233,6 +233,11 @@ export default function BuyersGuidePage() {
                     <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl mr-6">1</div>
                     <h3 className="text-2xl font-bold text-gray-900">Get Pre-approved</h3>
                   </div>
+                  <SectionImage
+                    imageId="preapproval-desk"
+                    heading="Get Pre-approved"
+                    caption="Mortgage pre-approval documents for Homestead West new construction in Las Vegas"
+                  />
                   <div className="ml-18">
                     <p className="text-lg text-gray-700 mb-4">
                       Before you start shopping, get pre-approved for a mortgage. This shows the builder 
