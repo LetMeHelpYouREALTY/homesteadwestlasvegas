@@ -128,11 +128,16 @@ export default function NorthwestLasVegasNewConstructionPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Why is zip code 89149 popular for new homes?
             </h2>
+            <SectionImage
+              imageId="ann-fort-apache-89149"
+              heading="Why is zip code 89149 popular for new homes?"
+              caption="Ann Road and Fort Apache area of Northwest Las Vegas zip code 89149 near Homestead West"
+            />
             <p className="text-gray-700 text-lg mb-4">
               89149 combines newer infrastructure with access to major arterials (CC-215, US 95) and everyday retail along
-              Centennial Center and nearby corridors. Families often weigh school assignments, commute to employment centers,
-              and proximity to parks—details that change with boundary updates, so your agent should confirm current zoning and
-              school information during your search.
+              Centennial Center and nearby corridors. Buyers often weigh commute time to employment centers,
+              named CCSD campuses, and proximity to parks—details that change with boundary updates, so your agent should confirm current zoning and
+              school names during your search.
             </p>
             <p className="text-gray-700 text-lg">
               <Link href="/community-map" className="text-[#1a365d] font-semibold underline">

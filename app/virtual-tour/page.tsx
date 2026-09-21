@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Take a virtual 3D tour of Homestead West luxury ranch homes in Northwest Las Vegas.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/virtual-tour',
-    images: ogImages('interior-great-room'),
+    images: ogImages('virtual-tour-tablet'),
   },
 };
 
@@ -69,7 +69,7 @@ export default function VirtualTourPage() {
       
       <div className="min-h-screen bg-white">
         <PageHero
-          imageId="interior-great-room"
+          imageId="virtual-tour-tablet"
           title="Homestead West Virtual Tour"
           subtitle="Experience Homestead West in 3D"
         />
@@ -81,9 +81,9 @@ export default function VirtualTourPage() {
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold mb-4">Homestead West Interactive 3D Property Tour</h2>
                 <SectionImage
-                  imageId="interior-great-room"
+                  imageId="virtual-tour-tablet"
                   heading="Homestead West Interactive 3D Property Tour"
-                  caption="Great room interior in a Homestead West ranch home, Las Vegas 89149"
+                  caption="3D virtual tour of a Homestead West ranch home in Las Vegas 89149"
                 />
                 <p className="text-lg text-gray-700 mb-6">
                   Explore Homestead West luxury ranch homes from anywhere with our immersive virtual tour. 

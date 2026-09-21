@@ -92,9 +92,9 @@ export default function ComparisonPage() {
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl font-bold mb-8 text-gray-900">Quick Comparison</h2>
               <SectionImage
-                imageId="ranch-exterior-dusk"
+                imageId="community-streetscape"
                 heading="Quick Comparison"
-                caption="Homestead West ranch homes in Northwest Las Vegas 89149"
+                caption="Homestead West ranch streetscape in Northwest Las Vegas 89149"
               />
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse border border-gray-300">

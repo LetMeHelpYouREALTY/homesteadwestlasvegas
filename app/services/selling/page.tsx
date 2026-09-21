@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Expert home selling services in Las Vegas with VIP New Construction Homes Specialist.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/services/selling',
-    images: ogImages('ranch-exterior-dusk'),
+    images: ogImages('for-sale-ranch'),
   },
 };
 
@@ -77,7 +77,7 @@ export default function HomeSellingPage() {
       />
     <div className="min-h-screen bg-white">
       <PageHero
-        imageId="ranch-exterior-dusk"
+        imageId="for-sale-ranch"
         title="Homestead West Home Selling Services"
         subtitle={
           <>
@@ -112,9 +112,9 @@ export default function HomeSellingPage() {
             </div>
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Elite Homestead West Selling Services</h2>
             <SectionImage
-              imageId="ranch-exterior-dusk"
+              imageId="for-sale-ranch"
               heading="Elite Homestead West Selling Services"
-              caption="Ranch homes at Homestead West in Northwest Las Vegas 89149"
+              caption="Ranch home for sale in Homestead West, Northwest Las Vegas 89149"
             />
             <p className="text-xl text-gray-700 mb-8">
               Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers exclusively, delivers exclusive market access, 
@@ -129,6 +129,11 @@ export default function HomeSellingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Comprehensive Homestead West Selling Services</h2>
+            <SectionImage
+              imageId="staged-living-room"
+              heading="Comprehensive Homestead West Selling Services"
+              caption="Staged living room ready to market in a Homestead West ranch home, Las Vegas 89149"
+            />
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">

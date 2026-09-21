@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description: `Plan your visit: directions to ${DESTINATION_DISPLAY}. From airport, downtown, Henderson. Drive, transit, or walk.`,
     type: 'website',
     url: absoluteUrl('/directions'),
-    images: ogImages('aerial-northwest-lv'),
+    images: ogImages('ann-fort-apache-89149'),
   },
 };
 
@@ -97,7 +97,7 @@ export default function DirectionsPage() {
 
       <div className="min-h-screen bg-white">
         <PageHero
-          imageId="aerial-northwest-lv"
+          imageId="ann-fort-apache-89149"
           title="Directions to Our Office"
           subtitle={
             <>
@@ -135,9 +135,9 @@ export default function DirectionsPage() {
           <div className="container mx-auto px-4">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Choose Travel Mode</h2>
             <SectionImage
-              imageId="aerial-northwest-lv"
+              imageId="ann-fort-apache-89149"
               heading="Choose Travel Mode"
-              caption="Aerial of Northwest Las Vegas near Homestead West at 5592 Dapple Gray Rd, 89149"
+              caption="Ann Road and Fort Apache area of Northwest Las Vegas 89149 near 5592 Dapple Gray Rd"
             />
             <p className="text-center text-gray-600 mb-8 max-w-xl mx-auto">
               Open directions with your preferred mode. Google Maps will show estimated travel time.

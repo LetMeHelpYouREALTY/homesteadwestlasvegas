@@ -114,6 +114,8 @@ export default function Plan3336Page() {
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Primary suite</h3>
                 <SectionImage imageId="primary-suite" heading="Primary suite" />
                 <p className="text-gray-700">Split-bedroom ranch layout with a large primary suite. Confirm window orientation before you lock a homesite—mountain vs. neighbor views change by lot.</p>
+                <h3 className="text-xl font-bold mb-3 mt-6 text-gray-900">Primary spa bath</h3>
+                <SectionImage imageId="spa-primary-bath" heading="Primary spa bath" />
               </div>
             </div>
           </div>

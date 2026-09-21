@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Expert real estate investment consulting in Las Vegas with VIP New Construction Homes Specialist.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/services/investment',
-    images: ogImages('aerial-northwest-lv'),
+    images: ogImages('managed-rental-ranch'),
   },
 };
 
@@ -77,7 +77,7 @@ export default function InvestmentConsultingPage() {
       />
     <div className="min-h-screen bg-white">
       <PageHero
-        imageId="aerial-northwest-lv"
+        imageId="managed-rental-ranch"
         title="Homestead West Investment Consulting"
         subtitle={
           <>
@@ -112,9 +112,9 @@ export default function InvestmentConsultingPage() {
             </div>
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Elite Homestead West Investment Access</h2>
             <SectionImage
-              imageId="aerial-northwest-lv"
+              imageId="managed-rental-ranch"
               heading="Elite Homestead West Investment Access"
-              caption="Aerial view of Northwest Las Vegas near Homestead West zip code 89149"
+              caption="Investment ranch home in Homestead West, Northwest Las Vegas 89149"
             />
             <p className="text-xl text-gray-700 mb-8">
               Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers exclusively, delivers exclusive investment opportunities, 

@@ -119,7 +119,11 @@ export default function Plan3704Page() {
         <section className="py-14 bg-white">
           <div className="container mx-auto px-4 max-w-5xl">
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Kitchen, patio, and garage</h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div>
+                <h3 className="text-lg font-bold mb-2 text-gray-900">Primary spa bath</h3>
+                <SectionImage imageId="spa-primary-bath" heading="Primary spa bath" />
+              </div>
               <div>
                 <h3 className="text-lg font-bold mb-2 text-gray-900">Kitchen</h3>
                 <SectionImage imageId="luxury-kitchen" heading="Kitchen" />

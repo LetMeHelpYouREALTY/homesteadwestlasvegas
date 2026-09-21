@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: 'Browse Las Vegas properties for sale with Dr. Jan Duffy. Ranch-style homes starting at $910K.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/properties',
-    images: ogImages('community-streetscape'),
+    images: ogImages('for-sale-ranch'),
   },
 };
 
@@ -120,7 +120,7 @@ export default function PropertiesPage() {
       
       <div className="min-h-screen bg-white">
         <PageHero
-          imageId="community-streetscape"
+          imageId="for-sale-ranch"
           title="Homestead West Las Vegas Properties for Sale"
           subtitle="Ranch-style homes on pool-sized lots in Northwest Las Vegas"
         />
@@ -130,6 +130,11 @@ export default function PropertiesPage() {
           <div className="container mx-auto px-4">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h2 className="text-3xl font-bold mb-6 text-center">Find Your Perfect Homestead West Home</h2>
+              <SectionImage
+                imageId="for-sale-ranch"
+                heading="Find Your Perfect Homestead West Home"
+                caption="Homestead West ranch homes for sale in Northwest Las Vegas 89149"
+              />
               <div className="flex justify-center w-full">
                 <div className="w-full max-w-4xl">
                   <RealScoutAdvancedSearch />
@@ -160,9 +165,9 @@ export default function PropertiesPage() {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Homestead West Properties?</h2>
             <SectionImage
-              imageId="community-streetscape"
+              imageId="staged-living-room"
               heading="Why Choose Homestead West Properties?"
-              caption="New construction ranch homes in Homestead West, Northwest Las Vegas 89149"
+              caption="Staged living room in a Homestead West ranch home, Las Vegas 89149"
             />
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
@@ -204,6 +209,11 @@ export default function PropertiesPage() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Homestead West and Las Vegas Market Insights</h2>
+            <SectionImage
+              imageId="ann-fort-apache-89149"
+              heading="Homestead West and Las Vegas Market Insights"
+              caption="Ann Road and Fort Apache area of Northwest Las Vegas 89149 near Homestead West"
+            />
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <h3 className="text-2xl font-semibold mb-6">Homestead West listing facts</h3>

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Professional property management services in Las Vegas with VIP New Construction Homes Specialist.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/services/property-management',
-    images: ogImages('community-streetscape'),
+    images: ogImages('managed-rental-ranch'),
   },
 };
 
@@ -60,7 +60,7 @@ export default function PropertyManagementPage() {
       
       <div className="min-h-screen bg-white">
         <PageHero
-          imageId="community-streetscape"
+          imageId="managed-rental-ranch"
           title="Homestead West Property Management Services"
           subtitle={
             <>
@@ -95,9 +95,9 @@ export default function PropertyManagementPage() {
               </div>
               <h2 className="text-3xl font-bold mb-6 text-gray-900">Elite Homestead West Property Management</h2>
               <SectionImage
-                imageId="community-streetscape"
+                imageId="managed-rental-ranch"
                 heading="Elite Homestead West Property Management"
-                caption="Homestead West streetscape in Northwest Las Vegas 89149"
+                caption="Professionally managed ranch home in Homestead West, Las Vegas 89149"
               />
               <p className="text-xl text-gray-700 mb-8">
                 Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers exclusively, delivers exclusive property management 
