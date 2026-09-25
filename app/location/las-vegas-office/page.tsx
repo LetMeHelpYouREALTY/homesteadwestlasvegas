@@ -44,9 +44,7 @@ export default function LasVegasOfficePage() {
       longitude: -115.3089,
     },
     openingHours: [
-      'Su 10:00-15:00',
-      'Mo-Fr 10:00-18:00',
-      'Sa 10:00-16:00'
+      'Mo-Su 08:00-20:00'
     ],
     licenseNumber: 'S.0197614.LLC',
     areaServed: {
@@ -141,9 +139,7 @@ export default function LasVegasOfficePage() {
                     </div>
                     <div>
                       <h3 className="font-semibold">Homestead West Office Hours</h3>
-                      <p>Sunday: 10:00 AM - 3:00 PM<br />
-                      Monday-Friday: 10:00 AM - 6:00 PM<br />
-                      Saturday: 10:00 AM - 4:00 PM</p>
+                      <p>Sunday-Saturday: 8:00 AM - 8:00 PM</p>
                     </div>
                   </div>
                 </div>
@@ -334,7 +330,7 @@ export default function LasVegasOfficePage() {
               </a>
             </div>
             <p className="text-blue-200 mt-6 max-w-2xl mx-auto">
-              Our Homestead West office is open Sunday 10:00 AM–3:00 PM, Monday through Friday 10:00 AM–6:00 PM, and Saturday 10:00 AM–4:00 PM. For Homestead West inquiries or to schedule a consultation, please call, email, or visit our office.
+              Our Homestead West office is open daily 8:00 AM–8:00 PM. For Homestead West inquiries or to schedule a consultation, please call, email, or visit our office.
             </p>
           </div>
         </section>

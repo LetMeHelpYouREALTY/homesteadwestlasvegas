@@ -34,14 +34,20 @@ const geo = {
 }
 
 const openingHoursSpecification = [
-  { '@type': 'OpeningHoursSpecification' as const, dayOfWeek: 'Sunday', opens: '10:00', closes: '15:00' },
   {
     '@type': 'OpeningHoursSpecification' as const,
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '10:00',
-    closes: '18:00',
+    dayOfWeek: [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday',
+    ],
+    opens: '08:00',
+    closes: '20:00',
   },
-  { '@type': 'OpeningHoursSpecification' as const, dayOfWeek: 'Saturday', opens: '10:00', closes: '16:00' },
 ]
 
 /**

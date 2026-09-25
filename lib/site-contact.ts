@@ -47,12 +47,24 @@ export const GOOGLE_GBP_URL = 'https://g.page/r/CVC1EMaenLJ3EBI' as const
 export const GOOGLE_CONTACT_CARD_URL = 'https://share.google/nB0T4SaU9gr8wLSdB' as const
 
 export const OFFICE_HOURS = [
-  { days: 'Sunday', hours: '10:00 AM – 3:00 PM', schemaDay: 'Sunday', opens: '10:00', closes: '15:00' },
-  { days: 'Monday – Friday', hours: '10:00 AM – 6:00 PM', schemaDay: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'] as const, opens: '10:00', closes: '18:00' },
-  { days: 'Saturday', hours: '10:00 AM – 4:00 PM', schemaDay: 'Saturday', opens: '10:00', closes: '16:00' },
+  {
+    days: 'Sunday – Saturday',
+    hours: '8:00 AM – 8:00 PM',
+    schemaDay: [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday',
+    ] as const,
+    opens: '08:00',
+    closes: '20:00',
+  },
 ] as const
 
-export const OPENING_HOURS_TEXT = 'Sun 10AM–3PM · Mon–Fri 10AM–6PM · Sat 10AM–4PM' as const
+export const OPENING_HOURS_TEXT = 'Sun–Sat 8AM–8PM' as const
 
 /** Stable @id for RealEstateAgent in JSON-LD (GEO entity consistency). */
 export const AGENT_SCHEMA_ID = `${SITE_URL}/#agent` as const

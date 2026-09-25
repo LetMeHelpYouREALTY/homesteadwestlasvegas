@@ -45,9 +45,7 @@ export default function ContactPage() {
       },
       licenseNumber: 'S.0197614.LLC',
       openingHours: [
-        'Su 10:00-15:00',
-        'Mo-Fr 10:00-18:00',
-        'Sa 10:00-16:00'
+        'Mo-Su 08:00-20:00'
       ]
     }
   };
@@ -160,7 +158,7 @@ export default function ContactPage() {
                           (702) 299-6607
                         </a>
                       </p>
-                      <p className="text-gray-700">Available Sunday 10AM-3PM, Monday-Friday 10AM-6PM, Saturday 10AM-4PM for Homestead West</p>
+                      <p className="text-gray-700">Available daily 8AM-8PM for Homestead West</p>
                       <a
                         href="https://share.google/nB0T4SaU9gr8wLSdB"
                         target="_blank"
@@ -231,16 +229,8 @@ export default function ContactPage() {
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">Homestead West Office Hours</h2>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span className="font-medium text-gray-900">Monday - Friday</span>
-                    <span className="text-gray-700">10:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span className="font-medium text-gray-900">Saturday</span>
-                    <span className="text-gray-700">10:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-gray-200">
-                    <span className="font-medium text-gray-900">Sunday</span>
-                    <span className="text-gray-700">10:00 AM – 3:00 PM</span>
+                    <span className="font-medium text-gray-900">Monday - Sunday</span>
+                    <span className="text-gray-700">8:00 AM - 8:00 PM</span>
                   </div>
                 </div>
                 <p className="mt-6 text-gray-800">
