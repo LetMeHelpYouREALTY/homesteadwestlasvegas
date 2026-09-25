@@ -4,10 +4,12 @@ import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
+import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Virtual Tour | Homestead West Las Vegas | 3D Property Walkthrough',
   description: 'Take a virtual 3D tour of Homestead West luxury ranch homes in Northwest Las Vegas. Experience the properties from anywhere with our interactive Matterport tour.',
+  ...canonicalMetadata('/virtual-tour'),
   keywords: [
     'Homestead West virtual tour',
     'Las Vegas 3D home tour',
@@ -38,7 +40,7 @@ export default function VirtualTourPage() {
       url: 'https://matterport.com'
     },
     about: {
-      '@type': 'RealEstateListing',
+      '@type': 'Place',
       name: 'Homestead West | Homes by Dr Jan Duffy',
       address: {
         '@type': 'PostalAddress',

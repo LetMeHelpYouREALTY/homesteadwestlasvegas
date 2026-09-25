@@ -4,10 +4,12 @@ import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
+import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Property Management Services | Dr. Jan Duffy | Las Vegas Real Estate',
   description: 'Professional property management services in Las Vegas with Dr. Jan Duffy. VIP New Construction Homes Specialist, rental management, and investment property services.',
+  ...canonicalMetadata('/services/property-management'),
   keywords: [
     'property management Las Vegas',
     'Dr. Jan Duffy property management',

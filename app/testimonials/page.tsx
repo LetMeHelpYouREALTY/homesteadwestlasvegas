@@ -5,11 +5,13 @@ import SectionImage from '@/components/SectionImage';
 import CtaBand from '@/components/CtaBand';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
+import { canonicalMetadata } from '@/lib/metadata';
 import { GOOGLE_REVIEW_URL, SITE_URL } from '@/lib/site-contact';
 
 export const metadata: Metadata = {
   title: 'Homestead West Buyer Stories | Dr. Jan Duffy | Northwest Las Vegas 89149',
   description: 'See how Dr. Jan Duffy represents Homestead West buyers—not the builder. Read Google reviews, then book a private tour at 5592 Dapple Gray Rd. Call (702) 299-6607.',
+  ...canonicalMetadata('/testimonials'),
   keywords: [
     'Dr. Jan Duffy testimonials',
     'new construction reviews',
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Client Testimonials & Reviews | Dr. Jan Duffy',
-    description: 'Read real client testimonials from families who worked with VIP New Construction Homes Specialist Dr. Jan Duffy.',
+    description: 'See how Dr. Jan Duffy represents Homestead West buyers—not the builder. Read Google reviews, then book a private tour at 5592 Dapple Gray Rd.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/testimonials',
     images: ogImages('private-tour'),

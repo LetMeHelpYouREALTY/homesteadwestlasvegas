@@ -5,14 +5,16 @@ import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
+import { canonicalMetadata } from '@/lib/metadata';
+import { GOOGLE_REVIEW_URL } from '@/lib/site-contact';
 
-const GOOGLE_REVIEW_URL = 'https://g.page/r/CVC1EMaenLJ3EBI/review';
 const QR_CODE_URL = `https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=${encodeURIComponent(GOOGLE_REVIEW_URL)}`;
 const GOOGLE_REVIEW_BEST_PRACTICES = 'https://support.google.com/business/answer/2622994';
 
 export const metadata: Metadata = {
   title: 'Review Us on Google | Homestead West Las Vegas | Dr. Jan Duffy',
   description: 'Leave a Google review for Dr. Jan Duffy and Homestead West Las Vegas. Reviews build trust and help our Business Profile stand out on Search and Maps.',
+  ...canonicalMetadata('/reviews'),
   keywords: [
     'review Homestead West',
     'Google review Dr. Jan Duffy',

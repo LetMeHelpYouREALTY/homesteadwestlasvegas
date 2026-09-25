@@ -4,10 +4,12 @@ import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
+import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Investment Consulting | Dr. Jan Duffy | Las Vegas Real Estate Investment Expert',
   description: 'Expert real estate investment consulting in Las Vegas with Dr. Jan Duffy. VIP New Construction Homes Specialist, market analysis, and investment strategy guidance.',
+  ...canonicalMetadata('/services/investment'),
   keywords: [
     'real estate investment Las Vegas',
     'Dr. Jan Duffy investment consulting',

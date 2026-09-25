@@ -35,7 +35,15 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'keepingcurrentmatters.com',
+        hostname: 'files.keepingcurrentmatters.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.simplifyingthemarket.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'api.qrserver.com',
       },
       {
         protocol: 'https',
@@ -88,7 +96,23 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://em.realscout.com https://www.realscout.com https://www.googletagmanager.com https://www.google-analytics.com https://assets.calendly.com https://www.google.com https://maps.googleapis.com",
+              "connect-src 'self' https://em.realscout.com https://www.realscout.com https://drjanduffy.realscout.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.google.com https://maps.googleapis.com https://assets.calendly.com https://calendly.com https://www.simplifyingthemarket.com",
+              "img-src 'self' data: blob: https:",
+              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://em.realscout.com https://assets.calendly.com",
+              "font-src 'self' data: https://fonts.gstatic.com",
+              "frame-src https://www.google.com https://maps.google.com https://www.google.com/maps https://calendly.com https://www.showingnew.com https://em.realscout.com https://www.realscout.com https://my.matterport.com",
+              "worker-src 'self' blob:",
+              "frame-ancestors 'self'",
+              "base-uri 'self'",
+              "form-action 'self' https://www.showingnew.com https://calendly.com",
+            ].join('; '),
           },
         ],
       },

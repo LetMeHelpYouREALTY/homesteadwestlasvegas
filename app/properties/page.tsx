@@ -3,12 +3,15 @@ import RealScoutListings from '@/components/RealScoutListings';
 import RealScoutAdvancedSearch from '@/components/RealScoutAdvancedSearch';
 import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
+import CtaBand from '@/components/CtaBand';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
+import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Las Vegas Properties for Sale | Dr. Jan Duffy | Ranch Homes $910K+',
   description: 'Browse Las Vegas properties for sale with Dr. Jan Duffy (License S.0197614.LLC). Discover ranch-style homes on pool-sized lots in Northwest Las Vegas starting at $910K. View available Homestead West homes and new construction listings.',
+  ...canonicalMetadata('/properties'),
   keywords: 'Las Vegas properties for sale, ranch homes Las Vegas, Northwest Las Vegas homes, $910K homes Las Vegas, Dr. Jan Duffy listings',
   openGraph: {
     title: 'Las Vegas Properties for Sale | Dr. Jan Duffy',
@@ -22,84 +25,41 @@ export const metadata: Metadata = {
 export default function PropertiesPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'Las Vegas Properties for Sale',
-    description: 'Ranch-style homes on pool-sized lots in Northwest Las Vegas',
-    numberOfItems: 3,
-    itemListElement: [
-      {
-        '@type': 'RealEstateListing',
-        position: 1,
-        name: 'Ranch Home - Northwest Las Vegas',
-        description: 'Beautiful ranch-style home on pool-sized lot',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Las Vegas',
-          addressRegion: 'NV',
-          addressCountry: 'US'
-        },
-        offers: {
-          '@type': 'Offer',
-          price: '910990',
-          priceCurrency: 'USD',
-          availability: 'https://schema.org/InStock'
-        },
-        realEstateAgent: {
-          '@type': 'RealEstateAgent',
-          name: 'Dr. Jan Duffy',
-          telephone: '+17022996607',
-          licenseNumber: 'S.0197614.LLC'
-        }
+    '@type': 'CollectionPage',
+    name: 'Homestead West homes for sale',
+    description: 'Browse Homestead West ranch plans and live MLS listings in Northwest Las Vegas 89149.',
+    url: 'https://www.homesteadwestlasvegas.com/properties',
+    about: {
+      '@type': 'Place',
+      name: 'Homestead West',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '5592 Dapple Gray Rd',
+        addressLocality: 'Las Vegas',
+        addressRegion: 'NV',
+        postalCode: '89149',
+        addressCountry: 'US',
       },
-      {
-        '@type': 'RealEstateListing',
-        position: 2,
-        name: 'Ranch Home - Premium Lot',
-        description: 'Spacious ranch home with premium pool-sized lot',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Las Vegas',
-          addressRegion: 'NV',
-          addressCountry: 'US'
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      name: 'Homestead West ranch floor plans',
+      numberOfItems: 2,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Plan 3336 — 3,336 sq ft ranch',
+          url: 'https://www.homesteadwestlasvegas.com/floor-plans/3336',
         },
-        offers: {
-          '@type': 'Offer',
-          price: '925990',
-          priceCurrency: 'USD',
-          availability: 'https://schema.org/InStock'
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Plan 3704 — 3,704 sq ft ranch with optional casita',
+          url: 'https://www.homesteadwestlasvegas.com/floor-plans/3704',
         },
-        realEstateAgent: {
-          '@type': 'RealEstateAgent',
-          name: 'Dr. Jan Duffy',
-          telephone: '+17022996607',
-          licenseNumber: 'S.0197614.LLC'
-        }
-      },
-      {
-        '@type': 'RealEstateListing',
-        position: 3,
-        name: 'Ranch Home - Executive Lot',
-        description: 'Executive ranch home with oversized pool lot',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Las Vegas',
-          addressRegion: 'NV',
-          addressCountry: 'US'
-        },
-        offers: {
-          '@type': 'Offer',
-          price: '940990',
-          priceCurrency: 'USD',
-          availability: 'https://schema.org/InStock'
-        },
-        realEstateAgent: {
-          '@type': 'RealEstateAgent',
-          name: 'Dr. Jan Duffy',
-          telephone: '+17022996607',
-          licenseNumber: 'S.0197614.LLC'
-        }
-      }
-    ]
+      ],
+    },
   };
 
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -301,37 +261,11 @@ export default function PropertiesPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 bg-[#1a365d] text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Interested in Homestead West Properties?</h2>
-            <p className="text-xl mb-8">
-              Contact Dr. Jan Duffy for private showings and detailed information
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://drjanduffy.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0xNTk3Mg=="
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-yellow-400 text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition-colors"
-              >
-                Search Available Homes
-              </a>
-              <a
-                href="/contact"
-                className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Contact Dr. Duffy
-              </a>
-              <a
-                href="/appointment"
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
-              >
-                Schedule Property Tour
-              </a>
-            </div>
-          </div>
-        </section>
+        <CtaBand
+          heading="Interested in Homestead West properties?"
+          body="Call for a private showing, then tell Dr. Jan which ranch plan you want to tour."
+          source="properties-page"
+        />
       </div>
     </>
   );

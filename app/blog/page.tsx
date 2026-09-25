@@ -6,10 +6,12 @@ import PageHero from '@/components/PageHero';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import RealScoutListings from '@/components/RealScoutListings';
 import { ogImages } from '@/lib/og';
+import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Real Estate Blog | Homestead West Las Vegas | Dr. Jan Duffy',
   description: 'Expert real estate insights, market updates, and home buying tips for Northwest Las Vegas from Dr. Jan Duffy and Keeping Current Matters.',
+  ...canonicalMetadata('/blog'),
   keywords: [
     'Las Vegas real estate blog',
     'Las Vegas market updates',
@@ -27,6 +29,7 @@ export const metadata: Metadata = {
     images: ogImages('covered-patio'),
   },
   alternates: {
+    canonical: 'https://www.homesteadwestlasvegas.com/blog',
     types: {
       'application/rss+xml': '/blog/rss.xml',
     },

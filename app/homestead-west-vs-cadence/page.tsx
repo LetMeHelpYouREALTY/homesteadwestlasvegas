@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
+import CtaBand from '@/components/CtaBand';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
@@ -151,23 +152,11 @@ export default function HomesteadWestVsCadencePage() {
           </div>
         </section>
 
-        <section className="py-16 bg-[#1a365d] text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Tour with a buyer&apos;s agent</h2>
-            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-              Call Dr. Jan Duffy to plan community tours and compare incentives with your goals—not the builder&apos;s sales
-              script alone.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="tel:7022996607" className="bg-yellow-500 text-black px-8 py-4 rounded-lg font-bold hover:bg-yellow-400">
-                Call (702) 299-6607
-              </a>
-              <a href="/appointment" className="bg-white text-blue-900 px-8 py-4 rounded-lg font-bold hover:bg-blue-50">
-                Schedule consultation
-              </a>
-            </div>
-          </div>
-        </section>
+        <CtaBand
+          heading="Tour with a buyer's agent"
+          body="Call Dr. Jan Duffy to compare Homestead West and Cadence on incentives, lot premiums, and commute—not the builder's sales script alone."
+          source="vs-cadence"
+        />
       </article>
     </>
   );

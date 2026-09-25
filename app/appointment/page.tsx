@@ -6,10 +6,12 @@ import SectionImage from '@/components/SectionImage';
 import LeadForm from '@/components/LeadForm';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
+import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Schedule Appointment | Dr. Jan Duffy Real Estate | Las Vegas',
   description: 'Schedule a consultation with Dr. Jan Duffy (License S.0197614.LLC) for expert real estate services in Las Vegas. Book your appointment online today.',
+  ...canonicalMetadata('/appointment'),
   keywords: 'schedule appointment, Dr. Jan Duffy, real estate consultation, Las Vegas real estate, book meeting',
   openGraph: {
     title: 'Schedule Appointment | Dr. Jan Duffy Real Estate',
@@ -228,7 +230,7 @@ export default function AppointmentPage() {
                   and lifestyle preferences. This personalized approach ensures that every Homestead West recommendation aligns 
                   with your goals, whether you're looking for a single-story ranch home, a property with a casita, or a 
                   multi-generational layout at Homestead West. Dr. Jan Duffy takes the time to understand what makes Homestead 
-                  West the right choice for you and your family.
+                  West the right choice for your goals.
                 </p>
               </div>
             </div>

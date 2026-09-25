@@ -6,9 +6,9 @@ import SearchWidgetScript from '@/components/SearchWidgetScript';
 import SectionImage from '@/components/SectionImage';
 import LeadForm from '@/components/LeadForm';
 import GbpActions from '@/components/GbpActions';
-import { LICENSE_ID, SITE_URL, ADDRESS_LINE, PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact';
-import { ASSET_BHHS_LOGO_PATH, ASSET_HEADSHOT_PATH, headshotAbsoluteUrl } from '@/lib/site-assets';
-import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
+import { LICENSE_ID, ADDRESS_LINE, PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact';
+import { ASSET_BHHS_LOGO_PATH, ASSET_HEADSHOT_PATH } from '@/lib/site-assets';
+import { canonicalMetadata, absoluteUrl } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
 import { mediaAlt, mediaSrc } from '@/lib/media';
 
@@ -68,52 +68,6 @@ const homePageFaqs = [
 ] as const;
 
 export default function HomePage() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'RealEstateListing',
-    name: 'Homestead West Las Vegas | Homes by Dr. Jan Duffy',
-    description: '$910K+ luxury single-story ranch homes on pool-sized lots in Northwest Las Vegas',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '5592 Dapple Gray Rd',
-      addressLocality: 'Las Vegas',
-      addressRegion: 'NV',
-      postalCode: '89149',
-      addressCountry: 'US'
-    },
-    telephone: '+17022996607',
-    email: 'DrJanSells@HomesteadWestLasVegas.com',
-    url: SITE_URL,
-    agent: {
-      '@type': 'RealEstateAgent',
-      name: 'Dr. Jan Duffy',
-      telephone: '+17022996607',
-      email: 'DrJanSells@HomesteadWestLasVegas.com',
-      image: headshotAbsoluteUrl,
-      priceRange: '$850,000-$990,000',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '5592 Dapple Gray Rd',
-        addressLocality: 'Las Vegas',
-        addressRegion: 'NV',
-        postalCode: '89149',
-        addressCountry: 'US'
-      },
-      areaServed: {
-        '@type': 'City',
-        name: 'Las Vegas',
-        '@id': 'https://en.wikipedia.org/wiki/Las_Vegas'
-      }
-    },
-    offers: {
-      '@type': 'AggregateOffer',
-      lowPrice: '910990',
-      highPrice: '940990',
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock'
-    }
-  };
-
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -139,10 +93,6 @@ export default function HomePage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

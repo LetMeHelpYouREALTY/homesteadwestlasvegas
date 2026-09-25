@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
+import CtaBand from '@/components/CtaBand';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
@@ -252,29 +253,11 @@ export default function ComparisonPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 bg-[#1a365d] text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Need Help Deciding?</h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Dr. Jan Duffy can help you compare communities, understand pricing, and find the right home for your needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a
-                href="tel:7022996607"
-                className="bg-yellow-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-colors"
-              >
-                📞 Call (702) 299-6607
-              </a>
-              <a
-                href="/appointment"
-                className="bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors"
-              >
-                📅 Schedule Consultation
-              </a>
-            </div>
-          </div>
-        </section>
+        <CtaBand
+          heading="Need help deciding?"
+          body="Dr. Jan Duffy can help you compare Homestead West and Skye Canyon, then tour with a buyer's agent—not the builder's sales desk."
+          source="vs-skye-canyon"
+        />
 
         {/* Content Freshness */}
         <aside className="bg-gray-50 py-8 border-t border-gray-200">

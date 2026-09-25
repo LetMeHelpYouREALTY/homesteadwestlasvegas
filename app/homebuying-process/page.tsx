@@ -2,12 +2,15 @@ import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
+import CtaBand from '@/components/CtaBand';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
+import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Homebuying Process | Homestead West Las Vegas | Expert Guidance by Dr. Jan Duffy',
   description: 'Complete guide to buying a new home at Homestead West Las Vegas. Expert guidance from Dr. Jan Duffy through prequalification, house hunting, contracting, and closing. Nevada License S.0197614.LLC.',
+  ...canonicalMetadata('/homebuying-process'),
   keywords: [
     'homebuying process Las Vegas',
     'new home buying guide',
@@ -22,7 +25,7 @@ export const metadata: Metadata = {
     description: 'Complete guide to buying a new home at Homestead West Las Vegas with expert guidance from Dr. Jan Duffy.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/homebuying-process',
-    images: ogImages('private-tour'),
+    images: ogImages('how-it-works'),
   },
 };
 
@@ -296,7 +299,7 @@ export default function HomebuyingProcessPage() {
                   <p className="text-lg text-gray-700 mb-6">
                     At Homestead West, you'll find luxury ranch homes on pool-sized lots, with optional detached casitas and 
                     multi-generational layouts. Dr. Jan Duffy can help you explore both Plan 3336 and Plan 3704 to find 
-                    the perfect fit for your family.
+                    the right fit for your must-haves.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
                     <a
@@ -469,42 +472,11 @@ export default function HomebuyingProcessPage() {
           </div>
         </section>
 
-        {/* Contact CTA */}
-        <section className="py-16 bg-blue-900 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold mb-6">Ready to Start Your Homestead West Homebuying Journey?</h2>
-              <p className="text-xl mb-8 text-blue-100">
-                Contact Dr. Jan Duffy for expert guidance through every step of your Homestead West home purchase
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a
-                  href="tel:7022996607"
-                  className="bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
-                >
-                  📞 Call Dr. Jan: (702) 299-6607
-                </a>
-                <a
-                  href="mailto:DrJanSells@HomesteadWestLasVegas.com"
-                  className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-colors"
-                >
-                  📧 Email Dr. Jan
-                </a>
-              </div>
-              
-              <div className="mt-8 text-blue-200">
-                <p className="text-lg font-semibold">Dr. Jan Duffy</p>
-                <p>Las Vegas Real Estate Expert | Nevada License S.0197614.LLC</p>
-                <p>DrJanSells@HomesteadWestLasVegas.com</p>
-                <p className="mt-4 text-sm">
-                  Independent real estate agent providing expert guidance to home buyers. 
-                  Not affiliated with or endorsed by the builder.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CtaBand
+          heading="Ready to start your Homestead West homebuying journey?"
+          body="Dr. Jan Duffy represents you—not the builder—through prequalification, lot selection, and closing."
+          source="homebuying-process"
+        />
       </div>
     </>
   );

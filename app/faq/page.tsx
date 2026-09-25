@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: 'Get answers to common questions about buying new construction homes in Las Vegas.',
     type: 'website',
     url: `${SITE_URL}/faq`,
-    images: ogImages('buyer-consultation'),
+    images: ogImages('faq-buyer-desk'),
   },
 };
 

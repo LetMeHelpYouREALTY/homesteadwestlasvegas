@@ -4,10 +4,12 @@ import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
+import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Community Map | Homestead West Las Vegas | Available Lots & Homesites | Northwest Las Vegas',
   description: 'Explore Homestead West community map with available lots and homesites in Northwest Las Vegas. Interactive map showing pool-sized lots, floor plan locations, community layout, and proximity to Red Rock Canyon, downtown Las Vegas, and Mount Charleston. New construction homes from $910K.',
+  ...canonicalMetadata('/community-map'),
   keywords: [
     'Homestead West community map',
     'Las Vegas homesites map',
@@ -41,10 +43,10 @@ export default function CommunityMapPage() {
     url: 'https://www.homesteadwestlasvegas.com/community-map',
     provider: {
       '@type': 'Organization',
-      name: 'the builder'
+      name: 'Homestead West | Homes by Dr Jan Duffy'
     },
     about: {
-      '@type': 'RealEstateListing',
+      '@type': 'Place',
       name: 'Homestead West | Homes by Dr Jan Duffy',
       address: {
         '@type': 'PostalAddress',

@@ -2,12 +2,15 @@ import { Metadata } from 'next';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
+import CtaBand from '@/components/CtaBand';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
+import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: "Buyer's Guide | New Construction Process | Dr. Jan Duffy | Las Vegas Real Estate Expert",
   description: "Complete buyer's guide to new construction homes in Las Vegas and Northwest Las Vegas. Step-by-step process with VIP New Construction Homes Specialist Dr. Jan Duffy. Expert guidance for first-time buyers and luxury home buyers.",
+  ...canonicalMetadata('/buyers-guide'),
   keywords: [
     'new construction buyer guide',
     'Las Vegas new home process',
@@ -279,8 +282,7 @@ export default function BuyersGuidePage() {
                   <div className="ml-18">
                     <p className="text-lg text-gray-700 mb-4">
                       Choose from the builder's floor plans. At Homestead West, select between 
-                      Plan 3336 (3,336 sq ft) or Plan 3704 (3,704 sq ft). Consider your family's needs, 
-                      lifestyle, and future plans.
+                      Plan 3336 (3,336 sq ft) or Plan 3704 (3,704 sq ft). Match square footage, bedroom count, and outdoor living space to your must-haves.
                     </p>
                     <div className="bg-blue-100 rounded-lg p-4">
                       <h4 className="font-bold text-gray-900 mb-2">VIP Advantage:</h4>
@@ -477,38 +479,11 @@ export default function BuyersGuidePage() {
           </div>
         </section>
 
-        {/* Contact CTA */}
-        <section className="py-16 bg-[#1a365d] text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold mb-6">Ready to Start Your Homestead West New Construction Journey?</h2>
-              <p className="text-xl mb-8 text-blue-100">
-                Let Dr. Jan Duffy, a VIP New Construction Homes Specialist who represents home buyers, guide you through every step
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a
-                  href="tel:7022996607"
-                  className="bg-yellow-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-colors"
-                >
-                  📞 Call Dr. Jan: (702) 299-6607
-                </a>
-                <a
-                  href="mailto:DrJanSells@HomesteadWestLasVegas.com"
-                  className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition-colors"
-                >
-                  📧 Email Dr. Jan
-                </a>
-              </div>
-              
-              <div className="mt-8 text-blue-200">
-                <p className="text-lg font-semibold">Dr. Jan Duffy - VIP New Construction Specialist</p>
-                <p>Las Vegas Real Estate Expert | Nevada License S.0197614.LLC</p>
-                <p>DrJanSells@HomesteadWestLasVegas.com</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CtaBand
+          heading="Ready to start your Homestead West new-construction journey?"
+          body="Dr. Jan Duffy represents you—not the builder—from pre-approval through closing."
+          source="buyers-guide"
+        />
       </div>
     </>
   );

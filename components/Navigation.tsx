@@ -6,6 +6,7 @@ import { Dropdown } from '@/components/ui/Dropdown';
 import { MobileMenu } from '@/components/MobileMenu';
 import CalendlyLink from '@/components/CalendlyLink';
 import { cn } from '@/lib/utils';
+import { PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact';
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -64,7 +65,7 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-16">
             {/* Phone Number - Primary CTA (Logo removed for maximum conversion focus) */}
             <a
-              href="tel:7022996607"
+              href={PHONE_TEL_HREF}
               className={cn(
                 'flex items-center space-x-3',
                 'hover:opacity-80 transition-opacity duration-75 will-change-opacity',
@@ -76,7 +77,7 @@ export default function Navigation() {
                 <span className="text-white text-2xl">📞</span>
               </div>
               <div className="text-xl md:text-2xl font-bold text-gray-900">
-                (702) 299-6607
+                {PHONE_DISPLAY}
               </div>
             </a>
 

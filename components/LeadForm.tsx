@@ -1,6 +1,7 @@
 'use client'
 
 import { FormEvent, useState } from 'react'
+import { PHONE_DISPLAY, PHONE_TEL_HREF, ADDRESS_LINE } from '@/lib/site-contact'
 
 type LeadFormProps = {
   source: string
@@ -51,14 +52,14 @@ export default function LeadForm({
       const json = (await response.json()) as { error?: string; success?: boolean }
       if (!response.ok) {
         setStatus('error')
-        setServerMessage(json.error || 'Unable to send right now. Call (702) 299-6607.')
+        setServerMessage(json.error || `Unable to send right now. Call ${PHONE_DISPLAY}.`)
         return
       }
       setStatus('success')
       form.reset()
     } catch {
       setStatus('error')
-      setServerMessage('Network error. Call (702) 299-6607 or email DrJanSells@HomesteadWestLasVegas.com.')
+      setServerMessage(`Network error. Call ${PHONE_DISPLAY} or email DrJanSells@HomesteadWestLasVegas.com.`)
     }
   }
 
@@ -68,8 +69,8 @@ export default function LeadForm({
         <p className="font-semibold text-lg mb-2">Request received.</p>
         <p>
           Dr. Jan Duffy will follow up. For faster help call{' '}
-          <a className="underline font-semibold" href="tel:7022996607">
-            (702) 299-6607
+          <a className="underline font-semibold" href={PHONE_TEL_HREF}>
+            {PHONE_DISPLAY}
           </a>
           .
         </p>
@@ -84,7 +85,7 @@ export default function LeadForm({
     <form onSubmit={onSubmit} className="space-y-4 bg-white p-6 rounded-xl shadow-md border border-gray-100">
       <h3 className="text-2xl font-bold text-gray-900">{heading}</h3>
       <p className="text-sm text-gray-600">
-        Homestead West | Homes by Dr Jan Duffy · 5592 Dapple Gray Rd, Las Vegas, NV 89149 · (702) 299-6607
+        Homestead West | Homes by Dr Jan Duffy · {ADDRESS_LINE} · {PHONE_DISPLAY}
       </p>
       <div className="grid sm:grid-cols-2 gap-4">
         <label className="block text-sm font-medium text-gray-800">

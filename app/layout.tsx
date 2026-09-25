@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import GbpNapBar from "../components/GbpNapBar";
+import RealScoutScript from "../components/RealScoutScript";
 import { SITE_URL } from "@/lib/site-contact";
 import { headshotAbsoluteUrl } from "@/lib/site-assets";
 import { mediaAbsoluteUrl } from "@/lib/media";
@@ -105,7 +106,6 @@ export const metadata: Metadata = {
     : {}),
 
   alternates: {
-    canonical: `${SITE_URL}/`,
     types: {
       'application/rss+xml': '/blog/rss.xml',
     },
@@ -122,8 +122,8 @@ export const metadata: Metadata = {
     'coverage': 'Las Vegas, Nevada, Northwest Las Vegas, 89149',
     'classification': 'Real Estate Listing Service',
     'category': 'Real Estate > Residential > New Construction',
-    'revised': '2026-01-19',
-    'date': '2026-01-19',
+    'revised': '2026-09-25',
+    'date': '2026-09-25',
   },
 };
 
@@ -133,6 +133,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const siteGraph = getSiteGraphJsonLd()
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim()
 
       return (
         <html lang="en">
@@ -146,17 +147,15 @@ export default function RootLayout({
             <link rel="dns-prefetch" href="https://www.realscout.com" />
             <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
             <link rel="dns-prefetch" href="https://assets.calendly.com" />
-            {/* Google Analytics - Deferred and optimized to reduce unused JS */}
+            {gaId ? (
             <script
               dangerouslySetInnerHTML={{
                 __html: `
                   (function() {
-                    // Defer Google Analytics until after page is fully interactive
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     window.gtag = gtag;
                     
-                    // Only initialize after user interaction or extended idle time
                     function loadGA() {
                       if (window.gtagLoaded) return;
                       window.gtagLoaded = true;
@@ -164,30 +163,24 @@ export default function RootLayout({
                       gtag('js', new Date());
                       const script = document.createElement('script');
                       script.async = true;
-                      script.src = 'https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'GA_MEASUREMENT_ID'}';
+                      script.src = 'https://www.googletagmanager.com/gtag/js?id=${gaId}';
                       script.defer = true;
                       document.head.appendChild(script);
                       
-                      // Delay config until script loads
                       script.onload = function() {
-                        gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'GA_MEASUREMENT_ID'}', {
+                        gtag('config', '${gaId}', {
                           send_page_view: false
                         });
                       };
                     }
                     
-                    // Load on user interaction (more efficient than on load)
-                    // Only load GA after significant user engagement to reduce unused JS
                     var interactionCount = 0;
                     var interactionHandler = function(event) {
                       interactionCount++;
-                      // Only load after 3+ interactions or scroll depth > 50%
                       if (!window.gtagLoaded && (interactionCount >= 3 || (event === 'scroll' && (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) > 0.5))) {
-                        // Defer GA loading to avoid blocking
                         requestAnimationFrame(function() {
                           loadGA();
                         });
-                        // Remove listeners after loading
                         ['mousedown', 'touchstart', 'keydown', 'scroll'].forEach(function(evt) {
                           window.removeEventListener(evt, interactionHandler, { passive: true });
                         });
@@ -197,7 +190,6 @@ export default function RootLayout({
                       window.addEventListener(event, interactionHandler, { once: false, passive: true });
                     });
                     
-                    // Fallback: load after page is idle for 5 seconds (increased from 2s)
                     if ('requestIdleCallback' in window) {
                       requestIdleCallback(function() {
                         setTimeout(function() {
@@ -217,6 +209,7 @@ export default function RootLayout({
                 `,
               }}
             />
+            ) : null}
 
             {/* Structured Data - LocalBusiness / agent graph for GBP + Maps */}
             <script
@@ -262,7 +255,7 @@ export default function RootLayout({
             <Navigation />
             {children}
             <Footer />
-            {/* RealScout script is now loaded by RealScoutListings component when needed */}
+            <RealScoutScript />
           </body>
         </html>
       );

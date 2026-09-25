@@ -11,10 +11,12 @@ import {
 } from '@/lib/amenities';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
+import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Nearby Amenities Map | Homestead West Las Vegas | Restaurants, Parks, Parking',
   description: `Explore nearby amenities near Homestead West and Centennial Hills: restaurants, parks, parking, shopping, schools, and healthcare. Interactive maps—no cost, powered by Google Maps.`,
+  ...canonicalMetadata('/amenities'),
   keywords: [
     'Homestead West amenities',
     'Centennial Hills restaurants',
