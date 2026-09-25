@@ -4,7 +4,8 @@ import Image from 'next/image';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
-import LeadForm from '@/components/LeadForm';
+import CalendlyInlineWidget from '@/components/CalendlyInlineWidget';
+import { CALENDLY_CONTACT_URL } from '@/lib/calendly';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { SITE_URL, BROKERAGE_NAME, ADDRESS } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
@@ -215,7 +216,8 @@ export default function ContactPage() {
                 </div>
               </div>
               <div>
-                <LeadForm source="contact-page" />
+                <h2 className="text-2xl font-bold mb-4 text-gray-900">Pick a time below</h2>
+                <CalendlyInlineWidget url={CALENDLY_CONTACT_URL} height="680px" />
               </div>
             </div>
           </div>

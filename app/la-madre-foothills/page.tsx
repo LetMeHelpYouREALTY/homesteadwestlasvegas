@@ -380,7 +380,7 @@ export default function LaMadreFoothillsPage() {
                 href="/contact"
                 className="inline-flex justify-center items-center rounded-lg border-2 border-[#1a365d] px-6 py-3 font-semibold text-[#1a365d] hover:bg-blue-50 transition-colors"
               >
-                Contact form
+                Schedule a Time
               </Link>
             </div>
             <h3 className="text-lg font-bold text-gray-900 mb-3">Local business &amp; license (GEO)</h3>

@@ -3,7 +3,8 @@ import Link from 'next/link';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
-import LeadForm from '@/components/LeadForm';
+import CalendlyInlineWidget from '@/components/CalendlyInlineWidget';
+import { CALENDLY_SHOWING_URL } from '@/lib/calendly';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
 import { mediaAbsoluteUrl } from '@/lib/media';
@@ -154,7 +155,8 @@ export default function Plan3336Page() {
 
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 max-w-xl">
-            <LeadForm source="floor-plan-3336" heading="Tour Plan 3336 with Dr. Jan" />
+            <h2 className="text-2xl font-bold mb-4 text-gray-900 text-center">Tour Plan 3336 with Dr. Jan</h2>
+            <CalendlyInlineWidget url={CALENDLY_SHOWING_URL} height="680px" />
             <p className="text-center text-sm text-gray-600 mt-4">
               Or <a className="underline font-semibold" href={PHONE_TEL_HREF}>call {PHONE_DISPLAY}</a>
             </p>

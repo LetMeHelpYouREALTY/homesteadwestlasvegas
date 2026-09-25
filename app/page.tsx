@@ -4,7 +4,8 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import SearchWidgetScript from '@/components/SearchWidgetScript';
 import SectionImage from '@/components/SectionImage';
-import LeadForm from '@/components/LeadForm';
+import CalendlyInlineWidget from '@/components/CalendlyInlineWidget';
+import { CALENDLY_SHOWING_URL } from '@/lib/calendly';
 import GbpActions from '@/components/GbpActions';
 import { LICENSE_ID, ADDRESS_LINE, PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact';
 import { ASSET_BHHS_LOGO_PATH, ASSET_HEADSHOT_PATH } from '@/lib/site-assets';
@@ -755,8 +756,9 @@ export default function HomePage() {
                 Schedule Your Tour
               </a>
             </div>
-            <div className="max-w-xl mx-auto text-left mb-10">
-              <LeadForm source="homepage" heading="Tell Dr. Jan what you are looking for" />
+            <div className="max-w-xl mx-auto mb-10">
+              <h3 className="text-xl font-semibold mb-3">Pick a time below</h3>
+              <CalendlyInlineWidget url={CALENDLY_SHOWING_URL} height="680px" />
             </div>
             <div className="space-y-2 text-gray-200">
               <p>Or call directly: <a href="tel:7022996607" className="text-yellow-400 hover:text-yellow-300 font-semibold">(702) 299-6607</a></p>

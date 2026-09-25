@@ -3,7 +3,6 @@ import Script from 'next/script';
 import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
-import LeadForm from '@/components/LeadForm';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
 import { ogImages } from '@/lib/og';
 import { canonicalMetadata } from '@/lib/metadata';
@@ -80,8 +79,6 @@ export default function AppointmentPage() {
                   Schedule a personalized Homestead West consultation with Dr. Jan Duffy to discuss your Homestead West real estate needs. 
                   We offer flexible scheduling to accommodate your busy lifestyle for Homestead West buyers.
                 </p>
-                <LeadForm source="appointment-page" heading="Or send a quick inquiry" submitLabel="Request a callback" />
-                
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mr-3 mt-1">

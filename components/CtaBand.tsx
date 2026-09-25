@@ -1,6 +1,7 @@
 import GbpActions from '@/components/GbpActions'
-import LeadForm from '@/components/LeadForm'
+import CalendlyLink from '@/components/CalendlyLink'
 import { ADDRESS_LINE, PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact'
+import { CALENDLY_SHOWING_URL } from '@/lib/calendly'
 
 type CtaBandProps = {
   heading: string
@@ -12,7 +13,6 @@ type CtaBandProps = {
 export default function CtaBand({
   heading,
   body = 'Call, get directions, or leave a Google review — then tell Dr. Jan which Homestead West plan you want to tour.',
-  source,
   showForm = true,
 }: CtaBandProps) {
   return (
@@ -30,9 +30,11 @@ export default function CtaBand({
             {ADDRESS_LINE}
           </p>
           {showForm ? (
-            <div className="text-left">
-              <LeadForm source={source} heading="Request a private tour" />
-            </div>
+            <CalendlyLink
+              url={CALENDLY_SHOWING_URL}
+              text="Request a Private Tour"
+              className="inline-block bg-[#d4af37] hover:bg-[#c19b2e] text-[#1a365d] px-8 py-3 rounded-lg font-bold transition-colors"
+            />
           ) : null}
         </div>
       </div>
