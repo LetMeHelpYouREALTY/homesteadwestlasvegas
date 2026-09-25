@@ -34,7 +34,7 @@ export default function PropertiesPage() {
       name: 'Homestead West',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '5592 Dapple Gray Rd',
+        streetAddress: '5592 N Dapple Gray Rd',
         addressLocality: 'Las Vegas',
         addressRegion: 'NV',
         postalCode: '89149',
@@ -188,7 +188,7 @@ export default function PropertiesPage() {
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-200">
                     <span className="font-medium">ZIP / map pin</span>
-                    <span className="text-[#1a365d] font-semibold">89149 · 5592 Dapple Gray Rd</span>
+                    <span className="text-[#1a365d] font-semibold">89149 · 5592 N Dapple Gray Rd</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-200">
                     <span className="font-medium">Live MLS inventory</span>

@@ -5,8 +5,8 @@
 
 import type { SiteImageId } from '@/lib/image-catalog';
 
-const MAP_BASE = '5592+Dapple+Gray+Rd,+Las+Vegas,+NV+89149';
-const MAP_BASE_DISPLAY = '5592 Dapple Gray Rd, Las Vegas, NV 89149';
+const MAP_BASE = '5592+N+Dapple+Gray+Rd,+Las+Vegas,+NV+89149';
+const MAP_BASE_DISPLAY = '5592 N Dapple Gray Rd, Las Vegas, NV 89149';
 
 export type AmenityCategory = {
   id: string;

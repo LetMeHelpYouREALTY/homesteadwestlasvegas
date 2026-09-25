@@ -13,7 +13,7 @@ GOOGLE_SITE_VERIFICATION=your-google-verification-code-here
 ```bash
 NEXT_PUBLIC_CONTACT_PHONE=7022221988
 NEXT_PUBLIC_CONTACT_EMAIL=DrJanSells@HomesteadWestLasVegas.com
-NEXT_PUBLIC_OFFICE_ADDRESS=5592 Dapple Gray Rd, Las Vegas, NV 89149
+NEXT_PUBLIC_OFFICE_ADDRESS=5592 N Dapple Gray Rd, Las Vegas, NV 89149
 ```
 
 ### Century Communities Integration (if available)

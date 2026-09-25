@@ -39,7 +39,7 @@ export default function FloorPlansPage() {
     email: 'DrJanSells@HomesteadWestLasVegas.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '5592 Dapple Gray Rd',
+      streetAddress: '5592 N Dapple Gray Rd',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       postalCode: '89149',

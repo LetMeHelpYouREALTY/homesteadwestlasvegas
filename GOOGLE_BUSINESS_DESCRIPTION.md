@@ -70,7 +70,7 @@ Las Vegas, Henderson, North Las Vegas, and surrounding areas
 Phone: (702) 299-6607
 Email: DrJanSells@HomesteadWestLasVegas.com
 Website: www.homesteadwestlasvegas.com
-Address: 5592 Dapple Gray Rd, Las Vegas, NV 89149
+Address: 5592 N Dapple Gray Rd, Las Vegas, NV 89149
 
 **Business Hours:**
 Monday-Friday: 10:00 AM - 6:00 PM

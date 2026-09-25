@@ -109,7 +109,7 @@
 - Email: DrJanSells@HomesteadWestLasVegas.com
 - License: Nevada S.0197614
 - Office: Builder Sales Office
-- Address: 5592 Dapple Gray Rd, Las Vegas, NV 89149
+- Address: 5592 N Dapple Gray Rd, Las Vegas, NV 89149
 
 ## 📄 Files Modified
 

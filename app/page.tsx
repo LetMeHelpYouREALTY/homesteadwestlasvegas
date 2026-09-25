@@ -24,7 +24,7 @@ const RealScoutListings = dynamic(() => import('@/components/RealScoutListings')
 
 export const metadata: Metadata = {
   title: 'Homestead West Las Vegas — Luxury Single-Story Ranch Homes from $910K | New Construction Northwest Las Vegas',
-  description: 'New construction luxury single-story ranch homes in Northwest Las Vegas from $910K. Pool-sized lots, optional casitas, VIP buyer representation. Dr. Jan Duffy represents YOU—not the builder. Independent buyer\'s agent with Berkshire Hathaway HomeServices Nevada at 5592 Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.',
+  description: 'New construction luxury single-story ranch homes in Northwest Las Vegas from $910K. Pool-sized lots, optional casitas, VIP buyer representation. Dr. Jan Duffy represents YOU—not the builder. Independent buyer\'s agent with Berkshire Hathaway HomeServices Nevada at 5592 N Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.',
   keywords: 'Homestead West Las Vegas, luxury ranch homes, single-story homes, Northwest Las Vegas, new construction, pool-sized lots, $910K homes, Las Vegas real estate, Berkshire Hathaway HomeServices, independent buyer agent, new construction homes Las Vegas, single story homes Las Vegas, luxury homes Northwest Las Vegas, new construction community Las Vegas, ranch homes Las Vegas, pool sized lots Las Vegas',
   ...canonicalMetadata('/'),
   openGraph: {
@@ -522,7 +522,7 @@ export default function HomePage() {
               <SectionImage
                 imageId="bhhs-office-interior"
                 heading="Backed by a Name You Can Trust"
-                caption="Buyer representation office overlooking ranch homes near 5592 Dapple Gray Rd, Las Vegas NV 89149"
+                caption="Buyer representation office overlooking ranch homes near 5592 N Dapple Gray Rd, Las Vegas NV 89149"
               />
               <p className="text-xl text-gray-700 mb-8">
                 Dr. Jan Duffy is proud to represent buyers through Berkshire Hathaway HomeServices Nevada—one of the most respected names in real estate.
@@ -593,7 +593,7 @@ export default function HomePage() {
 
               <div className="bg-[#1a365d] text-white p-6 md:p-8 rounded-lg">
                 <h3 className="text-2xl font-bold mb-4 text-center">Homestead West facts you can verify</h3>
-                <p className="text-center text-blue-100 mb-6 text-sm">Single-story ranch inventory at 5592 Dapple Gray Rd, Las Vegas NV 89149</p>
+                <p className="text-center text-blue-100 mb-6 text-sm">Single-story ranch inventory at 5592 N Dapple Gray Rd, Las Vegas NV 89149</p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                   <div>
                     <p className="text-2xl md:text-3xl font-bold text-[#d4af37] mb-1">$910,990</p>
@@ -761,7 +761,7 @@ export default function HomePage() {
             <div className="space-y-2 text-gray-200">
               <p>Or call directly: <a href="tel:7022996607" className="text-yellow-400 hover:text-yellow-300 font-semibold">(702) 299-6607</a></p>
               <p>Email: <a href="mailto:DrJanSells@HomesteadWestLasVegas.com" className="text-yellow-400 hover:text-yellow-300 font-semibold">DrJanSells@HomesteadWestLasVegas.com</a></p>
-              <p>Homestead West Location: 5592 Dapple Gray Rd, Las Vegas, NV 89149</p>
+              <p>Homestead West Location: 5592 N Dapple Gray Rd, Las Vegas, NV 89149</p>
             </div>
           </div>
         </section>

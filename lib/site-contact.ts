@@ -20,7 +20,7 @@ export const PHONE_TEL_HREF = 'tel:7022996607' as const
 export const EMAIL = 'DrJanSells@HomesteadWestLasVegas.com' as const
 
 export const ADDRESS = {
-  streetAddress: '5592 Dapple Gray Rd',
+  streetAddress: '5592 N Dapple Gray Rd',
   addressLocality: 'Las Vegas',
   addressRegion: 'NV',
   postalCode: '89149',
@@ -36,11 +36,11 @@ export const GEO = {
 export const ADDRESS_LINE = `${ADDRESS.streetAddress}, ${ADDRESS.addressLocality}, ${ADDRESS.addressRegion} ${ADDRESS.postalCode}` as const
 
 export const GOOGLE_MAPS_PLACE_URL =
-  'https://maps.google.com/?q=5592+Dapple+Gray+Rd,+Las+Vegas,+NV+89149' as const
+  'https://maps.google.com/?q=5592+N+Dapple+Gray+Rd,+Las+Vegas,+NV+89149' as const
 export const GOOGLE_DIRECTIONS_URL =
-  'https://www.google.com/maps/dir/?api=1&destination=5592%20Dapple%20Gray%20Rd%2C%20Las%20Vegas%2C%20NV%2089149' as const
+  'https://www.google.com/maps/dir/?api=1&destination=5592%20N%20Dapple%20Gray%20Rd%2C%20Las%20Vegas%2C%20NV%2089149' as const
 export const GOOGLE_MAPS_EMBED_URL =
-  'https://www.google.com/maps?q=5592+Dapple+Gray+Rd,+Las+Vegas,+NV+89149&output=embed' as const
+  'https://www.google.com/maps?q=5592+N+Dapple+Gray+Rd,+Las+Vegas,+NV+89149&output=embed' as const
 /** Google Business Profile review write URL (Search + Maps). */
 export const GOOGLE_REVIEW_URL = 'https://g.page/r/CVC1EMaenLJ3EBI/review' as const
 export const GOOGLE_GBP_URL = 'https://g.page/r/CVC1EMaenLJ3EBI' as const

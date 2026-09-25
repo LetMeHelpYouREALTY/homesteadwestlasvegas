@@ -60,7 +60,7 @@ export const SITE_IMAGES = {
   },
   'sales-office': {
     gitPath: '/photos/sections/sales-office.jpg',
-    alt: 'Homestead West Las Vegas real estate office at 5592 Dapple Gray Rd, Las Vegas NV 89149',
+    alt: 'Homestead West Las Vegas real estate office at 5592 N Dapple Gray Rd, Las Vegas NV 89149',
     width: 1920,
     height: 1080,
   },
@@ -114,7 +114,7 @@ export const SITE_IMAGES = {
   },
   'medical-campus': {
     gitPath: '/photos/sections/medical-campus.jpg',
-    alt: 'Medical campus in Northwest Las Vegas, a short drive from Homestead West at 5592 Dapple Gray Rd',
+    alt: 'Medical campus in Northwest Las Vegas, a short drive from Homestead West at 5592 N Dapple Gray Rd',
     width: 1920,
     height: 1080,
   },
@@ -132,7 +132,7 @@ export const SITE_IMAGES = {
   },
   'office-exterior-89149': {
     gitPath: '/photos/sections/office-exterior-89149.jpg',
-    alt: 'Homestead West sales office exterior in Northwest Las Vegas near 5592 Dapple Gray Rd, 89149',
+    alt: 'Homestead West sales office exterior in Northwest Las Vegas near 5592 N Dapple Gray Rd, 89149',
     width: 1920,
     height: 1080,
   },
@@ -198,7 +198,7 @@ export const SITE_IMAGES = {
   },
   'parking-retail-89149': {
     gitPath: '/photos/sections/parking-retail-89149.jpg',
-    alt: 'Retail parking lot at a shopping center in Northwest Las Vegas near 5592 Dapple Gray Rd',
+    alt: 'Retail parking lot at a shopping center in Northwest Las Vegas near 5592 N Dapple Gray Rd',
     width: 1920,
     height: 1080,
   },
@@ -270,7 +270,7 @@ export const SITE_IMAGES = {
   },
   'bhhs-office-interior': {
     gitPath: '/photos/sections/bhhs-office-interior.jpg',
-    alt: 'Real estate office interior overlooking ranch homes near 5592 Dapple Gray Rd, Las Vegas NV 89149',
+    alt: 'Real estate office interior overlooking ranch homes near 5592 N Dapple Gray Rd, Las Vegas NV 89149',
     width: 1920,
     height: 1080,
   },

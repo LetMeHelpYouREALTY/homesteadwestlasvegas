@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'directions to Homestead West',
     'directions to Dr. Jan Duffy office',
     'how to get to Homestead West Las Vegas',
-    '5592 Dapple Gray Rd directions',
+    '5592 N Dapple Gray Rd directions',
     'Centennial Hills directions',
   ],
   ...canonicalMetadata('/directions'),
@@ -137,7 +137,7 @@ export default function DirectionsPage() {
             <SectionImage
               imageId="ann-fort-apache-89149"
               heading="Choose Travel Mode"
-              caption="Ann Road and Fort Apache area of Northwest Las Vegas 89149 near 5592 Dapple Gray Rd"
+              caption="Ann Road and Fort Apache area of Northwest Las Vegas 89149 near 5592 N Dapple Gray Rd"
             />
             <p className="text-center text-gray-600 mb-8 max-w-xl mx-auto">
               Open directions with your preferred mode. Google Maps will show estimated travel time.

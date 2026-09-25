@@ -12,7 +12,7 @@ import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Contact Dr. Jan Duffy | Las Vegas Real Estate Agent | Homestead West',
-  description: 'Contact Dr. Jan Duffy (License S.0197614.LLC) for expert real estate services in Las Vegas. Call (702) 299-6607 or visit our office at 5592 Dapple Gray Rd.',
+  description: 'Contact Dr. Jan Duffy (License S.0197614.LLC) for expert real estate services in Las Vegas. Call (702) 299-6607 or visit our office at 5592 N Dapple Gray Rd.',
   keywords: 'contact Dr. Jan Duffy, Las Vegas real estate agent, Homestead West contact, real estate consultation Las Vegas',
   ...canonicalMetadata('/contact'),
   openGraph: {
@@ -37,7 +37,7 @@ export default function ContactPage() {
       email: 'DrJanSells@HomesteadWestLasVegas.com',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '5592 Dapple Gray Rd',
+        streetAddress: '5592 N Dapple Gray Rd',
         addressLocality: 'Las Vegas',
         addressRegion: 'NV',
         postalCode: '89149',
@@ -199,7 +199,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold mb-2 text-gray-900">Homestead West Office Address</h3>
-                      <p className="text-lg mb-1 text-gray-900">5592 Dapple Gray Rd</p>
+                      <p className="text-lg mb-1 text-gray-900">5592 N Dapple Gray Rd</p>
                       <p className="text-lg mb-2 text-gray-900">Las Vegas, NV 89149</p>
                       <p className="text-gray-700">By appointment only for Homestead West</p>
                       <a
@@ -244,11 +244,11 @@ export default function ContactPage() {
                 <SectionImage
                   imageId="sales-office"
                   heading="Find Our Office"
-                  caption="Homestead West office at 5592 Dapple Gray Rd, Las Vegas NV 89149"
+                  caption="Homestead West office at 5592 N Dapple Gray Rd, Las Vegas NV 89149"
                 />
                 <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center mb-6">
                   <iframe
-                    src="https://www.google.com/maps?q=5592+Dapple+Gray+Rd,+Las+Vegas,+NV+89149&output=embed"
+                    src="https://www.google.com/maps?q=5592+N+Dapple+Gray+Rd,+Las+Vegas,+NV+89149&output=embed"
                     width="100%"
                     height="100%"
                     className="border-0"
@@ -263,7 +263,7 @@ export default function ContactPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
-                    href="https://maps.google.com/?q=5592+Dapple+Gray+Rd,+Las+Vegas,+NV+89149"
+                    href="https://maps.google.com/?q=5592+N+Dapple+Gray+Rd,+Las+Vegas,+NV+89149"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center"
