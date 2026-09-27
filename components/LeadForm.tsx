@@ -1,7 +1,7 @@
 'use client'
 
 import { FormEvent, useState } from 'react'
-import { PHONE_DISPLAY, PHONE_TEL_HREF, ADDRESS_LINE } from '@/lib/site-contact'
+import { AGENT_NAME, PHONE_DISPLAY, PHONE_TEL_HREF, ADDRESS_LINE } from '@/lib/site-contact'
 
 type LeadFormProps = {
   source: string
@@ -10,6 +10,8 @@ type LeadFormProps = {
 }
 
 type FieldErrors = Partial<Record<'firstName' | 'lastName' | 'email' | 'phone' | 'message', string>>
+
+const SUBMIT_ERROR = `Sorry, something went wrong sending your message. Please call or text ${AGENT_NAME} at ${PHONE_DISPLAY}.`
 
 export default function LeadForm({
   source,
@@ -30,14 +32,24 @@ export default function LeadForm({
       email: String(data.get('email') || '').trim(),
       phone: String(data.get('phone') || '').trim(),
       message: String(data.get('message') || '').trim(),
-      source,
+      section: source,
+      formName: heading,
+      sourceUrl: typeof window !== 'undefined' ? window.location.href : '',
+      company: String(data.get('company') || '').trim(),
     }
 
     const nextErrors: FieldErrors = {}
     if (payload.firstName.length < 2) nextErrors.firstName = 'First name required'
     if (payload.lastName.length < 2) nextErrors.lastName = 'Last name required'
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) nextErrors.email = 'Valid email required'
-    if (payload.phone.replace(/\D/g, '').length < 10) nextErrors.phone = 'Valid phone required'
+    const hasEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)
+    const hasPhone = payload.phone.replace(/\D/g, '').length >= 10
+    if (!hasEmail && !hasPhone) {
+      nextErrors.email = 'Email or phone required'
+      nextErrors.phone = 'Email or phone required'
+    } else {
+      if (payload.email && !hasEmail) nextErrors.email = 'Valid email required'
+      if (payload.phone && !hasPhone) nextErrors.phone = 'Valid phone required'
+    }
     setErrors(nextErrors)
     if (Object.keys(nextErrors).length > 0) return
 
@@ -52,14 +64,14 @@ export default function LeadForm({
       const json = (await response.json()) as { error?: string; success?: boolean }
       if (!response.ok) {
         setStatus('error')
-        setServerMessage(json.error || `Unable to send right now. Call ${PHONE_DISPLAY}.`)
+        setServerMessage(json.error || SUBMIT_ERROR)
         return
       }
       setStatus('success')
       form.reset()
     } catch {
       setStatus('error')
-      setServerMessage(`Network error. Call ${PHONE_DISPLAY} or email DrJanSells@HomesteadWestLasVegas.com.`)
+      setServerMessage(SUBMIT_ERROR)
     }
   }
 
@@ -87,6 +99,12 @@ export default function LeadForm({
       <p className="text-sm text-gray-600">
         Homestead West | Homes by Dr Jan Duffy · {ADDRESS_LINE} · {PHONE_DISPLAY}
       </p>
+      <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+        <label>
+          Company
+          <input name="company" type="text" tabIndex={-1} autoComplete="off" />
+        </label>
+      </div>
       <div className="grid sm:grid-cols-2 gap-4">
         <label className="block text-sm font-medium text-gray-800">
           First name
@@ -101,12 +119,12 @@ export default function LeadForm({
       </div>
       <label className="block text-sm font-medium text-gray-800">
         Email
-        <input className={fieldClass} name="email" type="email" autoComplete="email" required />
+        <input className={fieldClass} name="email" type="email" autoComplete="email" />
         {errors.email ? <span className="text-red-600 text-sm">{errors.email}</span> : null}
       </label>
       <label className="block text-sm font-medium text-gray-800">
         Phone
-        <input className={fieldClass} name="phone" type="tel" autoComplete="tel" required />
+        <input className={fieldClass} name="phone" type="tel" autoComplete="tel" />
         {errors.phone ? <span className="text-red-600 text-sm">{errors.phone}</span> : null}
       </label>
       <label className="block text-sm font-medium text-gray-800">
