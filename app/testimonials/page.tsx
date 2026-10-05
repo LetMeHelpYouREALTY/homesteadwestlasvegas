@@ -9,7 +9,7 @@ import { canonicalMetadata } from '@/lib/metadata';
 import { GOOGLE_REVIEW_URL, SITE_URL } from '@/lib/site-contact';
 
 export const metadata: Metadata = {
-  title: 'Homestead West Buyer Stories | Dr. Jan Duffy | Northwest Las Vegas 89149',
+  title: 'Buyer Stories, Dr. Jan Duffy',
   description: 'See how Dr. Jan Duffy represents Homestead West buyers—not the builder. Read Google reviews, then book a private tour at 5592 N Dapple Gray Rd. Call (702) 299-6607.',
   ...canonicalMetadata('/testimonials'),
   keywords: [

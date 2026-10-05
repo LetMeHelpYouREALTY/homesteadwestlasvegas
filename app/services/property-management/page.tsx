@@ -7,7 +7,7 @@ import { ogImages } from '@/lib/og';
 import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
-  title: 'Property Management Services | Dr. Jan Duffy | Las Vegas Real Estate',
+  title: 'Las Vegas Property Management Services',
   description: 'Professional property management services in Las Vegas with Dr. Jan Duffy. VIP New Construction Homes Specialist, rental management, and investment property services.',
   ...canonicalMetadata('/services/property-management'),
   keywords: [

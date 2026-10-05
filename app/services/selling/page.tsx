@@ -7,7 +7,7 @@ import { ogImages } from '@/lib/og';
 import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
-  title: 'Home Selling Services | Dr. Jan Duffy | Las Vegas Real Estate Expert',
+  title: 'Sell Your Las Vegas Home, Dr. Jan Duffy',
   description: 'Expert home selling services in Las Vegas with Dr. Jan Duffy. VIP New Construction Homes Specialist, market expertise, and professional guidance for maximum home value.',
   ...canonicalMetadata('/services/selling'),
   keywords: [

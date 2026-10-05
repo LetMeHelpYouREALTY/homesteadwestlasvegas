@@ -9,7 +9,7 @@ import { ogImages } from '@/lib/og';
 import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
-  title: 'About Dr. Jan Duffy | VIP New Construction Specialist | Las Vegas Real Estate Expert',
+  title: "About Dr. Jan Duffy, Buyer's Agent",
   description: 'Meet Dr. Jan Duffy, VIP New Construction Homes Specialist with Berkshire Hathaway HomeServices Nevada. Nevada License S.0197614.LLC. Buyer representation for Homestead West at 5592 N Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.',
   ...canonicalMetadata('/about'),
   keywords: [

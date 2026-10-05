@@ -7,7 +7,7 @@ import { ogImages } from '@/lib/og';
 import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
-  title: 'Buying Homes Las Vegas | Dr. Jan Duffy | First-Time Buyer Guide',
+  title: 'Buying a Home in Las Vegas',
   description: 'Expert home buying services in Las Vegas by Dr. Jan Duffy (License S.0197614.LLC). First-time buyer guidance, pre-approval help, and property search assistance.',
   ...canonicalMetadata('/services/buying'),
   keywords: 'buying homes Las Vegas, first-time home buyer Las Vegas, Dr. Jan Duffy buyer services, Las Vegas real estate buying',
@@ -315,7 +315,7 @@ export default function BuyingServicePage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-lg font-semibold mb-2">Homestead West in Northwest Las Vegas</h3>
-                <p className="text-gray-700">Family-friendly Homestead West communities with excellent schools</p>
+                <p className="text-gray-700">Single-story ranch homes on pool-sized lots near Red Rock Canyon</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-lg font-semibold mb-2">Summerlin Near Homestead West</h3>
@@ -327,7 +327,7 @@ export default function BuyingServicePage() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-lg font-semibold mb-2">Green Valley</h3>
-                <p className="text-gray-700">Established neighborhood with mature landscaping</p>
+                <p className="text-gray-700">Resale homes with mature landscaping</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-lg font-semibold mb-2">Spring Valley</h3>

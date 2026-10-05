@@ -8,7 +8,7 @@ import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
-  title: 'Las Vegas Real Estate Office | Homestead West | Dr. Jan Duffy',
+  title: 'Las Vegas Real Estate Office, 89149',
   description: 'Visit our Las Vegas real estate office at 5592 N Dapple Gray Rd. Dr. Jan Duffy (License S.0197614.LLC) provides expert real estate services in Northwest Las Vegas.',
   keywords: 'Las Vegas real estate office, Dr. Jan Duffy office, Northwest Las Vegas real estate, real estate agent Las Vegas, Homestead West office',
   ...canonicalMetadata('/location/las-vegas-office'),

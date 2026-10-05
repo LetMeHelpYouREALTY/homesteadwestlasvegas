@@ -21,7 +21,7 @@ const LOCATOR_PLUS_EMBED_URL =
   'https://storage.googleapis.com/maps-solutions-v9iuebxrqf/locator-plus/stmd/locator-plus.html' as const;
 
 export const metadata: Metadata = {
-  title: 'Find Our Office | Store Locations | Homestead West Las Vegas | Dr. Jan Duffy',
+  title: 'Find Our Office, NW Las Vegas 89149',
   description:
     'Find our Homestead West Las Vegas real estate office. Visit Dr. Jan Duffy at 5592 N Dapple Gray Rd. Map, directions, hours, and contact for Northwest Las Vegas.',
   keywords:
@@ -189,7 +189,7 @@ export default function LocationIndexPage() {
                       </a>
                     </p>
                     <p>
-                      Hours: Sun 10–3; Mon–Fri 10–6; Sat 10–4
+                      Hours: Sun–Sat 8AM–8PM
                     </p>
                   </div>
                   <div className="flex flex-wrap gap-3">

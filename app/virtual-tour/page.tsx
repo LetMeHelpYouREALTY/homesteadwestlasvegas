@@ -7,7 +7,7 @@ import { ogImages } from '@/lib/og';
 import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
-  title: 'Virtual Tour | Homestead West Las Vegas | 3D Property Walkthrough',
+  title: 'Virtual 3D Tour of Ranch Homes',
   description: 'Take a virtual 3D tour of Homestead West luxury ranch homes in Northwest Las Vegas. Experience the properties from anywhere with our interactive Matterport tour.',
   ...canonicalMetadata('/virtual-tour'),
   keywords: [

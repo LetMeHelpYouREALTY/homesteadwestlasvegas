@@ -32,7 +32,7 @@ export async function generateMetadata({
   }
   
   return {
-    title: `${post.title} | Homestead West Las Vegas Blog`,
+    title: post.title,
     description: post.excerpt,
     openGraph: {
       title: post.title,

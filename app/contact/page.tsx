@@ -12,7 +12,7 @@ import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
-  title: 'Contact Dr. Jan Duffy | Las Vegas Real Estate Agent | Homestead West',
+  title: 'Contact Dr. Jan Duffy, Las Vegas Realtor',
   description: 'Contact Dr. Jan Duffy (License S.0197614.LLC) for expert real estate services in Las Vegas. Call (702) 299-6607 or visit our office at 5592 N Dapple Gray Rd.',
   keywords: 'contact Dr. Jan Duffy, Las Vegas real estate agent, Homestead West contact, real estate consultation Las Vegas',
   ...canonicalMetadata('/contact'),

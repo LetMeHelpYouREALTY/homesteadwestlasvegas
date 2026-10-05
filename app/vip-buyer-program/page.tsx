@@ -9,7 +9,7 @@ import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
-  title: 'VIP Berkshire Hathaway HomeServices Buyer Program | Dr. Jan Duffy | Las Vegas New Construction Expert',
+  title: 'VIP New Construction Buyer Program',
   description: 'Get VIP access to new construction homes in Las Vegas with Dr. Jan Duffy. Early phase access, priority lot selection, direct builder contact, and expert negotiation.',
   keywords: [
     'luxury new construction Las Vegas',

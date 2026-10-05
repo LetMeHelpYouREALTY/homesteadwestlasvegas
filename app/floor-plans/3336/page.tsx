@@ -12,7 +12,7 @@ import { ADDRESS_LINE, EMAIL, PHONE_DISPLAY, PHONE_TEL_HREF, SITE_URL } from '@/
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
-  title: 'Plan 3336 - 3,336 Sq Ft Ranch Home | Homestead West Las Vegas | Dr. Jan Duffy',
+  title: 'Plan 3336: 3,336 Sq Ft Single-Story Ranch',
   description:
     'Homestead West Plan 3336: 3,336 sq ft single-story ranch, 4–5 bedrooms, 4.5 baths, 3–5 car garage, pool-sized lot. From $910,990 at 5592 N Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.',
   keywords: [

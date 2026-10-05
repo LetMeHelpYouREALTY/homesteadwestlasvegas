@@ -8,7 +8,7 @@ import { ogImages } from '@/lib/og';
 import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
-  title: "Buyer's Guide | New Construction Process | Dr. Jan Duffy | Las Vegas Real Estate Expert",
+  title: "New Construction Buyer's Guide, Las Vegas",
   description: "Complete buyer's guide to new construction homes in Las Vegas and Northwest Las Vegas. Step-by-step process with VIP New Construction Homes Specialist Dr. Jan Duffy. Expert guidance for first-time buyers and luxury home buyers.",
   ...canonicalMetadata('/buyers-guide'),
   keywords: [

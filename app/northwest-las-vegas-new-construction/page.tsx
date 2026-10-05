@@ -9,7 +9,7 @@ import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
-  title: 'Northwest Las Vegas New Construction & 89149 Homes | Homestead West Area Guide',
+  title: 'NW Las Vegas New Construction, 89149',
   description:
     'Northwest Las Vegas new construction in zip code 89149: growth corridors, schools, and how Homestead West fits Centennial Hills. Dr. Jan Duffy, Nevada license S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties.',
   keywords: [

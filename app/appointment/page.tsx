@@ -8,7 +8,7 @@ import { ogImages } from '@/lib/og';
 import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
-  title: 'Schedule Appointment | Dr. Jan Duffy Real Estate | Las Vegas',
+  title: 'Book a Tour with Dr. Jan Duffy',
   description: 'Schedule a consultation with Dr. Jan Duffy (License S.0197614.LLC) for expert real estate services in Las Vegas. Book your appointment online today.',
   ...canonicalMetadata('/appointment'),
   keywords: 'schedule appointment, Dr. Jan Duffy, real estate consultation, Las Vegas real estate, book meeting',

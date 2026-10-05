@@ -9,7 +9,7 @@ import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
-  title: 'Community & Neighborhood | Homestead West Las Vegas | Schools, Shopping, Healthcare | Northwest Las Vegas',
+  title: 'Community Guide: Shopping, Parks, Healthcare',
   description: 'Explore Homestead West Las Vegas community in Northwest Las Vegas with local schools, shopping, dining, healthcare facilities, and recreation. Luxury new construction neighborhood guide for zip code 89149.',
   ...canonicalMetadata('/community'),
   keywords: [

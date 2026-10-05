@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   
   title: {
     default: "Homestead West Las Vegas | $910K+ Ranch Homes | Dr. Jan Duffy Real Estate",
-    template: "%s | Homestead West Las Vegas"
+    template: "%s | Homestead West"
   },
   
   description: "Homestead West: 3,336-3,704 sq ft luxury ranch homes on pool-sized lots in Northwest Las Vegas. Expert guidance from Dr. Jan Duffy. Starting at $910,990. Call (702) 299-6607.",

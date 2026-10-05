@@ -9,7 +9,7 @@ import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
-  title: 'Homestead West vs Skye Canyon: Complete Comparison | Northwest Las Vegas New Construction',
+  title: 'Homestead West vs Skye Canyon Compared',
   description: 'Compare Homestead West and Skye Canyon new construction communities in Northwest Las Vegas. Price, location, home sizes, and features comparison to help you choose the right community.',
   keywords: [
     'Homestead West vs Skye Canyon',
@@ -206,7 +206,7 @@ export default function ComparisonPage() {
               />
               <div className="prose prose-lg max-w-none text-gray-700">
                 <p className="text-lg mb-4">
-                  <strong>What types of homes are available in each community?</strong> Homestead West exclusively offers single-story ranch homes ranging from 3,336 to 3,704 square feet, perfect for families who want space without stairs. Skye Canyon offers both single-story and two-story homes with a wider size range from 1,800 to 4,500 square feet.
+                  <strong>What types of homes are available in each community?</strong> Homestead West exclusively offers single-story ranch homes ranging from 3,336 to 3,704 square feet, with all living space on one level—no stairs. Skye Canyon offers both single-story and two-story homes with a wider size range from 1,800 to 4,500 square feet.
                 </p>
                 <p className="text-lg mb-4">
                   If you prefer single-story living and larger floor plans, Homestead West may be the better fit. If you want more variety in home styles and sizes, including more affordable options, Skye Canyon offers greater flexibility.

@@ -20,7 +20,7 @@ const COMMUTES_MAP_EMBED_URL =
   'https://storage.googleapis.com/maps-solutions-v9iuebxrqf/commutes/hq3p/commutes.html' as const;
 
 export const metadata: Metadata = {
-  title: 'Directions to Our Office | Homestead West Las Vegas | Dr. Jan Duffy',
+  title: 'Directions to Our 89149 Office',
   description: `Get directions to Homestead West office at ${DESTINATION_DISPLAY}. From airport, downtown, Henderson, Summerlin. Drive, transit, walk, or bike — estimated travel time. No cost, powered by Google Maps.`,
   keywords: [
     'directions to Homestead West',

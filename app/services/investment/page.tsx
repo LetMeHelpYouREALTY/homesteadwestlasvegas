@@ -7,7 +7,7 @@ import { ogImages } from '@/lib/og';
 import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
-  title: 'Investment Consulting | Dr. Jan Duffy | Las Vegas Real Estate Investment Expert',
+  title: 'Las Vegas Investment Property Consulting',
   description: 'Expert real estate investment consulting in Las Vegas with Dr. Jan Duffy. VIP New Construction Homes Specialist, market analysis, and investment strategy guidance.',
   ...canonicalMetadata('/services/investment'),
   keywords: [

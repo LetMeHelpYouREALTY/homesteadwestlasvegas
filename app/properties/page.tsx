@@ -9,8 +9,8 @@ import { ogImages } from '@/lib/og';
 import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
-  title: 'Las Vegas Properties for Sale | Dr. Jan Duffy | Ranch Homes $910K+',
-  description: 'Browse Las Vegas properties for sale with Dr. Jan Duffy (License S.0197614.LLC). Discover ranch-style homes on pool-sized lots in Northwest Las Vegas starting at $910K. View available Homestead West homes and new construction listings.',
+  title: 'Northwest Las Vegas Homes for Sale',
+  description: 'Browse Northwest Las Vegas homes for sale with Dr. Jan Duffy (License S.0197614.LLC): Homestead West ranch homes on pool-sized lots and new construction listings.',
   ...canonicalMetadata('/properties'),
   keywords: 'Las Vegas properties for sale, ranch homes Las Vegas, Northwest Las Vegas homes, $910K homes Las Vegas, Dr. Jan Duffy listings',
   openGraph: {

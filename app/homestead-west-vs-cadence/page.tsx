@@ -9,7 +9,7 @@ import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
-  title: 'Homestead West vs Cadence (Henderson): New Construction Comparison | Las Vegas Valley',
+  title: 'Homestead West vs Cadence (Henderson)',
   description:
     'Compare Homestead West (Northwest Las Vegas, 89149) and Cadence master-planned community in Henderson. Location, commute, home styles, and how to choose with Dr. Jan Duffy.',
   keywords: [

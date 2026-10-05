@@ -9,7 +9,7 @@ import { ogImages } from '@/lib/og';
 import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
-  title: 'Real Estate Blog | Homestead West Las Vegas | Dr. Jan Duffy',
+  title: 'Real Estate Blog, Northwest Las Vegas',
   description: 'Expert real estate insights, market updates, and home buying tips for Northwest Las Vegas from Dr. Jan Duffy and Keeping Current Matters.',
   ...canonicalMetadata('/blog'),
   keywords: [

@@ -12,7 +12,7 @@ const QR_CODE_URL = `https://api.qrserver.com/v1/create-qr-code/?size=256x256&da
 const GOOGLE_REVIEW_BEST_PRACTICES = 'https://support.google.com/business/answer/2622994';
 
 export const metadata: Metadata = {
-  title: 'Review Us on Google | Homestead West Las Vegas | Dr. Jan Duffy',
+  title: 'Leave a Google Review for Dr. Jan Duffy',
   description: 'Leave a Google review for Dr. Jan Duffy and Homestead West Las Vegas. Reviews build trust and help our Business Profile stand out on Search and Maps.',
   ...canonicalMetadata('/reviews'),
   keywords: [

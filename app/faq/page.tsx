@@ -9,7 +9,7 @@ import { SITE_URL } from '@/lib/site-contact';
 import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
-  title: 'FAQ | Frequently Asked Questions | Dr. Jan Duffy | VIP New Construction Specialist',
+  title: 'New Construction Buyer FAQ, Las Vegas',
   description: 'Get answers to common questions about buying new construction homes in Las Vegas. FAQ about new construction, Homestead West, and working with VIP New Construction Homes Specialist Dr. Jan Duffy.',
   ...canonicalMetadata('/faq'),
   keywords: [

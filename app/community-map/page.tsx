@@ -7,8 +7,8 @@ import { ogImages } from '@/lib/og';
 import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
-  title: 'Community Map | Homestead West Las Vegas | Available Lots & Homesites | Northwest Las Vegas',
-  description: 'Explore Homestead West community map with available lots and homesites in Northwest Las Vegas. Interactive map showing pool-sized lots, floor plan locations, community layout, and proximity to Red Rock Canyon, downtown Las Vegas, and Mount Charleston. New construction homes from $910K.',
+  title: 'Community Map & Homesites, 89149',
+  description: 'Homestead West community map: pool-sized homesites, plan locations, and distances to Red Rock Canyon, downtown Las Vegas, and Mount Charleston.',
   ...canonicalMetadata('/community-map'),
   keywords: [
     'Homestead West community map',
@@ -239,7 +239,7 @@ export default function CommunityMapPage() {
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">
                       <span className="text-green-600 mr-3 font-bold">•</span>
-                      <span>Top-rated schools including Dean LaMar Allen Elementary and Centennial High School</span>
+                      <span>Assigned public schools include Dean LaMar Allen Elementary and Centennial High School (verify with CCSD)</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-600 mr-3 font-bold">•</span>

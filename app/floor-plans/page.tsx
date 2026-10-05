@@ -9,7 +9,7 @@ import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
-  title: 'Available Homes | Homestead West Las Vegas | MLS Listings',
+  title: 'Available Homes & MLS Listings',
   description: 'Browse current available homes in Las Vegas MLS. Updated daily with the latest properties from Homestead West and surrounding areas. Expert guidance from Dr. Jan Duffy.',
   ...canonicalMetadata('/floor-plans'),
   keywords: [

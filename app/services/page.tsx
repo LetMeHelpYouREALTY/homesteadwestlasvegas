@@ -9,7 +9,7 @@ import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
-  title: 'Real Estate Services | Dr. Jan Duffy | Las Vegas Real Estate Agent',
+  title: 'Real Estate Services, Dr. Jan Duffy',
   description: 'Comprehensive real estate services by Dr. Jan Duffy (License S.0197614.LLC) in Las Vegas. Buying, selling, investment consulting, and property management.',
   keywords: 'real estate services Las Vegas, Dr. Jan Duffy services, buying homes Las Vegas, selling homes Las Vegas, real estate investment',
   ...canonicalMetadata('/services'),

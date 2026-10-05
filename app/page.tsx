@@ -24,9 +24,8 @@ const RealScoutListings = dynamic(() => import('@/components/RealScoutListings')
 });
 
 export const metadata: Metadata = {
-  title: 'Homestead West Las Vegas — Luxury Single-Story Ranch Homes from $910K | New Construction Northwest Las Vegas',
-  description: 'New construction luxury single-story ranch homes in Northwest Las Vegas from $910K. Pool-sized lots, optional casitas, VIP buyer representation. Dr. Jan Duffy represents YOU—not the builder. Independent buyer\'s agent with Berkshire Hathaway HomeServices Nevada at 5592 N Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.',
-  keywords: 'Homestead West Las Vegas, luxury ranch homes, single-story homes, Northwest Las Vegas, new construction, pool-sized lots, $910K homes, Las Vegas real estate, Berkshire Hathaway HomeServices, independent buyer agent, new construction homes Las Vegas, single story homes Las Vegas, luxury homes Northwest Las Vegas, new construction community Las Vegas, ranch homes Las Vegas, pool sized lots Las Vegas',
+  title: 'Homestead West Las Vegas | Single-Story Ranch Homes 89149',
+  description: 'Single-story ranch homes on pool-sized lots at Homestead West, NW Las Vegas 89149. Dr. Jan Duffy represents buyers, not the builder. Call (702) 299-6607.',
   ...canonicalMetadata('/'),
   openGraph: {
     title: 'Homestead West Las Vegas — Luxury Single-Story Ranch Homes from $910K',
@@ -610,7 +609,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="text-2xl md:text-3xl font-bold text-[#d4af37] mb-1">(702) 299-6607</p>
-                    <p className="text-xs md:text-sm">Call for a private tour — Sun 10–3, Mon–Fri 10–6, Sat 10–4</p>
+                    <p className="text-xs md:text-sm">Call for a private tour — Sun–Sat 8AM–8PM</p>
                   </div>
                 </div>
               </div>
