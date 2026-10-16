@@ -172,6 +172,7 @@ export default function RootLayout({
                         gtag('config', '${gaId}', {
                           send_page_view: false
                         });
+                        ${process.env.NEXT_PUBLIC_GOOGLE_TAG_ID ? `gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_TAG_ID}');` : ''}
                       };
                     }
                     
