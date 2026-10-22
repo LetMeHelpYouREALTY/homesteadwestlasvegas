@@ -275,6 +275,7 @@ export default function RootLayout({
             `}
           </Script>
         )}
+            <Script src="/ads-conversions.js" strategy="afterInteractive" />
           </body>
         </html>
       );
