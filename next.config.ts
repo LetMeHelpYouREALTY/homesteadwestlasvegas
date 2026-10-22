@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000, // 1 year cache for images
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none' https://connect.facebook.net https://www.googleadservices.com https://googleads.g.doubleclick.net; sandbox;",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
         protocol: 'https',
@@ -102,7 +102,7 @@ const nextConfig: NextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://em.realscout.com https://www.realscout.com https://www.googletagmanager.com https://www.google-analytics.com https://assets.calendly.com https://www.google.com https://maps.googleapis.com https://www.googleadservices.com https://googleads.g.doubleclick.net",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://em.realscout.com https://www.realscout.com https://www.googletagmanager.com https://www.google-analytics.com https://assets.calendly.com https://www.google.com https://maps.googleapis.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://connect.facebook.net",
               "connect-src 'self' https://em.realscout.com https://www.realscout.com https://drjanduffy.realscout.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.google.com https://maps.googleapis.com https://assets.calendly.com https://calendly.com https://www.simplifyingthemarket.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://td.doubleclick.net https://www.facebook.com https://connect.facebook.net https://ad.doubleclick.net",
               "img-src 'self' data: blob: https:",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://em.realscout.com https://assets.calendly.com",
