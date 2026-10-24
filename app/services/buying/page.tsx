@@ -8,7 +8,7 @@ import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Buying Homes Las Vegas | Dr. Jan Duffy | First-Time Buyer Guide',
-  description: 'Expert home buying services in Las Vegas by Dr. Jan Duffy (License S.0197614.LLC). First-time buyer guidance, pre-approval help, and property search assistance.',
+  description: 'Expert home buying services in Las Vegas by Dr. Jan Duffy. First-time buyer guidance, pre-approval help, and property search assistance.',
   ...canonicalMetadata('/services/buying'),
   keywords: 'buying homes Las Vegas, first-time home buyer Las Vegas, Dr. Jan Duffy buyer services, Las Vegas real estate buying',
   openGraph: {

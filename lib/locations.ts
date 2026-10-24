@@ -15,7 +15,7 @@ export type StoreLocation = {
     postalCode: string;
     country: string;
   };
-  /** One-line address for map queries (e.g. "5592 Dapple Gray Rd, Las Vegas, NV 89149") */
+  /** One-line address for map queries (e.g. "5592 N Dapple Gray Rd, Las Vegas, NV 89149") */
   mapQuery: string;
   phone: string;
   email: string;
@@ -33,13 +33,13 @@ export const STORE_LOCATIONS: StoreLocation[] = [
     name: 'Homestead West Las Vegas Office',
     slug: 'las-vegas-office',
     address: {
-      street: '5592 Dapple Gray Rd',
+      street: '5592 N Dapple Gray Rd',
       locality: 'Las Vegas',
       region: 'NV',
       postalCode: '89149',
       country: 'US',
     },
-    mapQuery: '5592+Dapple+Gray+Rd,+Las+Vegas,+NV+89149',
+    mapQuery: '5592+N+Dapple+Gray+Rd,+Las+Vegas,+NV+89149',
     phone: '+17022996607',
     email: 'DrJanSells@HomesteadWestLasVegas.com',
     openingHours: ['Mo-Su 08:00-20:00'],
@@ -48,7 +48,7 @@ export const STORE_LOCATIONS: StoreLocation[] = [
   },
 ];
 
-/** Full address line for display (e.g. "5592 Dapple Gray Rd, Las Vegas, NV 89149") */
+/** Full address line for display (e.g. "5592 N Dapple Gray Rd, Las Vegas, NV 89149") */
 export function formatAddress(loc: StoreLocation): string {
   const { street, locality, region, postalCode } = loc.address;
   return `${street}, ${locality}, ${region} ${postalCode}`;

@@ -315,7 +315,7 @@ export default function CommunityPage() {
               <SectionImage
                 imageId="grocery-center-89149"
                 heading="Homestead West Shopping & Dining"
-                caption="Shopping centers in Northwest Las Vegas, a short drive from 5592 Dapple Gray Rd"
+                caption="Shopping centers in Northwest Las Vegas, a short drive from 5592 N Dapple Gray Rd"
               />
               
               <div className="grid md:grid-cols-2 gap-8">
@@ -517,7 +517,7 @@ export default function CommunityPage() {
                   <SectionImage
                     imageId="red-rock-canyon"
                     heading="Things to Do Near Homestead West"
-                    caption="Red Rock Canyon is about 9 miles from Homestead West at 5592 Dapple Gray Rd"
+                    caption="Red Rock Canyon is about 9 miles from Homestead West at 5592 N Dapple Gray Rd"
                   />
                   <div className="space-y-4 mb-6">
                     <div className="flex items-start">

@@ -6,8 +6,8 @@ import SearchWidgetScript from '@/components/SearchWidgetScript';
 import SectionImage from '@/components/SectionImage';
 import LeadForm from '@/components/LeadForm';
 import GbpActions from '@/components/GbpActions';
-import { LICENSE_ID, ADDRESS_LINE, PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact';
-import { ASSET_BHHS_LOGO_PATH, ASSET_HEADSHOT_PATH } from '@/lib/site-assets';
+import { ADDRESS_LINE, PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact';
+import { ASSET_HEADSHOT_PATH } from '@/lib/site-assets';
 import { canonicalMetadata, absoluteUrl } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
 import { mediaAlt, mediaSrc } from '@/lib/media';
@@ -24,12 +24,12 @@ const RealScoutListings = dynamic(() => import('@/components/RealScoutListings')
 
 export const metadata: Metadata = {
   title: 'Homestead West Las Vegas — Luxury Single-Story Ranch Homes from $910K | New Construction Northwest Las Vegas',
-  description: 'New construction luxury single-story ranch homes in Northwest Las Vegas from $910K. Pool-sized lots, optional casitas, VIP buyer representation. Dr. Jan Duffy represents YOU—not the builder. Independent buyer\'s agent with Berkshire Hathaway HomeServices Nevada at 5592 Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.',
+  description: 'New construction luxury single-story ranch homes in Northwest Las Vegas from $910K. Pool-sized lots, optional casitas, VIP buyer representation. Dr. Jan Duffy represents YOU—not the builder. Independent buyer\'s agent at 5592 N Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.',
   keywords: 'Homestead West Las Vegas, luxury ranch homes, single-story homes, Northwest Las Vegas, new construction, pool-sized lots, $910K homes, Las Vegas real estate, Berkshire Hathaway HomeServices, independent buyer agent, new construction homes Las Vegas, single story homes Las Vegas, luxury homes Northwest Las Vegas, new construction community Las Vegas, ranch homes Las Vegas, pool sized lots Las Vegas',
   ...canonicalMetadata('/'),
   openGraph: {
     title: 'Homestead West Las Vegas — Luxury Single-Story Ranch Homes from $910K',
-    description: 'Get VIP access to Northwest Las Vegas\'s newest luxury community. Independent buyer\'s agent with Berkshire Hathaway HomeServices Nevada.',
+    description: 'Get VIP access to Northwest Las Vegas\'s newest luxury community. Independent buyer\'s agent Dr. Jan Duffy, in real estate since 1983.',
     type: 'website',
     url: absoluteUrl('/'),
     siteName: 'Homestead West Las Vegas',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Homestead West Las Vegas — Luxury Single-Story Ranch Homes from $910K',
-    description: 'Get VIP access to Northwest Las Vegas\'s newest luxury community. Independent buyer\'s agent with Berkshire Hathaway HomeServices Nevada.',
+    description: 'Get VIP access to Northwest Las Vegas\'s newest luxury community. Independent buyer\'s agent Dr. Jan Duffy, in real estate since 1983.',
     images: ogImages('ranch-exterior-dusk').map((img) => img.url),
   },
 };
@@ -119,7 +119,7 @@ export default function HomePage() {
               {/* VIP Badge */}
               <div className="mb-8">
                 <div className="inline-block bg-[#d4af37] text-[#1a365d] px-6 py-2 rounded-full font-bold text-lg mb-6 shadow-lg">
-                  VIP Berkshire Hathaway HomeServices Buyer Program
+                  VIP New Construction Buyer Program
                 </div>
               </div>
               {/* LCP Element - Optimized for fast rendering (no blocking styles) */}
@@ -143,7 +143,7 @@ export default function HomePage() {
               <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm md:text-base">
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white">
                   <span className="text-2xl">🏢</span>
-                  <span className="text-white">Berkshire Hathaway HomeServices Nevada</span>
+                  <span className="text-white">In Real Estate Since 1983</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white">
                   <span className="text-2xl">🏆</span>
@@ -151,7 +151,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white">
                   <span className="text-2xl">📜</span>
-                  <span className="text-white">Nevada License S.0197614.LLC</span>
+                  <span className="text-white">Top 1% Las Vegas REALTOR®</span>
                 </div>
               </div>
 
@@ -486,7 +486,7 @@ export default function HomePage() {
                 Who is Dr. Jan Duffy?
               </h2>
               <p className="text-lg text-center mb-6 text-gray-700 max-w-2xl mx-auto">
-                VIP New Construction Homes Specialist with Berkshire Hathaway HomeServices Nevada (License {LICENSE_ID}). She represents home buyers—not the builder—in Homestead West and Northwest Las Vegas, with VIP access, negotiation support, and local market context.
+                VIP New Construction Homes Specialist, in real estate since 1983. She represents home buyers—not the builder—in Homestead West and Northwest Las Vegas, with VIP access, negotiation support, and local market context.
               </p>
               <ul className="grid sm:grid-cols-2 gap-2 mb-8 text-gray-700 text-sm max-w-2xl mx-auto">
                 <li className="flex gap-2"><span className="text-[#1a365d] font-bold shrink-0">✓</span> Early phase &amp; lot release alerts</li>
@@ -512,58 +512,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* About Berkshire Hathaway HomeServices Section */}
-        <section className="py-16 bg-slate-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold mb-6 text-gray-900">
-                Backed by a Name You Can Trust
-              </h2>
-              <SectionImage
-                imageId="bhhs-office-interior"
-                heading="Backed by a Name You Can Trust"
-                caption="Buyer representation office overlooking ranch homes near 5592 Dapple Gray Rd, Las Vegas NV 89149"
-              />
-              <p className="text-xl text-gray-700 mb-8">
-                Dr. Jan Duffy is proud to represent buyers through Berkshire Hathaway HomeServices Nevada—one of the most respected names in real estate.
-              </p>
-              
-              {/* BHHS Logo */}
-              <div className="flex justify-center mb-8">
-                <Image 
-                  src={ASSET_BHHS_LOGO_PATH} 
-                  alt="Berkshire Hathaway HomeServices Nevada Properties" 
-                  width={250}
-                  height={80}
-                  className="h-16 md:h-20 w-auto"
-                  priority
-                />
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="text-lg font-bold mb-3 text-gray-900">Global Network</h3>
-                  <p className="text-gray-700 text-sm">
-                    Part of the Berkshire Hathaway family of companies
-                  </p>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="text-lg font-bold mb-3 text-gray-900">Local Expertise</h3>
-                  <p className="text-gray-700 text-sm">
-                    Deep knowledge of Northwest Las Vegas neighborhoods and new construction
-                  </p>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="text-lg font-bold mb-3 text-gray-900">Buyer-First Philosophy</h3>
-                  <p className="text-gray-700 text-sm">
-                    Committed to integrity, trust, and exceptional service
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Proof — teaser; full stories on /testimonials */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -579,7 +527,7 @@ export default function HomePage() {
 
               <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-600 mb-6">
                 <p className="text-lg text-gray-700 mb-4 italic">
-                  &quot;A couple in the area wanted a corner lot in Homestead West. They called the VIP Berkshire Hathaway HomeServices Buyer Program two weeks before the public release. We registered them in the VIP program. They secured a corner position with mountain views—before anyone else saw it.&quot;
+                  &quot;A couple in the area wanted a corner lot in Homestead West. They called the VIP New Construction Buyer Program two weeks before the public release. We registered them in the VIP program. They secured a corner position with mountain views—before anyone else saw it.&quot;
                 </p>
                 <p className="text-gray-900 font-semibold">— Homestead West Buyers</p>
                 <p className="text-gray-700 text-sm">Final savings: $15,000 in negotiated upgrades including quartz countertops and covered patio extension</p>
@@ -593,7 +541,7 @@ export default function HomePage() {
 
               <div className="bg-[#1a365d] text-white p-6 md:p-8 rounded-lg">
                 <h3 className="text-2xl font-bold mb-4 text-center">Homestead West facts you can verify</h3>
-                <p className="text-center text-blue-100 mb-6 text-sm">Single-story ranch inventory at 5592 Dapple Gray Rd, Las Vegas NV 89149</p>
+                <p className="text-center text-blue-100 mb-6 text-sm">Single-story ranch inventory at 5592 N Dapple Gray Rd, Las Vegas NV 89149</p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                   <div>
                     <p className="text-2xl md:text-3xl font-bold text-[#d4af37] mb-1">$910,990</p>
@@ -609,7 +557,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="text-2xl md:text-3xl font-bold text-[#d4af37] mb-1">(702) 299-6607</p>
-                    <p className="text-xs md:text-sm">Call for a private tour — Sun 10–3, Mon–Fri 10–6, Sat 10–4</p>
+                    <p className="text-xs md:text-sm">Call for a private tour — Daily 8:00 AM–8:00 PM</p>
                   </div>
                 </div>
               </div>
@@ -761,7 +709,7 @@ export default function HomePage() {
             <div className="space-y-2 text-gray-200">
               <p>Or call directly: <a href="tel:7022996607" className="text-yellow-400 hover:text-yellow-300 font-semibold">(702) 299-6607</a></p>
               <p>Email: <a href="mailto:DrJanSells@HomesteadWestLasVegas.com" className="text-yellow-400 hover:text-yellow-300 font-semibold">DrJanSells@HomesteadWestLasVegas.com</a></p>
-              <p>Homestead West Location: 5592 Dapple Gray Rd, Las Vegas, NV 89149</p>
+              <p>Homestead West Location: 5592 N Dapple Gray Rd, Las Vegas, NV 89149</p>
             </div>
           </div>
         </section>

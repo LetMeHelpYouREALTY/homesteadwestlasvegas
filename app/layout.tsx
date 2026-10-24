@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         "pool-sized lots Las Vegas",
         "single story homes Las Vegas",
         "luxury homes Las Vegas",
-        "5592 Dapple Gray Rd",
+        "5592 N Dapple Gray Rd",
         "Dr. Jan Duffy",
         "Las Vegas real estate",
         "89149 zip code homes",

@@ -10,7 +10,7 @@ import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'About Dr. Jan Duffy | VIP New Construction Specialist | Las Vegas Real Estate Expert',
-  description: 'Meet Dr. Jan Duffy, VIP New Construction Homes Specialist with Berkshire Hathaway HomeServices Nevada. Nevada License S.0197614.LLC. Buyer representation for Homestead West at 5592 Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.',
+  description: 'Meet Dr. Jan Duffy, VIP New Construction Homes Specialist, in real estate since 1983. Buyer representation for Homestead West at 5592 N Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.',
   ...canonicalMetadata('/about'),
   keywords: [
     'Dr. Jan Duffy Las Vegas',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'About Dr. Jan Duffy | VIP New Construction Specialist',
-    description: 'Meet Dr. Jan Duffy, VIP New Construction Homes Specialist. Buyer representation for Homestead West at 5592 Dapple Gray Rd, Las Vegas NV 89149.',
+    description: 'Meet Dr. Jan Duffy, VIP New Construction Homes Specialist. Buyer representation for Homestead West at 5592 N Dapple Gray Rd, Las Vegas NV 89149.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/about',
     images: ogImages('bhhs-office-interior'),
@@ -41,7 +41,7 @@ export default function AboutPage() {
     email: 'DrJanSells@HomesteadWestLasVegas.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '5592 Dapple Gray Rd',
+      streetAddress: '5592 N Dapple Gray Rd',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       postalCode: '89149',
@@ -98,10 +98,10 @@ export default function AboutPage() {
           subtitle={
             <>
               <span itemProp="description">
-                Dr. Jan Duffy is a VIP New Construction Homes Specialist with Berkshire Hathaway HomeServices Nevada (License S.0197614.LLC) who represents home buyers exclusively in Northwest Las Vegas, including Homestead West at 5592 Dapple Gray Rd.
+                Dr. Jan Duffy is a VIP New Construction Homes Specialist, in real estate since 1983, who represents home buyers exclusively in Northwest Las Vegas, including Homestead West at 5592 N Dapple Gray Rd.
               </span>
               <br />
-              Las Vegas Real Estate Expert | Nevada License S.0197614.LLC
+              Las Vegas Real Estate Expert | Top 1% Las Vegas REALTOR®
             </>
           }
           badge="New Construction Specialist"
@@ -121,7 +121,7 @@ export default function AboutPage() {
             </div>
           </div>
           <address rel="author" className="text-blue-50 text-lg mb-2 not-italic">
-            By <a href="/about" className="text-yellow-400 hover:text-yellow-300">Dr. Jan Duffy</a>, Licensed Nevada Real Estate Agent (S.0197614.LLC)
+            By <a href="/about" className="text-yellow-400 hover:text-yellow-300">Dr. Jan Duffy</a>, Licensed Nevada Real Estate Agent
           </address>
           <time dateTime="2026-01-19" className="text-blue-100 text-sm">Last updated: January 19, 2026</time>
         </PageHero>
@@ -150,7 +150,7 @@ export default function AboutPage() {
                 <SectionImage
                   imageId="buyer-consultation"
                   heading="VIP New Construction Homes Specialist"
-                  caption="Buyer consultation for Homestead West new construction at 5592 Dapple Gray Rd, Las Vegas NV 89149"
+                  caption="Buyer consultation for Homestead West new construction at 5592 N Dapple Gray Rd, Las Vegas NV 89149"
                 />
                 <p className="text-xl text-gray-700 max-w-4xl mx-auto">
                   Dr. Jan Duffy is a VIP New Construction Homes Specialist who represents home buyers exclusively. 
@@ -247,8 +247,8 @@ export default function AboutPage() {
                       <div className="flex items-start">
                         <span className="text-green-600 mr-3 text-xl">✓</span>
                         <div>
-                          <p className="font-semibold text-gray-900">Nevada Real Estate License</p>
-                          <p className="text-gray-700">License #S.0197614.LLC</p>
+                          <p className="font-semibold text-gray-900">Licensed Nevada REALTOR®</p>
+                          <p className="text-gray-700">In real estate since 1983</p>
                         </div>
                       </div>
                       <div className="flex items-start">
@@ -304,11 +304,11 @@ export default function AboutPage() {
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-lg text-center">
                   <div className="text-4xl font-bold text-[#1a365d] mb-2">89149</div>
-                  <p className="text-gray-700 font-semibold">Office at 5592 Dapple Gray Rd</p>
+                  <p className="text-gray-700 font-semibold">Office at 5592 N Dapple Gray Rd</p>
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-                  <div className="text-4xl font-bold text-[#1a365d] mb-2">S.0197614.LLC</div>
-                  <p className="text-gray-700 font-semibold">Nevada real estate license</p>
+                  <div className="text-4xl font-bold text-[#1a365d] mb-2">Since 1983</div>
+                  <p className="text-gray-700 font-semibold">In real estate</p>
                 </div>
               </div>
 
@@ -440,7 +440,7 @@ export default function AboutPage() {
 
         <CtaBand
           heading="Tour Homestead West with Dr. Jan Duffy"
-          body="Call (702) 299-6607 before you register at the builder sales office. Office: 5592 Dapple Gray Rd, Las Vegas NV 89149."
+          body="Call (702) 299-6607 before you register at the builder sales office. Office: 5592 N Dapple Gray Rd, Las Vegas NV 89149."
           source="about"
         />
 

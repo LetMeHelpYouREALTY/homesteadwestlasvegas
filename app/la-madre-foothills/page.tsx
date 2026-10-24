@@ -4,7 +4,7 @@ import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
-import { SITE_URL, ADDRESS, PHONE_DISPLAY, PHONE_TEL_HREF, BROKERAGE_NAME, LICENSE_ID } from '@/lib/site-contact';
+import { SITE_URL, ADDRESS, PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
 
@@ -53,7 +53,7 @@ const CITY_PLANNING_ZONING_URL = 'https://www.lasvegasnevada.gov/Business/Planni
 export const metadata: Metadata = {
   title: 'La Madre Foothills Las Vegas | Homes & Area Guide | Homestead West',
   description:
-    'La Madre Foothills homes and area guide: zips 89124–89166, live MLS search, Northwest Las Vegas foothills context, and buyer representation. Call (702) 299-6607. Dr. Jan Duffy, Nevada license S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties.',
+    'La Madre Foothills homes and area guide: zips 89124–89166, live MLS search, Northwest Las Vegas foothills context, and buyer representation. Call (702) 299-6607. Dr. Jan Duffy, REALTOR®.',
   keywords: [
     'La Madre Foothills Las Vegas',
     'Homestead West Northwest Las Vegas',
@@ -385,10 +385,7 @@ export default function LaMadreFoothillsPage() {
             </div>
             <h3 className="text-lg font-bold text-gray-900 mb-3">Local business &amp; license (GEO)</h3>
             <p className="text-gray-800 mb-2">
-              <strong>Dr. Jan Duffy</strong> · {BROKERAGE_NAME}
-            </p>
-            <p className="text-gray-800 mb-2">
-              Nevada real estate license <strong>{LICENSE_ID}</strong>
+              <strong>Dr. Jan Duffy</strong> · REALTOR®
             </p>
             <p className="text-gray-800 mb-2">
               <a href={PHONE_TEL_HREF} className="text-[#1a365d] font-semibold underline">

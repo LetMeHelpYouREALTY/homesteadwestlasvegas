@@ -70,7 +70,7 @@ export default function ComparisonPage() {
           subtitle="Compare two premier new construction communities in Northwest Las Vegas to find the right fit for your lifestyle and budget."
         >
           <address rel="author" className="text-blue-100 text-sm mb-2 not-italic">
-            By <a href="/about" className="text-yellow-400 hover:text-yellow-300">Dr. Jan Duffy</a>, Licensed Nevada Real Estate Agent (S.0197614.LLC)
+            By <a href="/about" className="text-yellow-400 hover:text-yellow-300">Dr. Jan Duffy</a>, Licensed Nevada Real Estate Agent
           </address>
           <time dateTime="2026-01-19" className="text-blue-100 text-sm">Last updated: January 19, 2026</time>
         </PageHero>

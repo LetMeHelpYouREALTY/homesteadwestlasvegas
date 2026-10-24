@@ -10,7 +10,7 @@ import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Schedule Appointment | Dr. Jan Duffy Real Estate | Las Vegas',
-  description: 'Schedule a consultation with Dr. Jan Duffy (License S.0197614.LLC) for expert real estate services in Las Vegas. Book your appointment online today.',
+  description: 'Schedule a consultation with Dr. Jan Duffy for expert real estate services in Las Vegas. Book your appointment online today.',
   ...canonicalMetadata('/appointment'),
   keywords: 'schedule appointment, Dr. Jan Duffy, real estate consultation, Las Vegas real estate, book meeting',
   openGraph: {
@@ -183,7 +183,7 @@ export default function AppointmentPage() {
               <SectionImage
                 imageId="appointment-consultation"
                 heading="Why Schedule Your Homestead West Consultation with Dr. Jan Duffy?"
-                caption="Appointment desk with Homestead West ranch floor plans at 5592 Dapple Gray Rd, Las Vegas 89149"
+                caption="Appointment desk with Homestead West ranch floor plans at 5592 N Dapple Gray Rd, Las Vegas 89149"
               />
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 <div className="bg-blue-50 p-6 rounded-xl">
@@ -204,7 +204,7 @@ export default function AppointmentPage() {
                 <div className="bg-green-50 p-6 rounded-xl">
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">Homestead West Market Expertise</h3>
                   <p className="text-gray-700 mb-4">
-                    With years of experience in the Las Vegas real estate market, Dr. Jan Duffy brings unparalleled knowledge 
+                    In real estate since 1983, Dr. Jan Duffy brings unparalleled knowledge 
                     of Homestead West and surrounding Northwest Las Vegas communities. Your Homestead West consultation will 
                     include comprehensive market analysis, pricing insights, and neighborhood information that helps you make 
                     informed decisions about your Homestead West investment.

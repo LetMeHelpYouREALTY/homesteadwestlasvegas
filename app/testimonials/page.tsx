@@ -10,7 +10,7 @@ import { GOOGLE_REVIEW_URL, SITE_URL } from '@/lib/site-contact';
 
 export const metadata: Metadata = {
   title: 'Homestead West Buyer Stories | Dr. Jan Duffy | Northwest Las Vegas 89149',
-  description: 'See how Dr. Jan Duffy represents Homestead West buyers—not the builder. Read Google reviews, then book a private tour at 5592 Dapple Gray Rd. Call (702) 299-6607.',
+  description: 'See how Dr. Jan Duffy represents Homestead West buyers—not the builder. Read Google reviews, then book a private tour at 5592 N Dapple Gray Rd. Call (702) 299-6607.',
   ...canonicalMetadata('/testimonials'),
   keywords: [
     'Dr. Jan Duffy testimonials',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Client Testimonials & Reviews | Dr. Jan Duffy',
-    description: 'See how Dr. Jan Duffy represents Homestead West buyers—not the builder. Read Google reviews, then book a private tour at 5592 Dapple Gray Rd.',
+    description: 'See how Dr. Jan Duffy represents Homestead West buyers—not the builder. Read Google reviews, then book a private tour at 5592 N Dapple Gray Rd.',
     type: 'website',
     url: 'https://www.homesteadwestlasvegas.com/testimonials',
     images: ogImages('private-tour'),
@@ -57,7 +57,7 @@ export default function TestimonialsPage() {
       id: 2,
       name: 'Relocating buyers',
       location: 'Started with a video tour',
-      text: 'We were not in Nevada yet. Dr. Jan sent plan walkthroughs, compared lot premiums, and met us at 5592 Dapple Gray Rd when we flew in.',
+      text: 'We were not in Nevada yet. Dr. Jan sent plan walkthroughs, compared lot premiums, and met us at 5592 N Dapple Gray Rd when we flew in.',
       homeType: 'Plan 3336 ranch',
     },
     {
@@ -158,7 +158,7 @@ export default function TestimonialsPage() {
 
                 <div className="bg-white p-6 rounded-xl shadow-lg text-center">
                   <h3 className="text-xl font-bold mb-3 text-gray-900">Office at the community</h3>
-                  <p className="text-gray-700">Tour from 5592 Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.</p>
+                  <p className="text-gray-700">Tour from 5592 N Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.</p>
                 </div>
               </div>
             </div>
@@ -207,7 +207,7 @@ export default function TestimonialsPage() {
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-lg text-center">
                   <div className="text-4xl font-bold text-[#1a365d] mb-2">89149</div>
-                  <p className="text-gray-700 font-semibold">Office at 5592 Dapple Gray Rd</p>
+                  <p className="text-gray-700 font-semibold">Office at 5592 N Dapple Gray Rd</p>
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-lg text-center">
                   <div className="text-4xl font-bold text-[#1a365d] mb-2">Maps</div>
@@ -220,7 +220,7 @@ export default function TestimonialsPage() {
 
         <CtaBand
           heading="Tour Homestead West with your own agent"
-          body="Call (702) 299-6607, get directions to 5592 Dapple Gray Rd, or leave a Google review. Then send Dr. Jan the plan you want to walk."
+          body="Call (702) 299-6607, get directions to 5592 N Dapple Gray Rd, or leave a Google review. Then send Dr. Jan the plan you want to walk."
           source="testimonials"
         />
 

@@ -68,7 +68,7 @@ export default function PropertyManagementPage() {
             <>
               Professional Homestead West Property Management Solutions
               <br />
-              Dr. Jan Duffy | Nevada License S.0197614.LLC
+              Dr. Jan Duffy, REALTOR®
             </>
           }
         />

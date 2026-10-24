@@ -108,7 +108,7 @@ export default function ReviewsPage() {
                 <SectionImage
                   imageId="sales-office"
                   heading="Share your review link"
-                  caption="Homestead West office at 5592 Dapple Gray Rd, Las Vegas NV 89149"
+                  caption="Homestead West office at 5592 N Dapple Gray Rd, Las Vegas NV 89149"
                 />
                 <p className="text-sm text-gray-600 mb-4">
                   Right-click the QR code and select &quot;Save Image As...&quot; to share with customers

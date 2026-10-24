@@ -9,7 +9,7 @@ import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Homebuying Process | Homestead West Las Vegas | Expert Guidance by Dr. Jan Duffy',
-  description: 'Complete guide to buying a new home at Homestead West Las Vegas. Expert guidance from Dr. Jan Duffy through prequalification, house hunting, contracting, and closing. Nevada License S.0197614.LLC.',
+  description: 'Complete guide to buying a new home at Homestead West Las Vegas. Expert guidance from Dr. Jan Duffy through prequalification, house hunting, contracting, and closing.',
   ...canonicalMetadata('/homebuying-process'),
   keywords: [
     'homebuying process Las Vegas',

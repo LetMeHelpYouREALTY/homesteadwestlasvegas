@@ -1,5 +1,4 @@
 import CalendlyLink from '@/components/CalendlyLink';
-import { ASSET_BHHS_LOGO_PATH } from '@/lib/site-assets';
 import {
   ADDRESS_LINE,
   BUSINESS_NAME,
@@ -20,8 +19,6 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-white font-bold text-lg mb-4">{BUSINESS_NAME}</h3>
-            <p className="mb-2">Berkshire Hathaway HomeServices Nevada</p>
-            <p className="mb-2">Nevada License: {LICENSE_ID}</p>
             <p className="mb-2">
               <a href={PHONE_TEL_HREF} className="hover:text-yellow-400">{PHONE_DISPLAY}</a>
             </p>
@@ -83,14 +80,6 @@ export default function Footer() {
         
         {/* Logos */}
         <div className="flex flex-wrap justify-center items-center gap-6 mb-8">
-          <img 
-            src={ASSET_BHHS_LOGO_PATH} 
-            alt="Berkshire Hathaway HomeServices Nevada" 
-            width={200}
-            height={48}
-            className="h-12 w-auto"
-            loading="lazy"
-          />
           <a
             href="https://www.hud.gov/program_offices/fair_housing_equal_opp"
             target="_blank"
@@ -104,7 +93,7 @@ export default function Footer() {
         
         <div className="border-t border-gray-700 pt-8 text-center text-sm">
           <p className="mb-2">
-            Homestead West | Homes by Dr Jan Duffy | Berkshire Hathaway HomeServices | License: {LICENSE_ID}
+            Berkshire Hathaway HomeServices Nevada Properties since September 2008 · License {LICENSE_ID}
           </p>
           <p className="text-gray-400">
             © 2026 Homestead West | Homes by Dr Jan Duffy All rights reserved.

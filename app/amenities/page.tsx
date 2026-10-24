@@ -49,7 +49,7 @@ export default function AmenitiesPage() {
       name: 'Homestead West / Centennial Hills area',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '5592 Dapple Gray Rd',
+        streetAddress: '5592 N Dapple Gray Rd',
         addressLocality: 'Las Vegas',
         addressRegion: 'NV',
         postalCode: '89149',
@@ -139,7 +139,7 @@ export default function AmenitiesPage() {
                     <SectionImage
                       imageId={category.imageId}
                       heading={category.label}
-                      caption={`${category.label} near Homestead West at 5592 Dapple Gray Rd, Las Vegas NV 89149`}
+                      caption={`${category.label} near Homestead West at 5592 N Dapple Gray Rd, Las Vegas NV 89149`}
                       className="mt-4 mb-0"
                     />
                   </div>

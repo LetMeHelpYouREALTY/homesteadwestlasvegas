@@ -109,7 +109,7 @@ export default function FAQPage() {
         },
         {
           question: 'What makes Dr. Jan Duffy different from other agents?',
-          answer: 'Dr. Jan Duffy is a VIP New Construction Homes Specialist who combines independent client advocacy with deep new construction expertise. She represents home buyers exclusively, has an office at the builder sales office, direct builder relationships, and Nevada License S.0197614.LLC. Her expertise spans multiple new construction developments, all while working for YOU, not the builder.'
+          answer: 'Dr. Jan Duffy is a VIP New Construction Homes Specialist who combines independent client advocacy with deep new construction expertise. She represents home buyers exclusively, has an office at the builder sales office, and direct builder relationships, and has been in real estate since 1983. Her expertise spans multiple new construction developments, all while working for YOU, not the builder.'
         },
         {
           question: 'How do I get started with Dr. Jan Duffy?',

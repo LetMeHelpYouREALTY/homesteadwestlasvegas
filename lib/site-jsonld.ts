@@ -195,7 +195,7 @@ export function getSiteGraphJsonLd() {
           { '@type': 'SiteNavigationElement', name: 'Homestead West homes for sale', url: `${SITE_URL}/properties` },
           { '@type': 'SiteNavigationElement', name: 'Ranch floor plans 3336 and 3704', url: `${SITE_URL}/floor-plans` },
           { '@type': 'SiteNavigationElement', name: 'Homestead West community in 89149', url: `${SITE_URL}/community` },
-          { '@type': 'SiteNavigationElement', name: 'Find our office at 5592 Dapple Gray Rd', url: `${SITE_URL}/location` },
+          { '@type': 'SiteNavigationElement', name: 'Find our office at 5592 N Dapple Gray Rd', url: `${SITE_URL}/location` },
           { '@type': 'SiteNavigationElement', name: 'VIP buyer program', url: `${SITE_URL}/vip-buyer-program` },
           { '@type': 'SiteNavigationElement', name: 'Google reviews', url: `${SITE_URL}/reviews` },
           { '@type': 'SiteNavigationElement', name: 'Contact Dr. Jan Duffy', url: `${SITE_URL}/contact` },

@@ -10,7 +10,7 @@ import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'Las Vegas Properties for Sale | Dr. Jan Duffy | Ranch Homes $910K+',
-  description: 'Browse Las Vegas properties for sale with Dr. Jan Duffy (License S.0197614.LLC). Discover ranch-style homes on pool-sized lots in Northwest Las Vegas starting at $910K. View available Homestead West homes and new construction listings.',
+  description: 'Browse Las Vegas properties for sale with Dr. Jan Duffy. Discover ranch-style homes on pool-sized lots in Northwest Las Vegas starting at $910K. View available Homestead West homes and new construction listings.',
   ...canonicalMetadata('/properties'),
   keywords: 'Las Vegas properties for sale, ranch homes Las Vegas, Northwest Las Vegas homes, $910K homes Las Vegas, Dr. Jan Duffy listings',
   openGraph: {
@@ -34,7 +34,7 @@ export default function PropertiesPage() {
       name: 'Homestead West',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '5592 Dapple Gray Rd',
+        streetAddress: '5592 N Dapple Gray Rd',
         addressLocality: 'Las Vegas',
         addressRegion: 'NV',
         postalCode: '89149',
@@ -188,7 +188,7 @@ export default function PropertiesPage() {
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-200">
                     <span className="font-medium">ZIP / map pin</span>
-                    <span className="text-[#1a365d] font-semibold">89149 · 5592 Dapple Gray Rd</span>
+                    <span className="text-[#1a365d] font-semibold">89149 · 5592 N Dapple Gray Rd</span>
                   </div>
                   <div className="flex justify-between items-center py-2 border-b border-gray-200">
                     <span className="font-medium">Live MLS inventory</span>

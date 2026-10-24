@@ -50,7 +50,7 @@ export default async function OpenGraphImage() {
             Luxury single-story ranch homes from $910K
           </div>
           <div style={{ fontSize: 24, marginTop: 16, color: '#e2e8f0' }}>
-            5592 Dapple Gray Rd, Las Vegas, NV 89149 · (702) 299-6607
+            5592 N Dapple Gray Rd, Las Vegas, NV 89149 · (702) 299-6607
           </div>
         </div>
       </div>

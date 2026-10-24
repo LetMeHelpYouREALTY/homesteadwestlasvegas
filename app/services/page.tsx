@@ -10,7 +10,7 @@ import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Real Estate Services | Dr. Jan Duffy | Las Vegas Real Estate Agent',
-  description: 'Comprehensive real estate services by Dr. Jan Duffy (License S.0197614.LLC) in Las Vegas. Buying, selling, investment consulting, and property management.',
+  description: 'Comprehensive real estate services by Dr. Jan Duffy in Las Vegas. Buying, selling, investment consulting, and property management.',
   keywords: 'real estate services Las Vegas, Dr. Jan Duffy services, buying homes Las Vegas, selling homes Las Vegas, real estate investment',
   ...canonicalMetadata('/services'),
   openGraph: {
@@ -58,7 +58,7 @@ export default function ServicesPage() {
     email: 'DrJanSells@HomesteadWestLasVegas.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '5592 Dapple Gray Rd',
+      streetAddress: '5592 N Dapple Gray Rd',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       postalCode: '89149',
@@ -107,7 +107,7 @@ export default function ServicesPage() {
             <>
               Comprehensive Solutions by Dr. Jan Duffy
               <br />
-              VIP New Construction Homes Specialist | Nevada License S.0197614.LLC
+              VIP New Construction Homes Specialist
             </>
           }
           badge="New Construction Specialist"
@@ -241,7 +241,7 @@ export default function ServicesPage() {
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">Local Market Expertise</h3>
                   <p className="text-gray-700">
                     Deep knowledge of the Las Vegas real estate market, including Northwest Las Vegas, 
-                    Homestead West, and surrounding communities. 30+ years of experience.
+                    Homestead West, and surrounding communities. In real estate since 1983.
                   </p>
                 </div>
                 
@@ -262,7 +262,7 @@ export default function ServicesPage() {
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">Data-Driven Insights</h3>
                   <p className="text-gray-700">
-                    Ph.D. in Market Research & Consumer Behavior brings data-driven insights to every transaction. 
+                    Ph.D. in Research brings data-driven insights to every transaction. 
                     Up-to-date market analysis and trends to help you make informed decisions.
                   </p>
                 </div>
@@ -346,7 +346,7 @@ export default function ServicesPage() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mt-8 text-white">
                 <p className="text-lg font-semibold mb-2 text-white">Dr. Jan Duffy - VIP New Construction Homes Specialist</p>
-                <p className="text-blue-200">Las Vegas Real Estate Expert | Nevada License S.0197614.LLC</p>
+                <p className="text-blue-200">Las Vegas Real Estate Expert</p>
                 <p className="text-blue-200 mt-1">DrJanSells@HomesteadWestLasVegas.com</p>
               </div>
             </div>

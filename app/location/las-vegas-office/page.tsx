@@ -3,18 +3,18 @@ import RealScoutListings from '@/components/RealScoutListings';
 import PageHero from '@/components/PageHero';
 import SectionImage from '@/components/SectionImage';
 import { generateBreadcrumbSchema } from '@/lib/breadcrumbs';
-import { SITE_URL, ADDRESS, BROKERAGE_NAME, PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact';
+import { SITE_URL, ADDRESS, PHONE_DISPLAY, PHONE_TEL_HREF } from '@/lib/site-contact';
 import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Las Vegas Real Estate Office | Homestead West | Dr. Jan Duffy',
-  description: 'Visit our Las Vegas real estate office at 5592 Dapple Gray Rd. Dr. Jan Duffy (License S.0197614.LLC) provides expert real estate services in Northwest Las Vegas.',
+  description: 'Visit our Las Vegas real estate office at 5592 N Dapple Gray Rd. Dr. Jan Duffy provides expert real estate services in Northwest Las Vegas.',
   keywords: 'Las Vegas real estate office, Dr. Jan Duffy office, Northwest Las Vegas real estate, real estate agent Las Vegas, Homestead West office',
   ...canonicalMetadata('/location/las-vegas-office'),
   openGraph: {
     title: 'Las Vegas Real Estate Office | Homestead West',
-    description: 'Visit our Las Vegas real estate office at 5592 Dapple Gray Rd. Dr. Jan Duffy provides expert real estate services.',
+    description: 'Visit our Las Vegas real estate office at 5592 N Dapple Gray Rd. Dr. Jan Duffy provides expert real estate services.',
     type: 'website',
     url: absoluteUrl('/location/las-vegas-office'),
     images: ogImages('sales-office'),
@@ -32,7 +32,7 @@ export default function LasVegasOfficePage() {
     email: 'DrJanSells@HomesteadWestLasVegas.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '5592 Dapple Gray Rd',
+      streetAddress: '5592 N Dapple Gray Rd',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       postalCode: '89149',
@@ -53,7 +53,7 @@ export default function LasVegasOfficePage() {
       '@id': 'https://en.wikipedia.org/wiki/Las_Vegas'
     },
     serviceType: ['Real Estate Sales', 'Property Management', 'Real Estate Investment Consulting'],
-    hasMap: 'https://maps.google.com/?q=5592+Dapple+Gray+Rd,+Las+Vegas,+NV+89149'
+    hasMap: 'https://maps.google.com/?q=5592+N+Dapple+Gray+Rd,+Las+Vegas,+NV+89149'
   };
 
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -79,8 +79,6 @@ export default function LasVegasOfficePage() {
           subtitle={
             <>
               Homestead West | Homes by Dr Jan Duffy
-              <br />
-              {BROKERAGE_NAME}
             </>
           }
         />
@@ -94,7 +92,7 @@ export default function LasVegasOfficePage() {
                 <SectionImage
                   imageId="sales-office"
                   heading="Visit Our Homestead West Office"
-                  caption="Homestead West office at 5592 Dapple Gray Rd, Las Vegas NV 89149"
+                  caption="Homestead West office at 5592 N Dapple Gray Rd, Las Vegas NV 89149"
                 />
                 <div className="space-y-4">
                   <div className="flex items-start">
@@ -149,19 +147,19 @@ export default function LasVegasOfficePage() {
                 <h2 className="text-3xl font-bold mb-6">Get Directions to Homestead West</h2>
                 <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center mb-6">
                   <iframe
-                    src="https://www.google.com/maps?q=5592+Dapple+Gray+Rd,+Las+Vegas,+NV+89149&output=embed"
+                    src="https://www.google.com/maps?q=5592+N+Dapple+Gray+Rd,+Las+Vegas,+NV+89149&output=embed"
                     width="100%"
                     height="100%"
                     className="border-0"
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Las Vegas Office - 5592 Dapple Gray Rd, Las Vegas, NV 89149"
+                    title="Las Vegas Office - 5592 N Dapple Gray Rd, Las Vegas, NV 89149"
                   ></iframe>
                 </div>
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href="https://maps.google.com/?q=5592+Dapple+Gray+Rd,+Las+Vegas,+NV+89149"
+                    href="https://maps.google.com/?q=5592+N+Dapple+Gray+Rd,+Las+Vegas,+NV+89149"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"

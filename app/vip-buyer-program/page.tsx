@@ -9,7 +9,7 @@ import { absoluteUrl, canonicalMetadata } from '@/lib/metadata';
 import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
-  title: 'VIP Berkshire Hathaway HomeServices Buyer Program | Dr. Jan Duffy | Las Vegas New Construction Expert',
+  title: 'VIP New Construction Buyer Program | Dr. Jan Duffy | Las Vegas New Construction Expert',
   description: 'Get VIP access to new construction homes in Las Vegas with Dr. Jan Duffy. Early phase access, priority lot selection, direct builder contact, and expert negotiation.',
   keywords: [
     'luxury new construction Las Vegas',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   ],
   ...canonicalMetadata('/vip-buyer-program'),
   openGraph: {
-    title: 'VIP Berkshire Hathaway HomeServices Buyer Program | Dr. Jan Duffy',
+    title: 'VIP New Construction Buyer Program | Dr. Jan Duffy',
     description: 'Get VIP access to new construction homes in Las Vegas with Dr. Jan Duffy. Early phase access, priority lot selection, and expert negotiation.',
     type: 'website',
     url: absoluteUrl('/vip-buyer-program'),
@@ -59,7 +59,7 @@ export default function VIPBuyerProgramPage() {
     email: 'DrJanSells@HomesteadWestLasVegas.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '5592 Dapple Gray Rd',
+      streetAddress: '5592 N Dapple Gray Rd',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       postalCode: '89149',
@@ -158,12 +158,12 @@ export default function VIPBuyerProgramPage() {
       <div className="min-h-screen bg-white">
         <PageHero
           imageId="vip-model-home"
-          title="VIP Berkshire Hathaway HomeServices Buyer Program for Homestead West"
+          title="VIP New Construction Buyer Program for Homestead West"
           subtitle={
             <>
               Premier New Home Buyer Program for Homestead West Las Vegas
               <span className="block mt-4 text-lg md:text-xl font-normal">
-                The VIP Berkshire Hathaway HomeServices New Home Buyer Program provides exclusive access to Homestead West Las Vegas new construction homes. As a VIP New Construction Homes Specialist, Dr. Jan Duffy represents YOU—the buyer—with insider access, priority lot selection, and expert negotiation. She works exclusively for home buyers, not the builder, giving YOU the ultimate advantage when purchasing your new Homestead West home.
+                The VIP New Home Buyer Program provides exclusive access to Homestead West Las Vegas new construction homes. As a VIP New Construction Homes Specialist, Dr. Jan Duffy represents YOU—the buyer—with insider access, priority lot selection, and expert negotiation. She works exclusively for home buyers, not the builder, giving YOU the ultimate advantage when purchasing your new Homestead West home.
               </span>
             </>
           }
@@ -224,7 +224,7 @@ export default function VIPBuyerProgramPage() {
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">Early Phase Access Through VIP Program</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    The VIP Berkshire Hathaway HomeServices New Home Buyer Program provides first access to new Homestead West phases before public release. Secure the best Homestead West lots, prime locations, and preferred floor plans while others wait.
+                    The VIP New Home Buyer Program provides first access to new Homestead West phases before public release. Secure the best Homestead West lots, prime locations, and preferred floor plans while others wait.
                   </p>
                 </div>
 
@@ -267,7 +267,7 @@ export default function VIPBuyerProgramPage() {
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">Expert Negotiation Power</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    The VIP Berkshire Hathaway HomeServices program delivers elite builder relationship-backed negotiation power for Homestead West. Get upgrades, concessions, and terms that others simply cannot achieve through the standard homebuying process.
+                    The VIP New Home Buyer Program delivers elite builder relationship-backed negotiation power for Homestead West. Get upgrades, concessions, and terms that others simply cannot achieve through the standard homebuying process.
                   </p>
                 </div>
 
@@ -277,7 +277,7 @@ export default function VIPBuyerProgramPage() {
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">Priority Lot Selection Benefits</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    The VIP Berkshire Hathaway HomeServices New Home Buyer Program ensures priority treatment throughout the entire Homestead West process—from lot selection to closing. Experience the difference of working with a premier program partner.
+                    The VIP New Home Buyer Program ensures priority treatment throughout the entire Homestead West process—from lot selection to closing. Experience the difference of working with a premier program partner.
                   </p>
                 </div>
               </div>
@@ -461,7 +461,7 @@ export default function VIPBuyerProgramPage() {
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-2xl">2</div>
                   <h3 className="text-lg font-bold mb-2 text-gray-900">VIP Registration for New Homes</h3>
-                  <p className="text-gray-700 text-sm">Register with VIP Berkshire Hathaway HomeServices buyer program by Calling Dr. Jan Duffy</p>
+                  <p className="text-gray-700 text-sm">Register with the VIP New Home Buyer Program by calling Dr. Jan Duffy</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-2xl">3</div>
