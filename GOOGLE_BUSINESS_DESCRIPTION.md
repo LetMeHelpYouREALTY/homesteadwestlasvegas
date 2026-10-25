@@ -16,7 +16,7 @@ Specializing in new construction homes with exclusive VIP builder partnerships. 
 
 Services: New construction home buying, home selling, investment consulting, and VIP buyer program registration. Serving Las Vegas, Henderson, and North Las Vegas.
 
-Contact: (702) 299-6607 | DrJanSells@HomesteadWestLasVegas.com
+Contact: (702) 500-0729 | DrJanSells@HomesteadWestLasVegas.com
 Website: www.homesteadwestlasvegas.com
 
 ---
@@ -34,7 +34,7 @@ Specializing in new construction homes with exclusive VIP builder partnerships. 
 ✅ Office at builder sales office for direct access
 ✅ Expert negotiation and market expertise
 
-Serving Las Vegas, Henderson, North Las Vegas. Contact: (702) 299-6607
+Serving Las Vegas, Henderson, North Las Vegas. Contact: (702) 500-0729
 
 ---
 
@@ -67,7 +67,7 @@ Expert guidance for new construction homes with exclusive VIP builder partnershi
 Las Vegas, Henderson, North Las Vegas, and surrounding areas
 
 **Contact Information:**
-Phone: (702) 299-6607
+Phone: (702) 500-0729
 Email: DrJanSells@HomesteadWestLasVegas.com
 Website: www.homesteadwestlasvegas.com
 Address: 5592 Dapple Gray Rd, Las Vegas, NV 89149

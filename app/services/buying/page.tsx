@@ -29,7 +29,7 @@ export default function BuyingServicePage() {
     provider: {
       '@type': 'RealEstateAgent',
       name: 'Dr. Jan Duffy',
-      telephone: '+17022996607',
+      telephone: '+17025000729',
       email: 'DrJanSells@HomesteadWestLasVegas.com',
       licenseNumber: 'S.0197614.LLC'
     },
@@ -150,7 +150,7 @@ export default function BuyingServicePage() {
                     </span>
                     <div>
                       <p className="font-semibold">Call Now</p>
-                      <p className="text-blue-600">(702) 299-6607</p>
+                      <p className="text-blue-600">(702) 500-0729</p>
                     </div>
                   </div>
                   

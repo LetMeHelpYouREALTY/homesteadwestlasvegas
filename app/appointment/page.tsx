@@ -31,7 +31,7 @@ export default function AppointmentPage() {
     provider: {
       '@type': 'RealEstateAgent',
       name: 'Dr. Jan Duffy',
-      telephone: '+17022996607',
+      telephone: '+17025000729',
       email: 'DrJanSells@HomesteadWestLasVegas.com',
       licenseNumber: 'S.0197614.LLC'
     },
@@ -301,11 +301,11 @@ export default function AppointmentPage() {
             <p className="text-lg mb-8">You can also reach us directly for immediate Homestead West assistance</p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
-                href="tel:+17022996607"
+                href="tel:+17025000729"
                 className="flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <span className="mr-2">📞</span>
-                (702) 299-6607
+                (702) 500-0729
               </a>
               <a
                 href="mailto:DrJanSells@HomesteadWestLasVegas.com"

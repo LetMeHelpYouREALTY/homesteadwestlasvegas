@@ -371,7 +371,7 @@ export default function CommunityMapPage() {
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h3 className="text-xl font-bold mb-4 text-gray-900">Contact Dr. Jan Duffy for Homestead West</h3>
                   <div className="space-y-3">
-                    <p><span className="font-semibold">Phone:</span> (702) 299-6607</p>
+                    <p><span className="font-semibold">Phone:</span> (702) 500-0729</p>
                     <p><span className="font-semibold">Email:</span> DrJanSells@HomesteadWestLasVegas.com</p>
                     <p><span className="font-semibold">Office:</span> Builder Sales Office</p>
                     
@@ -391,10 +391,10 @@ export default function CommunityMapPage() {
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a
-                  href="tel:7022996607"
+                  href="tel:7025000729"
                   className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-colors"
                 >
-                  📞 Call Dr. Jan: (702) 299-6607
+                  📞 Call Dr. Jan: (702) 500-0729
                 </a>
                 <a
                   href="mailto:DrJanSells@HomesteadWestLasVegas.com"

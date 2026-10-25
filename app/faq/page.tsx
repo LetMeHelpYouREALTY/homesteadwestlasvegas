@@ -113,7 +113,7 @@ export default function FAQPage() {
         },
         {
           question: 'How do I get started with Dr. Jan Duffy?',
-          answer: 'Contact Dr. Jan Duffy at (702) 299-6607 or DrJanSells@HomesteadWestLasVegas.com. She\'ll provide a free consultation, connect you with preferred lenders for pre-approval, and guide you through the VIP new construction home buying process with exclusive advantages.'
+          answer: 'Contact Dr. Jan Duffy at (702) 500-0729 or DrJanSells@HomesteadWestLasVegas.com. She\'ll provide a free consultation, connect you with preferred lenders for pre-approval, and guide you through the VIP new construction home buying process with exclusive advantages.'
         }
       ]
     }
@@ -267,8 +267,8 @@ export default function FAQPage() {
                       <span className="text-3xl">📞</span>
                     </div>
                     <h3 className="text-xl font-bold mb-2 text-gray-900">Call Dr. Jan About Homestead West</h3>
-                    <a href="tel:7022996607" className="text-blue-600 font-semibold text-lg hover:text-blue-800">
-                      (702) 299-6607
+                    <a href="tel:7025000729" className="text-blue-600 font-semibold text-lg hover:text-blue-800">
+                      (702) 500-0729
                     </a>
                   </div>
                   
@@ -298,7 +298,7 @@ export default function FAQPage() {
 
         <CtaBand
           heading="Have a Homestead West question?"
-          body="Call (702) 299-6607 or send the form. Confirm lot, plan, and zoning before you write an offer."
+          body="Call (702) 500-0729 or send the form. Confirm lot, plan, and zoning before you write an offer."
           source="faq"
         />
 

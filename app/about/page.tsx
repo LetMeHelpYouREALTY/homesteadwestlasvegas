@@ -10,7 +10,7 @@ import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'About Dr. Jan Duffy | VIP New Construction Specialist | Las Vegas Real Estate Expert',
-  description: 'Meet Dr. Jan Duffy, VIP New Construction Homes Specialist, in real estate since 1983. Buyer representation for Homestead West at 5592 N Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.',
+  description: 'Meet Dr. Jan Duffy, VIP New Construction Homes Specialist, in real estate since 1983. Buyer representation for Homestead West at 5592 N Dapple Gray Rd, Las Vegas NV 89149. Call (702) 500-0729.',
   ...canonicalMetadata('/about'),
   keywords: [
     'Dr. Jan Duffy Las Vegas',
@@ -37,7 +37,7 @@ export default function AboutPage() {
     name: 'Dr. Jan Duffy',
     jobTitle: 'VIP New Construction Specialist',
     description: 'Las Vegas real estate expert and VIP New Construction Homes Specialist who represents home buyers',
-    telephone: '+17022996607',
+    telephone: '+17025000729',
     email: 'DrJanSells@HomesteadWestLasVegas.com',
     address: {
       '@type': 'PostalAddress',
@@ -440,7 +440,7 @@ export default function AboutPage() {
 
         <CtaBand
           heading="Tour Homestead West with Dr. Jan Duffy"
-          body="Call (702) 299-6607 before you register at the builder sales office. Office: 5592 N Dapple Gray Rd, Las Vegas NV 89149."
+          body="Call (702) 500-0729 before you register at the builder sales office. Office: 5592 N Dapple Gray Rd, Las Vegas NV 89149."
           source="about"
         />
 

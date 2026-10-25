@@ -193,7 +193,7 @@ export default async function BlogPostPage({
             
             <CtaBand
               heading="Ready to buy in Northwest Las Vegas 89149?"
-              body="Call (702) 299-6607, get directions to 5592 N Dapple Gray Rd, or send Dr. Jan the Homestead West plan you want to tour."
+              body="Call (702) 500-0729, get directions to 5592 N Dapple Gray Rd, or send Dr. Jan the Homestead West plan you want to tour."
               source={`blog-${slug}`}
             />
             
