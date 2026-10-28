@@ -600,7 +600,7 @@ export default function CommunityPage() {
 
         <CtaBand
           heading="Walk Homestead West in 89149"
-          body="Single-story ranch homes on pool-sized lots at Ann Road and Fort Apache. Call (702) 299-6607 for a private tour."
+          body="Single-story ranch homes on pool-sized lots at Ann Road and Fort Apache. Call (702) 500-0729 for a private tour."
           source="community"
         />
       </div>

@@ -13,9 +13,9 @@ export const AGENT_NAME = 'Dr. Jan Duffy' as const
 export const LICENSE_ID = 'S.0197614.LLC' as const
 export const LICENSE_DISPLAY = `Nevada Real Estate License ${LICENSE_ID}` as const
 
-export const PHONE_E164 = '+17022996607' as const
-export const PHONE_DISPLAY = '(702) 299-6607' as const
-export const PHONE_TEL_HREF = 'tel:7022996607' as const
+export const PHONE_E164 = '+17025000729' as const
+export const PHONE_DISPLAY = '(702) 500-0729' as const
+export const PHONE_TEL_HREF = 'tel:7025000729' as const
 
 export const EMAIL = 'DrJanSells@HomesteadWestLasVegas.com' as const
 

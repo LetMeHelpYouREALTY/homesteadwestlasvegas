@@ -40,7 +40,7 @@ export const STORE_LOCATIONS: StoreLocation[] = [
       country: 'US',
     },
     mapQuery: '5592+N+Dapple+Gray+Rd,+Las+Vegas,+NV+89149',
-    phone: '+17022996607',
+    phone: '+17025000729',
     email: 'DrJanSells@HomesteadWestLasVegas.com',
     openingHours: ['Mo-Su 08:00-20:00'],
     geo: { latitude: 36.2738, longitude: -115.3089 },
@@ -54,7 +54,7 @@ export function formatAddress(loc: StoreLocation): string {
   return `${street}, ${locality}, ${region} ${postalCode}`;
 }
 
-/** E.164 to display (e.g. "+17022996607" → "(702) 299-6607") */
+/** E.164 to display (e.g. "+17025000729" → "(702) 500-0729") */
 export function formatPhoneDisplay(phone: string): string {
   const digits = phone.replace(/\D/g, '');
   if (digits.length === 11 && digits.startsWith('1')) {

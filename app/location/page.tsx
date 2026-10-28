@@ -254,8 +254,8 @@ export default function LocationIndexPage() {
               >
                 Contact Us
               </a>
-              <a href="tel:7022996607" className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                Call (702) 299-6607
+              <a href="tel:7025000729" className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                Call (702) 500-0729
               </a>
             </div>
           </div>

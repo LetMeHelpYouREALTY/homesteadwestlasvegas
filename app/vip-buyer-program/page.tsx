@@ -55,7 +55,7 @@ export default function VIPBuyerProgramPage() {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
     name: 'Dr. Jan Duffy',
-    telephone: '+17022996607',
+    telephone: '+17025000729',
     email: 'DrJanSells@HomesteadWestLasVegas.com',
     address: {
       '@type': 'PostalAddress',
@@ -118,7 +118,7 @@ export default function VIPBuyerProgramPage() {
     provider: {
       '@type': 'RealEstateAgent',
       name: 'Dr. Jan Duffy',
-      telephone: '+17022996607',
+      telephone: '+17025000729',
       email: 'DrJanSells@HomesteadWestLasVegas.com'
     },
     areaServed: {
@@ -171,10 +171,10 @@ export default function VIPBuyerProgramPage() {
         >
           <div className="flex flex-col sm:flex-row gap-6">
             <a
-              href="tel:7022996607"
+              href="tel:7025000729"
               className="bg-yellow-500 text-black px-10 py-5 rounded-lg font-bold text-xl hover:bg-yellow-400 transition-all shadow-2xl hover:shadow-3xl text-center"
             >
-              📞 Call Dr. Jan: (702) 299-6607
+              📞 Call Dr. Jan: (702) 500-0729
             </a>
             <a
               href="mailto:DrJanSells@HomesteadWestLasVegas.com"
@@ -370,7 +370,7 @@ export default function VIPBuyerProgramPage() {
                     <p className="text-xl">Square feet on the two ranch plans</p>
                   </div>
                   <div>
-                    <p className="text-5xl font-bold text-[#d4af37] mb-2">(702) 299-6607</p>
+                    <p className="text-5xl font-bold text-[#d4af37] mb-2">(702) 500-0729</p>
                     <p className="text-xl">Call before you walk into the sales office</p>
                   </div>
                 </div>
@@ -480,7 +480,7 @@ export default function VIPBuyerProgramPage() {
 
         <CtaBand
           heading="Register as a represented Homestead West buyer"
-          body="Call (702) 299-6607 before you walk into the builder sales office. Dr. Jan represents you—not the builder."
+          body="Call (702) 500-0729 before you walk into the builder sales office. Dr. Jan represents you—not the builder."
           source="vip-buyer-program"
         />
 

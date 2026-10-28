@@ -31,7 +31,7 @@ export default function ServicesPage() {
     provider: {
       '@type': 'RealEstateAgent',
       name: 'Dr. Jan Duffy',
-      telephone: '+17022996607',
+      telephone: '+17025000729',
       email: 'DrJanSells@HomesteadWestLasVegas.com',
       licenseNumber: 'S.0197614.LLC'
     },
@@ -54,7 +54,7 @@ export default function ServicesPage() {
     name: 'Homestead West | Homes by Dr Jan Duffy',
     description: 'Las Vegas real estate services specializing in new construction homes with VIP New Construction Homes Specialist, and expert real estate guidance',
     url: 'https://www.homesteadwestlasvegas.com',
-    telephone: '+17022996607',
+    telephone: '+17025000729',
     email: 'DrJanSells@HomesteadWestLasVegas.com',
     address: {
       '@type': 'PostalAddress',
@@ -68,7 +68,7 @@ export default function ServicesPage() {
       '@type': 'Person',
       name: 'Dr. Jan Duffy',
       jobTitle: 'VIP New Construction Specialist',
-      telephone: '+17022996607',
+      telephone: '+17025000729',
       email: 'DrJanSells@HomesteadWestLasVegas.com'
     },
     areaServed: {
@@ -332,10 +332,10 @@ export default function ServicesPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
                 <a
-                  href="tel:7022996607"
+                  href="tel:7025000729"
                   className="bg-yellow-500 text-black px-10 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-colors shadow-lg"
                 >
-                  📞 Call (702) 299-6607
+                  📞 Call (702) 500-0729
                 </a>
                 <a
                   href="/appointment"

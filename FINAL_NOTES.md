@@ -61,7 +61,7 @@ The Final CTA mentions "Get Early Access Form" - you'll need to either:
 - Or create a dedicated `/vip-registration` page
 
 ### Priority 3: Testing
-- Test all phone links: `tel:7022996607`
+- Test all phone links: `tel:7025000729`
 - Test all email links: `mailto:DrJanSells@HomesteadWestLasVegas.com`
 - Verify RealScout listings display correctly
 - Test search widget functionality
@@ -73,7 +73,7 @@ The Final CTA mentions "Get Early Access Form" - you'll need to either:
 Before going live, review:
 
 - [ ] All placeholders replaced with real data
-- [ ] Phone numbers correct: (702) 299-6607
+- [ ] Phone numbers correct: (702) 500-0729
 - [ ] Email correct: DrJanSells@HomesteadWestLasVegas.com
 - [ ] License number correct: S.0197614
 - [ ] All internal links work

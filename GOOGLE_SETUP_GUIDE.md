@@ -27,7 +27,7 @@ In `app/layout.tsx`, replace:
 3. Use exact information from structured data:
    - **Business Name**: Homestead West | Homes by Dr Jan Duffy
    - **Address**: 5592 Dapple Gray Rd, Las Vegas, NV 89149
-   - **Phone**: (702) 299-6607
+   - **Phone**: (702) 500-0729
    - **Email**: DrJanSells@HomesteadWestLasVegas.com
    - **Website**: https://homesteadwestlasvegas.com
 

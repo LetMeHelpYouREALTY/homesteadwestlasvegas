@@ -44,13 +44,13 @@
 
 ### Content Review
 - [ ] Review all placeholder text for accuracy
-- [ ] Verify all phone numbers are correct: (702) 299-6607
+- [ ] Verify all phone numbers are correct: (702) 500-0729
 - [ ] Verify email is correct: DrJanSells@HomesteadWestLasVegas.com
 - [ ] Check all links work (VIP program, contact, etc.)
 - [ ] Verify "Homestead West" appears 8-10 times (currently: ~10)
 
 ### Technical Testing
-- [ ] Test phone link: `tel:7022996607`
+- [ ] Test phone link: `tel:7025000729`
 - [ ] Test email link: `mailto:DrJanSells@HomesteadWestLasVegas.com`
 - [ ] Verify RealScout listings display correctly
 - [ ] Verify search widget functions properly
@@ -105,7 +105,7 @@
 
 ## 📞 Contact Information to Verify
 
-- Phone: (702) 299-6607
+- Phone: (702) 500-0729
 - Email: DrJanSells@HomesteadWestLasVegas.com
 - License: Nevada S.0197614
 - Office: Builder Sales Office
