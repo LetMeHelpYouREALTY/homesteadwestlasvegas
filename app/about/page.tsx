@@ -10,7 +10,7 @@ import { canonicalMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = {
   title: 'About Dr. Jan Duffy | VIP New Construction Specialist | Las Vegas Real Estate Expert',
-  description: 'Meet Dr. Jan Duffy, VIP New Construction Homes Specialist, in real estate since 1983. Buyer representation for Homestead West at 5592 N Dapple Gray Rd, Las Vegas NV 89149. Call (702) 500-0729.',
+  description: 'Meet Dr. Jan Duffy, VIP New Construction Homes Specialist, licensed since 2008 · 35 years in Las Vegas. Buyer representation for Homestead West at 5592 N Dapple Gray Rd, Las Vegas NV 89149. Call (702) 500-0729.',
   ...canonicalMetadata('/about'),
   keywords: [
     'Dr. Jan Duffy Las Vegas',
@@ -98,10 +98,10 @@ export default function AboutPage() {
           subtitle={
             <>
               <span itemProp="description">
-                Dr. Jan Duffy is a VIP New Construction Homes Specialist, in real estate since 1983, who represents home buyers exclusively in Northwest Las Vegas, including Homestead West at 5592 N Dapple Gray Rd.
+                Dr. Jan Duffy is a VIP New Construction Homes Specialist, licensed since 2008 · 35 years in Las Vegas, who represents home buyers exclusively in Northwest Las Vegas, including Homestead West at 5592 N Dapple Gray Rd.
               </span>
               <br />
-              Las Vegas Real Estate Expert | Top 1% Las Vegas REALTOR®
+              Las Vegas Real Estate Expert | Las Vegas REALTOR®
             </>
           }
           badge="New Construction Specialist"
@@ -248,7 +248,7 @@ export default function AboutPage() {
                         <span className="text-green-600 mr-3 text-xl">✓</span>
                         <div>
                           <p className="font-semibold text-gray-900">Licensed Nevada REALTOR®</p>
-                          <p className="text-gray-700">In real estate since 1983</p>
+                          <p className="text-gray-700">Licensed since 2008 · 35 years in Las Vegas</p>
                         </div>
                       </div>
                       <div className="flex items-start">
@@ -307,7 +307,7 @@ export default function AboutPage() {
                   <p className="text-gray-700 font-semibold">Office at 5592 N Dapple Gray Rd</p>
                 </div>
                 <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-                  <div className="text-4xl font-bold text-[#1a365d] mb-2">Since 1983</div>
+                  <div className="text-4xl font-bold text-[#1a365d] mb-2">Since 2008</div>
                   <p className="text-gray-700 font-semibold">In real estate</p>
                 </div>
               </div>
