@@ -204,7 +204,7 @@ export default function AppointmentPage() {
                 <div className="bg-green-50 p-6 rounded-xl">
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">Homestead West Market Expertise</h3>
                   <p className="text-gray-700 mb-4">
-                    In real estate since 1983, Dr. Jan Duffy brings unparalleled knowledge 
+                    Licensed since 2008 · 35 years in Las Vegas, Dr. Jan Duffy brings unparalleled knowledge 
                     of Homestead West and surrounding Northwest Las Vegas communities. Your Homestead West consultation will 
                     include comprehensive market analysis, pricing insights, and neighborhood information that helps you make 
                     informed decisions about your Homestead West investment.

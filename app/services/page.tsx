@@ -241,7 +241,7 @@ export default function ServicesPage() {
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">Local Market Expertise</h3>
                   <p className="text-gray-700">
                     Deep knowledge of the Las Vegas real estate market, including Northwest Las Vegas, 
-                    Homestead West, and surrounding communities. In real estate since 1983.
+                    Homestead West, and surrounding communities. Licensed since 2008 · 35 years in Las Vegas.
                   </p>
                 </div>
                 

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   ...canonicalMetadata('/'),
   openGraph: {
     title: 'Homestead West Las Vegas — Luxury Single-Story Ranch Homes from $910K',
-    description: 'Get VIP access to Northwest Las Vegas\'s newest luxury community. Independent buyer\'s agent Dr. Jan Duffy, in real estate since 1983.',
+    description: 'Get VIP access to Northwest Las Vegas\'s newest luxury community. Independent buyer\'s agent Dr. Jan Duffy, licensed since 2008 · 35 years in Las Vegas.',
     type: 'website',
     url: absoluteUrl('/'),
     siteName: 'Homestead West Las Vegas',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Homestead West Las Vegas — Luxury Single-Story Ranch Homes from $910K',
-    description: 'Get VIP access to Northwest Las Vegas\'s newest luxury community. Independent buyer\'s agent Dr. Jan Duffy, in real estate since 1983.',
+    description: 'Get VIP access to Northwest Las Vegas\'s newest luxury community. Independent buyer\'s agent Dr. Jan Duffy, licensed since 2008 · 35 years in Las Vegas.',
     images: ogImages('ranch-exterior-dusk').map((img) => img.url),
   },
 };
@@ -143,7 +143,7 @@ export default function HomePage() {
               <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm md:text-base">
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white">
                   <span className="text-2xl">🏢</span>
-                  <span className="text-white">In Real Estate Since 1983</span>
+                  <span className="text-white">Licensed Since 2008</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white">
                   <span className="text-2xl">🏆</span>
@@ -151,7 +151,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white">
                   <span className="text-2xl">📜</span>
-                  <span className="text-white">Top 1% Las Vegas REALTOR®</span>
+                  <span className="text-white">Las Vegas REALTOR®</span>
                 </div>
               </div>
 
@@ -486,7 +486,7 @@ export default function HomePage() {
                 Who is Dr. Jan Duffy?
               </h2>
               <p className="text-lg text-center mb-6 text-gray-700 max-w-2xl mx-auto">
-                VIP New Construction Homes Specialist, in real estate since 1983. She represents home buyers—not the builder—in Homestead West and Northwest Las Vegas, with VIP access, negotiation support, and local market context.
+                VIP New Construction Homes Specialist, licensed since 2008 · 35 years in Las Vegas. She represents home buyers—not the builder—in Homestead West and Northwest Las Vegas, with VIP access, negotiation support, and local market context.
               </p>
               <ul className="grid sm:grid-cols-2 gap-2 mb-8 text-gray-700 text-sm max-w-2xl mx-auto">
                 <li className="flex gap-2"><span className="text-[#1a365d] font-bold shrink-0">✓</span> Early phase &amp; lot release alerts</li>
