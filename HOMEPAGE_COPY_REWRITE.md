@@ -23,7 +23,7 @@ Single-story ranch homes starting at $910,000. 3,300 to 3,700 square feet. Pool-
 - 500+ families helped
 
 ### Primary CTA
-[Single button: "Call (702) 299-6607" OR "Get Early Access Form"]
+[Single button: "Call (702) 500-0729" OR "Get Early Access Form"]
 
 ---
 
@@ -205,10 +205,10 @@ Register in my VIP program today. Get early access to new phases. Secure the lot
 
 **Limited lots available.** Homestead West Phase [NUMBER] releases [DATE]. Corner lots go fast.
 
-Call me now: (702) 299-6607
+Call me now: (702) 500-0729
 
 Or fill out the form below. I'll call you within 24 hours to discuss your needs.
 
-[PHONE CTA BUTTON: "Call (702) 299-6607"]
+[PHONE CTA BUTTON: "Call (702) 500-0729"]
 [FORM CTA BUTTON: "Get Early Access Form"]
 

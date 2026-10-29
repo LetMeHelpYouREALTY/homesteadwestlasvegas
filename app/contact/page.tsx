@@ -12,7 +12,7 @@ import { ogImages } from '@/lib/og';
 
 export const metadata: Metadata = {
   title: 'Contact Dr. Jan Duffy | Las Vegas Real Estate Agent | Homestead West',
-  description: 'Contact Dr. Jan Duffy for expert real estate services in Las Vegas. Call (702) 299-6607 or visit our office at 5592 N Dapple Gray Rd.',
+  description: 'Contact Dr. Jan Duffy for expert real estate services in Las Vegas. Call (702) 500-0729 or visit our office at 5592 N Dapple Gray Rd.',
   keywords: 'contact Dr. Jan Duffy, Las Vegas real estate agent, Homestead West contact, real estate consultation Las Vegas',
   ...canonicalMetadata('/contact'),
   openGraph: {
@@ -33,7 +33,7 @@ export default function ContactPage() {
     mainEntity: {
       '@type': 'RealEstateAgent',
       name: 'Dr. Jan Duffy',
-      telephone: '+17022996607',
+      telephone: '+17025000729',
       email: 'DrJanSells@HomesteadWestLasVegas.com',
       address: {
         '@type': 'PostalAddress',
@@ -152,8 +152,8 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-xl font-semibold mb-2 text-gray-900">Homestead West Phone</h3>
                       <p className="text-lg text-gray-900">
-                        <a href="tel:7022996607" className="text-blue-600 hover:text-blue-800 font-semibold">
-                          (702) 299-6607
+                        <a href="tel:7025000729" className="text-blue-600 hover:text-blue-800 font-semibold">
+                          (702) 500-0729
                         </a>
                       </p>
                       <p className="text-gray-700">Available daily 8AM-8PM for Homestead West</p>

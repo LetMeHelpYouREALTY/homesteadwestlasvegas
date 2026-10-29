@@ -24,7 +24,7 @@ const RealScoutListings = dynamic(() => import('@/components/RealScoutListings')
 
 export const metadata: Metadata = {
   title: 'Homestead West Las Vegas — Luxury Single-Story Ranch Homes from $910K | New Construction Northwest Las Vegas',
-  description: 'New construction luxury single-story ranch homes in Northwest Las Vegas from $910K. Pool-sized lots, optional casitas, VIP buyer representation. Dr. Jan Duffy represents YOU—not the builder. Independent buyer\'s agent at 5592 N Dapple Gray Rd, Las Vegas NV 89149. Call (702) 299-6607.',
+  description: 'New construction luxury single-story ranch homes in Northwest Las Vegas from $910K. Pool-sized lots, optional casitas, VIP buyer representation. Dr. Jan Duffy represents YOU—not the builder. Independent buyer\'s agent at 5592 N Dapple Gray Rd, Las Vegas NV 89149. Call (702) 500-0729.',
   keywords: 'Homestead West Las Vegas, luxury ranch homes, single-story homes, Northwest Las Vegas, new construction, pool-sized lots, $910K homes, Las Vegas real estate, Berkshire Hathaway HomeServices, independent buyer agent, new construction homes Las Vegas, single story homes Las Vegas, luxury homes Northwest Las Vegas, new construction community Las Vegas, ranch homes Las Vegas, pool sized lots Las Vegas',
   ...canonicalMetadata('/'),
   openGraph: {
@@ -556,7 +556,7 @@ export default function HomePage() {
                     <p className="text-xs md:text-sm">Northwest Las Vegas at Ann &amp; Fort Apache</p>
                   </div>
                   <div>
-                    <p className="text-2xl md:text-3xl font-bold text-[#d4af37] mb-1">(702) 299-6607</p>
+                    <p className="text-2xl md:text-3xl font-bold text-[#d4af37] mb-1">(702) 500-0729</p>
                     <p className="text-xs md:text-sm">Call for a private tour — Daily 8:00 AM–8:00 PM</p>
                   </div>
                 </div>
@@ -707,7 +707,7 @@ export default function HomePage() {
               <LeadForm source="homepage" heading="Tell Dr. Jan what you are looking for" />
             </div>
             <div className="space-y-2 text-gray-200">
-              <p>Or call directly: <a href="tel:7022996607" className="text-yellow-400 hover:text-yellow-300 font-semibold">(702) 299-6607</a></p>
+              <p>Or call directly: <a href="tel:7025000729" className="text-yellow-400 hover:text-yellow-300 font-semibold">(702) 500-0729</a></p>
               <p>Email: <a href="mailto:DrJanSells@HomesteadWestLasVegas.com" className="text-yellow-400 hover:text-yellow-300 font-semibold">DrJanSells@HomesteadWestLasVegas.com</a></p>
               <p>Homestead West Location: 5592 N Dapple Gray Rd, Las Vegas, NV 89149</p>
             </div>

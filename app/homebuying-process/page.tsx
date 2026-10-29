@@ -238,10 +238,10 @@ export default function HomebuyingProcessPage() {
                   </ul>
                   <div className="mt-6">
                     <a
-                      href="tel:7022996607"
+                      href="tel:7025000729"
                       className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                     >
-                      📞 Call Dr. Jan: (702) 299-6607
+                      📞 Call Dr. Jan: (702) 500-0729
                     </a>
                   </div>
                 </div>

@@ -29,7 +29,7 @@ export default function BuyingServicePage() {
     provider: {
       '@type': 'RealEstateAgent',
       name: 'Dr. Jan Duffy',
-      telephone: '+17022996607',
+      telephone: '+17025000729',
       email: 'DrJanSells@HomesteadWestLasVegas.com',
       licenseNumber: 'S.0197614.LLC'
     },
@@ -150,7 +150,7 @@ export default function BuyingServicePage() {
                     </span>
                     <div>
                       <p className="font-semibold">Call Now</p>
-                      <p className="text-blue-600">(702) 299-6607</p>
+                      <p className="text-blue-600">(702) 500-0729</p>
                     </div>
                   </div>
                   
@@ -315,7 +315,7 @@ export default function BuyingServicePage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-lg font-semibold mb-2">Homestead West in Northwest Las Vegas</h3>
-                <p className="text-gray-700">Family-friendly Homestead West communities with excellent schools</p>
+                <p className="text-gray-700">Homestead West communities near parks and public schools</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-lg font-semibold mb-2">Summerlin Near Homestead West</h3>
@@ -327,7 +327,7 @@ export default function BuyingServicePage() {
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-lg font-semibold mb-2">Green Valley</h3>
-                <p className="text-gray-700">Established neighborhood with mature landscaping</p>
+                <p className="text-gray-700">Older neighborhood with mature landscaping</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-lg font-semibold mb-2">Spring Valley</h3>
