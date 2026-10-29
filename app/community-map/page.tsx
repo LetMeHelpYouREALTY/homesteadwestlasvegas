@@ -207,7 +207,7 @@ export default function CommunityMapPage() {
                   <h3 className="text-xl font-bold mb-4 text-gray-900">Prime Northwest Las Vegas Location</h3>
                   <p className="text-gray-700 mb-4">
                     Homestead West is located in the desirable Northwest Las Vegas area, known for its newer communities, 
-                    excellent schools, and proximity to outdoor recreation. The community offers easy access to major highways 
+                    nearby public schools, and proximity to outdoor recreation. The community offers easy access to major highways 
                     while maintaining a peaceful residential atmosphere.
                   </p>
                   <ul className="space-y-2 text-gray-700">
@@ -233,13 +233,13 @@ export default function CommunityMapPage() {
                 <div className="bg-green-50 p-6 rounded-lg">
                   <h3 className="text-xl font-bold mb-4 text-gray-900">Nearby Northwest Las Vegas Amenities</h3>
                   <p className="text-gray-700 mb-4">
-                    The Homestead West community is surrounded by excellent schools, shopping centers, healthcare facilities, 
+                    The Homestead West community is surrounded by nearby public schools, shopping centers, healthcare facilities, 
                     and recreational opportunities that make Northwest Las Vegas a desirable place to live.
                   </p>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">
                       <span className="text-green-600 mr-3 font-bold">•</span>
-                      <span>Top-rated schools including Dean LaMar Allen Elementary and Centennial High School</span>
+                      <span>Nearby public schools including Dean LaMar Allen Elementary and Centennial High School</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-600 mr-3 font-bold">•</span>

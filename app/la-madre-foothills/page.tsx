@@ -225,7 +225,7 @@ export default function LaMadreFoothillsPage() {
               In everyday Las Vegas real estate language, “La Madre Foothills” refers to a northwest suburban pocket near the
               La Madre Mountain range—often discussed alongside zip codes like <strong>89124</strong>, <strong>89149</strong>,
               and <strong>89166</strong>. It is not a single gated subdivision; it is a geographic label buyers and portals use
-              for a mix of newer master-planned communities, established neighborhoods, and custom homesites with mountain
+              for a mix of newer master-planned communities, older neighborhoods, and custom homesites with mountain
               views—typically well north of the resort corridor.
             </p>
             <p className="text-gray-700 text-lg">
