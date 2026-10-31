@@ -11,6 +11,8 @@ import { mediaAbsoluteUrl } from "@/lib/media";
 import { metadataBaseUrl } from "@/lib/metadata";
 import { getSiteGraphJsonLd } from "@/lib/site-jsonld";
 import Script from 'next/script';
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+import { SpeedInsights as VercelSpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -276,6 +278,8 @@ export default function RootLayout({
           </Script>
         )}
             <Script src="/ads-conversions.js" strategy="afterInteractive" />
+            <VercelAnalytics />
+            <VercelSpeedInsights />
           </body>
         </html>
       );
